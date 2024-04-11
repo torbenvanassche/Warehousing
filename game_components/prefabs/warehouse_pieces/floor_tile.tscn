@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://hhhydo5nyk52"]
+
+[ext_resource type="PackedScene" uid="uid://hjbreyabkvqb" path="res://imported_assets/prototyping/SM_Primitive_Cube_02.glb" id="1_njqam"]
+[ext_resource type="Script" path="res://game_mechanics/floor_tiles/tile_walkable.gd" id="2_et6w2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hp5h1"]
+size = Vector3(1, 1, 0.1)
+
+[node name="SM_Primitive_Cube_022" instance=ExtResource("1_njqam")]
+script = ExtResource("2_et6w2")
+
+[node name="SM_Primitive_Cube_02" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -0.1, 0, 1, -4.37114e-09, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+shape = SubResource("BoxShape3D_hp5h1")
