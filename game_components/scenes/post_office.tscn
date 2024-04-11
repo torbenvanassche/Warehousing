@@ -1,0 +1,71 @@
+[gd_scene load_steps=4 format=3 uid="uid://dihub6auclug1"]
+
+[ext_resource type="PackedScene" uid="uid://hjbreyabkvqb" path="res://imported_assets/prototyping/SM_Primitive_Cube_02.glb" id="1_yxo6y"]
+[ext_resource type="Script" path="res://game_mechanics/floor_tiles/tile_walkable.gd" id="2_4m0ch"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tqv3h"]
+
+[node name="PostOffice" type="Node3D"]
+
+[node name="SM_Primitive_Cube_022" parent="." instance=ExtResource("1_yxo6y")]
+transform = Transform3D(1, 0, 0, 0, 0.1, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("2_4m0ch")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="SM_Primitive_Cube_022"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SM_Primitive_Cube_022/StaticBody3D"]
+shape = SubResource("BoxShape3D_tqv3h")
+
+[node name="SM_Primitive_Cube_023" parent="." instance=ExtResource("1_yxo6y")]
+transform = Transform3D(1, 0, 0, 0, 0.1, 0, 0, 0, 1, 1, 0, 0)
+script = ExtResource("2_4m0ch")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="SM_Primitive_Cube_023"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SM_Primitive_Cube_023/StaticBody3D"]
+shape = SubResource("BoxShape3D_tqv3h")
+
+[node name="SM_Primitive_Cube_024" parent="." instance=ExtResource("1_yxo6y")]
+transform = Transform3D(1, 0, 0, 0, 0.1, 0, 0, 0, 1, 1, 0, 1)
+script = ExtResource("2_4m0ch")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="SM_Primitive_Cube_024"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SM_Primitive_Cube_024/StaticBody3D"]
+shape = SubResource("BoxShape3D_tqv3h")
+
+[node name="SM_Primitive_Cube_025" parent="." instance=ExtResource("1_yxo6y")]
+transform = Transform3D(1, 0, 0, 0, 0.1, 0, 0, 0, 1, 2, 0, 1)
+script = ExtResource("2_4m0ch")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="SM_Primitive_Cube_025"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SM_Primitive_Cube_025/StaticBody3D"]
+shape = SubResource("BoxShape3D_tqv3h")
+
+[node name="SM_Primitive_Cube_026" parent="." instance=ExtResource("1_yxo6y")]
+transform = Transform3D(1, 0, 0, 0, 0.1, 0, 0, 0, 1, 3, 0, 1)
+script = ExtResource("2_4m0ch")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="SM_Primitive_Cube_026"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SM_Primitive_Cube_026/StaticBody3D"]
+shape = SubResource("BoxShape3D_tqv3h")
+
+[node name="SM_Primitive_Cube_027" parent="." instance=ExtResource("1_yxo6y")]
+transform = Transform3D(1, 0, 0, 0, 0.1, 0, 0, 0, 1, 3, 0, 0)
+script = ExtResource("2_4m0ch")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="SM_Primitive_Cube_027"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SM_Primitive_Cube_027/StaticBody3D"]
+shape = SubResource("BoxShape3D_tqv3h")
+
+[node name="SM_Primitive_Cube_028" parent="." instance=ExtResource("1_yxo6y")]
+transform = Transform3D(1, 0, 0, 0, 0.1, 0, 0, 0, 1, 3, 0, -1)
+script = ExtResource("2_4m0ch")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="SM_Primitive_Cube_028"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SM_Primitive_Cube_028/StaticBody3D"]
+shape = SubResource("BoxShape3D_tqv3h")

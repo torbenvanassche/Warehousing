@@ -1,0 +1,59 @@
+{
+    "wheat": {
+        "name": "Wheat",
+        "description": "Raw wheat farmed in a field.",
+        "location": "farm",
+        "available": true,
+        "stack_size": 10,
+        "random_weight": 5,
+        "sprite_path": "growable/wheat",
+        "scene_path": "growable/SM_Prop_Plant_Wheat_03.glb",
+        "grow_time": 5,
+        "layout": {
+            "data": "1111",
+            "columns": 2
+        },
+        "yield": 1
+    },
+    "flour": {
+        "name": "Flour",
+        "description": "A bunch of flour, seems pretty basic.",
+        "available": true,
+        "stack_size": 10,
+        "random_weight": 1,
+        "sprite_path": "other/flour",
+        "scene_path": "growable/SM_Prop_Plant_Wheat_03.glb",
+        "process": "GRIND",
+        "processing_time": 4
+    },
+    "iron_raw": {
+        "name": "Raw Iron",
+        "description": "A bunch of raw iron. Can be processed or sold as-is.",
+        "location": "mine",
+        "available": true,
+        "stack_size": 10,
+        "random_weight": 5,
+        "sprite_path": "ores/iron_ore",
+        "scene_path": "ores/ore"
+    },
+    "gold_raw": {
+        "name": "Raw Gold",
+        "description": "A bunch of raw gold, it sparkles and looks quite rare.",
+        "location": "mine",
+        "available": true,
+        "stack_size": 10,
+        "random_weight": 1,
+        "sprite_path": "ores/gold_ore",
+        "scene_path": "ores/ore"
+    },
+    "copper_raw": {
+        "name": "Raw Copper",
+        "description": "A clump of raw copper. It feels dense and useful.",
+        "location": "mine",
+        "available": true,
+        "stack_size": 10,
+        "random_weight": 2,
+        "sprite_path": "ores/copper_ore",
+        "scene_path": "ores/ore"
+    }
+}
