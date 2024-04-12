@@ -6,7 +6,7 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_tjavt"]
 size = Vector3(1, 0.1, 1)
 
-[node name="Node3D" type="Node3D"]
+[node name="walkable_floor_tile" type="Node3D"]
 script = ExtResource("1_dh785")
 
 [node name="SM_Primitive_Plane_01" parent="." instance=ExtResource("1_3u7mk")]
