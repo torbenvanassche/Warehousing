@@ -1,34 +1,31 @@
 [gd_scene load_steps=2 format=3 uid="uid://dihub6auclug1"]
 
-[ext_resource type="PackedScene" uid="uid://hhhydo5nyk52" path="res://game_components/prefabs/warehouse_pieces/floor_tile.tscn" id="1_48ogl"]
+[ext_resource type="PackedScene" uid="uid://cg6odywxseyvv" path="res://game_components/prefabs/floor_tile.tscn" id="1_dvoeq"]
 
 [node name="PostOffice" type="Node3D"]
 
-[node name="SM_Primitive_Cube_022" parent="." instance=ExtResource("1_48ogl")]
+[node name="Node3D" parent="." instance=ExtResource("1_dvoeq")]
 
-[node name="SM_Primitive_Cube_023" parent="." instance=ExtResource("1_48ogl")]
+[node name="Node3D2" parent="." instance=ExtResource("1_dvoeq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
 
-[node name="SM_Primitive_Cube_024" parent="." instance=ExtResource("1_48ogl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+[node name="Node3D3" parent="." instance=ExtResource("1_dvoeq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
 
-[node name="SM_Primitive_Cube_025" parent="." instance=ExtResource("1_48ogl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -1)
+[node name="Node3D4" parent="." instance=ExtResource("1_dvoeq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 1)
 
-[node name="SM_Primitive_Cube_026" parent="." instance=ExtResource("1_48ogl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -1)
-
-[node name="SM_Primitive_Cube_027" parent="." instance=ExtResource("1_48ogl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -1)
-
-[node name="SM_Primitive_Cube_028" parent="." instance=ExtResource("1_48ogl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
-
-[node name="SM_Primitive_Cube_029" parent="." instance=ExtResource("1_48ogl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 1)
-
-[node name="SM_Primitive_Cube_030" parent="." instance=ExtResource("1_48ogl")]
+[node name="Node3D5" parent="." instance=ExtResource("1_dvoeq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 1)
 
-[node name="SM_Primitive_Cube_031" parent="." instance=ExtResource("1_48ogl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 1)
+[node name="Node3D6" parent="." instance=ExtResource("1_dvoeq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 1)
+
+[node name="Node3D7" parent="." instance=ExtResource("1_dvoeq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="Node3D8" parent="." instance=ExtResource("1_dvoeq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -1)
+
+[node name="Node3D9" parent="." instance=ExtResource("1_dvoeq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -1)
