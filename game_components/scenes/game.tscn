@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://r0h5w7xxcrjs"]
+[gd_scene load_steps=6 format=3 uid="uid://r0h5w7xxcrjs"]
 
 [ext_resource type="PackedScene" uid="uid://dihub6auclug1" path="res://game_components/scenes/post_office.tscn" id="1_2akv6"]
+[ext_resource type="PackedScene" uid="uid://cmhio6dr41661" path="res://game_mechanics/user_interface/windows/inventory.tscn" id="4_ap852"]
 [ext_resource type="PackedScene" uid="uid://bwrcc2gxqnosv" path="res://game_components/prefabs/Player.tscn" id="4_d5x6q"]
 [ext_resource type="PackedScene" uid="uid://cuqpjlp4i7pkb" path="res://game_components/prefabs/camera.tscn" id="5_gew37"]
 
@@ -26,3 +27,7 @@ light_energy = 0.5
 [node name="CameraRoot" parent="PlayerRoot" node_paths=PackedStringArray("target") instance=ExtResource("5_gew37")]
 transform = Transform3D(-0.65, 0, -9.81473e-08, 0, 0.65, 0, 9.81473e-08, 0, -0.65, 0, 0.160077, 0)
 target = NodePath("../Player")
+
+[node name="Window" parent="." instance=ExtResource("4_ap852")]
+id = "Inventory"
+override_size = Vector2(400, 450)

@@ -1,14 +1,14 @@
 class_name DraggableControl
 extends Control
 
-@export_enum("inventory", "puzzle", "other") var id: String = "other";
+@export var id: String = "";
 
 @onready var vp := get_viewport()
 @onready var top_bar: ColorRect = $VBoxContainer/topbar;
 @onready var close_button: Button = $VBoxContainer/topbar/HBoxContainer/Button;
 @onready var title: Label = $VBoxContainer/topbar/HBoxContainer/MarginContainer/Title;
-@onready var background: ColorRect = $VBoxContainer/ColorRect;
-@onready var background_color: Color = $VBoxContainer/ColorRect.color;
+@onready var background: ColorRect = $VBoxContainer/topbar;
+@onready var background_color: Color = $VBoxContainer/topbar.color;
 @onready var content_panel: Node = $VBoxContainer/content;
 
 @export_enum("display", "no_header", "none") var display_mode: String = "display"
@@ -40,6 +40,8 @@ func _ready():
 	
 	if override_size != Vector2.ZERO:
 		size = override_size;
+	
+	on_enable();
 	
 func on_enable(options: Dictionary = {}):
 	if !events_connected:
