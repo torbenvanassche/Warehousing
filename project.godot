@@ -23,6 +23,11 @@ UIManager="*res://game_mechanics/global_scripts/ui_manager.gd"
 ItemManager="*res://game_mechanics/global_scripts/item_manager.gd"
 PathFinder="*res://game_mechanics/player_elements/navigation/pathfinder.gd"
 
+[display]
+
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
 [filesystem]
 
 import/blender/enabled=false

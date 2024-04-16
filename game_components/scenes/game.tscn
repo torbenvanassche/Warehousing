@@ -30,4 +30,4 @@ target = NodePath("../Player")
 
 [node name="Window" parent="." instance=ExtResource("4_ap852")]
 id = "Inventory"
-override_size = Vector2(400, 450)
+override_size = Vector2(400, 300)

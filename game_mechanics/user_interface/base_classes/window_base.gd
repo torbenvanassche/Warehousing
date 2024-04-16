@@ -9,7 +9,7 @@ extends Control
 @onready var title: Label = $VBoxContainer/topbar/HBoxContainer/MarginContainer/Title;
 @onready var background: ColorRect = $VBoxContainer/topbar;
 @onready var background_color: Color = $VBoxContainer/topbar.color;
-@onready var content_panel: Node = $VBoxContainer/content;
+@onready var content_panel: Control = $VBoxContainer/content;
 
 @export_enum("display", "no_header", "none") var display_mode: String = "display"
 @export_enum("mouse", "center", "override") var position_options: String = "center";
@@ -40,6 +40,8 @@ func _ready():
 	
 	if override_size != Vector2.ZERO:
 		size = override_size;
+		top_bar.custom_minimum_size = Vector2(override_size.x, 50)
+		content_panel.custom_minimum_size = Vector2(override_size.x, override_size.y - top_bar.size.y)
 	
 	on_enable();
 	

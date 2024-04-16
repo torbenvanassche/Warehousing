@@ -22,8 +22,11 @@ func _ready():
 	
 func _control_size():
 	for e: Control in get_children():
-		e.custom_minimum_size.x = (size.x / columns) - get_theme_constant("h_separation");
-		e.custom_minimum_size.y = e.custom_minimum_size.x;
+		print(size)
+		var container_size_x = clamp((size.x / columns) - get_theme_constant("h_separation"), 50, 100);
+		print(container_size_x)
+		e.custom_minimum_size.x = container_size_x;
+		e.custom_minimum_size.y = container_size_x;
 
 func on_enable(options: Dictionary = {}):
 	if !item_ui_packed:

@@ -58,4 +58,4 @@ expand_icon = true
 [node name="content" type="ColorRect" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-color = Color(0.109804, 0.109804, 0.109804, 1)
+color = Color(0.666667, 0.666667, 0.666667, 1)
