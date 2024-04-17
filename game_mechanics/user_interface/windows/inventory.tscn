@@ -9,6 +9,9 @@ offset_right = -702.0
 offset_bottom = -248.0
 to_enable = NodePath("VBoxContainer/content/MarginContainer/Control/InventoryGrid")
 
+[node name="Title" parent="VBoxContainer/topbar/HBoxContainer/MarginContainer" index="0"]
+text = "Inventory"
+
 [node name="content" parent="VBoxContainer" index="1"]
 custom_minimum_size = Vector2(450, 200)
 size_flags_vertical = 1
