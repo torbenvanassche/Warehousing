@@ -15,5 +15,5 @@ func _ready():
 
 func execute(_camera = null, _event = null, _pos = Vector3.ZERO, _normal = Vector3.ZERO, _shape_idx = -1):
 	if !require_adjacent || Manager.player.is_near(self, 1.5):
-		if _event.is_action_pressed("mouse_left") && interaction:
+		if _event.is_action_pressed("primary_click") && interaction:
 			interaction.execute({"target": self});
