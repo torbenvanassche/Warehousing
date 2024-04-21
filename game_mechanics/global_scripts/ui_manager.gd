@@ -1,12 +1,20 @@
 class_name UserInterface
 extends Node
 
-@export var window_data: Dictionary = {};
+var window_data: Dictionary = {};
 var scene_history: Array[Node] = []
 
 func _ready():
 	for c in get_children():
 		c.visible = false;
+		
+func add_window(name: String, control: Control):
+	if name == "":
+		printerr("There is no name defined for " + control.name)
+	if(window_data.has(name)):
+		printerr(name + " already exists in the ui manager.")
+		return;
+	window_data[name] = control;
 
 func _unhandled_input(event):
 	if event.is_action_pressed("open_inventory") && !get_tree().paused:
@@ -30,7 +38,7 @@ func get_subwindow(s: String) -> Node:
 			window_data[s] = get_node_or_null(window_data[s]);
 		return window_data[s];
 	else: 
-		printerr("The provided key does not have an associated window.")
+		printerr("The provided key: " + s +  " does not have an associated window.")
 		return null;
 
 func enable_ui(to_enable: Node, add_to_undo_stack: bool = true, options: Dictionary = {}):

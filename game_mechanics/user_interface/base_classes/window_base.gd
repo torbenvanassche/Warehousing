@@ -35,6 +35,8 @@ func _ready():
 	change_title.connect(_change_title)
 	events_connected = true;
 	
+	UIManager.add_window(id, self)
+	
 	if to_enable && "window" in to_enable:
 		to_enable.window = self;
 	
@@ -42,8 +44,6 @@ func _ready():
 		size = override_size;
 		top_bar.custom_minimum_size = Vector2(override_size.x, 50)
 		content_panel.custom_minimum_size = Vector2(override_size.x, override_size.y - top_bar.size.y)
-	
-	on_enable();
 	
 func on_enable(options: Dictionary = {}):
 	if !events_connected:

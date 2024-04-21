@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://r0h5w7xxcrjs"]
+[gd_scene load_steps=8 format=3 uid="uid://r0h5w7xxcrjs"]
 
 [ext_resource type="PackedScene" uid="uid://dihub6auclug1" path="res://game_components/scenes/post_office.tscn" id="1_2akv6"]
 [ext_resource type="PackedScene" uid="uid://cmhio6dr41661" path="res://game_mechanics/user_interface/windows/inventory.tscn" id="4_ap852"]
 [ext_resource type="PackedScene" uid="uid://bwrcc2gxqnosv" path="res://game_components/prefabs/Player.tscn" id="4_d5x6q"]
 [ext_resource type="PackedScene" uid="uid://cuqpjlp4i7pkb" path="res://game_components/prefabs/camera.tscn" id="5_gew37"]
 [ext_resource type="PackedScene" uid="uid://dkn4nxkpwita" path="res://game_components/prefabs/packing_table.tscn" id="5_njmnk"]
+[ext_resource type="PackedScene" uid="uid://ccrqwbtxe7wa4" path="res://game_mechanics/user_interface/windows/box_fitting.tscn" id="6_vpj32"]
 
 [sub_resource type="Environment" id="Environment_jjkjc"]
 tonemap_mode = 1
@@ -29,9 +30,15 @@ light_energy = 0.5
 transform = Transform3D(-0.65, 0, -9.81473e-08, 0, 0.65, 0, 9.81473e-08, 0, -0.65, 0, 0.160077, 0)
 target = NodePath("../Player")
 
-[node name="Window" parent="." instance=ExtResource("4_ap852")]
-id = "Inventory"
-override_size = Vector2(400, 300)
-
 [node name="Node3D" parent="." instance=ExtResource("5_njmnk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+
+[node name="UI" type="Node" parent="."]
+
+[node name="Inventory" parent="UI" instance=ExtResource("4_ap852")]
+visible = false
+id = "INVENTORY"
+override_size = Vector2(400, 300)
+
+[node name="Puzzle" parent="UI" instance=ExtResource("6_vpj32")]
+id = "PUZZLE"

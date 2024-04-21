@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://ccrqwbtxe7wa4"]
+
+[ext_resource type="PackedScene" uid="uid://dny1dqcanlco0" path="res://game_mechanics/user_interface/base_scenes/base_window.tscn" id="1_v7sw0"]
+[ext_resource type="Script" path="res://game_mechanics/puzzles/fit_in_box/box_puzzle.gd" id="2_edvg4"]
+[ext_resource type="Script" path="res://game_mechanics/user_interface/window_components/scripts/item_slot_ui_puzzle.gd" id="3_1vkwa"]
+
+[node name="Window" node_paths=PackedStringArray("to_enable") instance=ExtResource("1_v7sw0")]
+offset_right = -702.0
+offset_bottom = -248.0
+to_enable = NodePath("VBoxContainer/content/MarginContainer/Control/GridController")
+
+[node name="Title" parent="VBoxContainer/topbar/HBoxContainer/MarginContainer" index="0"]
+text = "Inventory"
+
+[node name="content" parent="VBoxContainer" index="1"]
+custom_minimum_size = Vector2(450, 200)
+size_flags_vertical = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/content" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Control" type="HFlowContainer" parent="VBoxContainer/content/MarginContainer" index="0"]
+layout_mode = 2
+
+[node name="GridController" type="GridContainer" parent="VBoxContainer/content/MarginContainer/Control" index="0" node_paths=PackedStringArray("visual_element")]
+layout_mode = 2
+columns = 4
+script = ExtResource("2_edvg4")
+item_slot_script = ExtResource("3_1vkwa")
+visual_element = NodePath(".")

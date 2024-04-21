@@ -6,8 +6,6 @@ extends Control
 var item_ui_packed: PackedScene = preload("res://game_mechanics/inventory/user_interface/slot_ui.tscn");  
 var window: DraggableControl;
 
-@onready var close_box_button: Button = $VBoxContainer/Button;
-
 signal item_added(id: String);
 signal item_removed(id: String);
 
@@ -38,11 +36,6 @@ func on_enable(dict: Dictionary = {}):
 		if i % visual_element.columns == visual_element.columns - 1:
 			container.inventory_2d.append(curr_arr.duplicate());
 			curr_arr.clear();
-			
-func assign_to_player():
-	Manager.player.carryable.current = container;
-	clear_on_open = true;
-	window.close_requested.emit();
 	
 func _ready():
 	if !visual_element:
@@ -51,7 +44,6 @@ func _ready():
 	
 func _deferred_ready():
 	window.close_requested.connect(hide)
-	close_box_button.pressed.connect(assign_to_player)
 	
 func can_add(btn: ItemSlotUI, item: Dictionary) -> Array:
 	item = item.duplicate();
