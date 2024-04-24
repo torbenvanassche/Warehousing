@@ -1,5 +1,41 @@
-[gd_scene load_steps=2 format=3 uid="uid://cab8b0fs7luja"]
+[gd_scene load_steps=3 format=3 uid="uid://cab8b0fs7luja"]
 
 [ext_resource type="PackedScene" uid="uid://dny1dqcanlco0" path="res://game_mechanics/user_interface/base_scenes/base_window.tscn" id="1_v7d3o"]
+[ext_resource type="Script" path="res://game_mechanics/user_interface/scripts/pause_menu.gd" id="2_emtrc"]
 
-[node name="Window" instance=ExtResource("1_v7d3o")]
+[node name="Window" node_paths=PackedStringArray("to_enable") instance=ExtResource("1_v7d3o")]
+process_mode = 2
+id = "PAUSE"
+display_mode = "none"
+to_enable = NodePath("VBoxContainer/content/VBoxContainer")
+
+[node name="content" parent="VBoxContainer" index="1"]
+color = Color(0.666667, 0.666667, 0.666667, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/content" index="0"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -33.0
+offset_right = 100.0
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+script = ExtResource("2_emtrc")
+
+[node name="resume" type="Button" parent="VBoxContainer/content/VBoxContainer" index="0"]
+layout_mode = 2
+text = "RESUME"
+
+[node name="settings" type="Button" parent="VBoxContainer/content/VBoxContainer" index="1"]
+layout_mode = 2
+text = "SETTINGS"
+
+[node name="quit" type="Button" parent="VBoxContainer/content/VBoxContainer" index="2"]
+layout_mode = 2
+text = "QUIT"

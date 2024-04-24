@@ -7,9 +7,8 @@ extends Control
 @onready var top_bar: ColorRect = $VBoxContainer/topbar;
 @onready var close_button: Button = $VBoxContainer/topbar/HBoxContainer/Button;
 @onready var title: Label = $VBoxContainer/topbar/HBoxContainer/MarginContainer/Title;
-@onready var background: ColorRect = $VBoxContainer/topbar;
-@onready var background_color: Color = $VBoxContainer/topbar.color;
-@onready var content_panel: Control = $VBoxContainer/content;
+@onready var content_panel: ColorRect = $VBoxContainer/content;
+@onready var background_color: Color = $VBoxContainer/content.color;
 
 @export_enum("display", "no_header", "none") var display_mode: String = "display"
 @export_enum("mouse", "center", "override") var position_options: String = "center";
@@ -41,7 +40,7 @@ func _ready():
 		to_enable.window = self;
 	
 	if override_size != Vector2.ZERO:
-		size = override_size;
+		self.set_deferred("size", override_size)
 		top_bar.custom_minimum_size = Vector2(override_size.x, 50)
 		content_panel.custom_minimum_size = Vector2(override_size.x, override_size.y - top_bar.size.y)
 	
@@ -56,15 +55,15 @@ func on_enable(options: Dictionary = {}):
 	match display_mode:
 		"display":
 			top_bar.visible = true;
-			background.color = background_color;
+			content_panel.color = background_color;
 			pass
 		"no_header":
 			top_bar.visible = false;
-			background.color = background_color;
+			content_panel.color = background_color;
 			pass
 		"none":
 			top_bar.visible = false;
-			background.color = Color.TRANSPARENT;
+			content_panel.color = Color.TRANSPARENT;
 			pass
 	
 	match position_options:

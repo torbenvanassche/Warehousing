@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dny1dqcanlco0"]
 
 [ext_resource type="Script" path="res://game_mechanics/user_interface/base_classes/window_base.gd" id="1_6jx1r"]
-[ext_resource type="Texture2D" uid="uid://bcnp6hs2ifpp3" path="res://imported_assets/2d_icons/cross.png" id="3_sno4b"]
+[ext_resource type="Texture2D" uid="uid://bcnp6hs2ifpp3" path="res://imported_assets/ui_icons/cross.png" id="3_sno4b"]
 
 [node name="Window" type="Control"]
 layout_mode = 3

@@ -7,10 +7,11 @@
 [node name="Window" node_paths=PackedStringArray("to_enable") instance=ExtResource("1_v7sw0")]
 offset_right = -702.0
 offset_bottom = -248.0
+id = "BOX_FITTING"
 to_enable = NodePath("VBoxContainer/content/MarginContainer/Control/GridController")
 
 [node name="Title" parent="VBoxContainer/topbar/HBoxContainer/MarginContainer" index="0"]
-text = "Inventory"
+text = "Puzzle"
 
 [node name="content" parent="VBoxContainer" index="1"]
 custom_minimum_size = Vector2(450, 200)

@@ -20,7 +20,7 @@ func get_by_property(prop: String, value: Variant, dict: Dictionary = _items) ->
 	return a_items;
 
 func get_scene(item: Dictionary) -> PackedScene:
-	var path = "res://resources/items/scenes/" + item.scene_path
+	var path = "res://imported_assets/item_data/scenes/" + item.scene_path
 	if ResourceLoader.exists(path):
 		return load(path)
 	return null
@@ -29,10 +29,12 @@ func get_sprite(item: Dictionary) -> Texture:
 	if item.has("sprite"):
 		return item.sprite;
 	else:
-		var path = "res://resources/items/sprites/" + item.sprite_path + ".png"
+		var path = "res://imported_assets/item_data/sprites/" + item.sprite_path + ".png"
 		if ResourceLoader.exists(path):
 			item.sprite = load(path);
 			return item.sprite;
+		else:
+			printerr("Could not find sprite for " + item.name)
 		return null
 	
 func assign_layout(source: Dictionary, destination: Dictionary) -> void:

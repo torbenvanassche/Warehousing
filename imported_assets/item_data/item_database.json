@@ -6,8 +6,8 @@
         "available": true,
         "stack_size": 10,
         "random_weight": 5,
-        "sprite_path": "growable/wheat",
-        "scene_path": "growable/SM_Prop_Plant_Wheat_03.glb",
+        "sprite_path": "wheat",
+        "scene_path": "SM_Prop_Plant_Wheat_03.glb",
         "grow_time": 5,
         "layout": {
             "data": "1111",
@@ -21,8 +21,8 @@
         "available": true,
         "stack_size": 10,
         "random_weight": 1,
-        "sprite_path": "other/flour",
-        "scene_path": "growable/SM_Prop_Plant_Wheat_03.glb",
+        "sprite_path": "flour",
+        "scene_path": "SM_Prop_Plant_Wheat_03.glb",
         "process": "GRIND",
         "processing_time": 4
     },
@@ -33,8 +33,8 @@
         "available": true,
         "stack_size": 10,
         "random_weight": 5,
-        "sprite_path": "ores/iron_ore",
-        "scene_path": "ores/ore"
+        "sprite_path": "iron_ore",
+        "scene_path": "ore"
     },
     "gold_raw": {
         "name": "Raw Gold",
@@ -43,8 +43,8 @@
         "available": true,
         "stack_size": 10,
         "random_weight": 1,
-        "sprite_path": "ores/gold_ore",
-        "scene_path": "ores/ore"
+        "sprite_path": "gold_ore",
+        "scene_path": "ore"
     },
     "copper_raw": {
         "name": "Raw Copper",
@@ -53,7 +53,7 @@
         "available": true,
         "stack_size": 10,
         "random_weight": 2,
-        "sprite_path": "ores/copper_ore",
-        "scene_path": "ores/ore"
+        "sprite_path": "copper_ore",
+        "scene_path": "ore"
     }
 }

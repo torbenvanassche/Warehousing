@@ -13,9 +13,8 @@ var btn_grp: ButtonGroup = ButtonGroup.new()
 
 @export var show_locked: bool = false;
 
-#@onready var infoTitle: Label = $"../VBoxContainer/InfoView/MarginContainer/HBoxContainer/Label";
-#@onready var infoTexture: TextureRect = $"../VBoxContainer/InfoView/MarginContainer/HBoxContainer/TextureRect";
-#@onready var infoDetails: Label = $"../VBoxContainer/InfoView/TextMargin/Label";
+@onready var infoTitle: Label = $"../MarginContainer/VBoxContainer/Title";
+@onready var infoDetails: Label = $"../MarginContainer/VBoxContainer/Description";
 
 func _ready():
 	resized.connect(_control_size)
@@ -26,7 +25,7 @@ func _control_size():
 		e.custom_minimum_size.x = container_size_x;
 		e.custom_minimum_size.y = container_size_x;
 
-func on_enable(options: Dictionary = {}):
+func on_enable(_options: Dictionary = {}):
 	if !item_ui_packed:
 		printerr("the item's UI is undefined")
 		return;
@@ -54,8 +53,8 @@ func add(dict: ItemSlot):
 	add_child(item_ui);
 	elements.append(item_ui);
 	
-	#item_ui.mouse_entered.connect(set_info_content.bind(item_ui))
-	#item_ui.mouse_exited.connect(set_info_content)
+	item_ui.mouse_entered.connect(set_info_content.bind(item_ui))
+	item_ui.mouse_exited.connect(set_info_content)
 	item_ui.button_up.connect(_set_selected.bind(item_ui))
 	item_ui.on_drag_end.connect(func(_drag_end_slot): selected_slot = null);
 	item_ui.button_group = btn_grp;
@@ -66,18 +65,16 @@ func add(dict: ItemSlot):
 		item_ui.visible = dict.is_available;
 	item_ui.set_reference(dict);
 	
-#func set_info_content(slot: ItemSlotUI = null):
-	#if selected_slot:
-		#slot = selected_slot;
-		#
-	#if slot && slot.slot_data && slot.slot_data.item != {}:
-		#infoTitle.text = slot.slot_data.item.name;
-		#infoDetails.text = slot.slot_data.item.description;
-		#infoTexture.texture = slot.slot_data.item.sprite;
-	#else:
-		#infoTitle.text = "";
-		#infoDetails.text = "";
-		#infoTexture.texture = null;
+func set_info_content(slot: ItemSlotUI = null):
+	if selected_slot:
+		slot = selected_slot;
+		
+	if slot && slot.slot_data && slot.slot_data.item != {}:
+		infoTitle.text = slot.slot_data.item.name;
+		infoDetails.text = slot.slot_data.item.description;
+	else:
+		infoTitle.text = "";
+		infoDetails.text = "";
 	
 func _set_selected(slot: ItemSlotUI):
 	if selected_slot != slot && selected_slot:

@@ -5,16 +5,17 @@ var window_data: Dictionary = {};
 var scene_history: Array[Node] = []
 
 func _ready():
+	process_mode = Node.PROCESS_MODE_ALWAYS;
 	for c in get_children():
 		c.visible = false;
 		
-func add_window(name: String, control: Control):
-	if name == "":
+func add_window(n: String, control: Control):
+	if n == "":
 		printerr("There is no name defined for " + control.name)
-	if(window_data.has(name)):
-		printerr(name + " already exists in the ui manager.")
+	if(window_data.has(n)):
+		printerr(n + " already exists in the ui manager.")
 		return;
-	window_data[name] = control;
+	window_data[n] = control;
 
 func _unhandled_input(event):
 	if event.is_action_pressed("open_inventory") && !get_tree().paused:
@@ -24,10 +25,15 @@ func _unhandled_input(event):
 		enable_ui(get_subwindow("PUZZLE"))
 		
 	if event.is_action_pressed("cancel") && is_ui_closed():
-		get_viewport().set_input_as_handled()
-		Manager.pause(!get_tree().paused)
-		if get_tree().paused:
-			enable_ui(get_subwindow("PAUSE"), true)
+		toggle_pause();
+		
+func toggle_pause():
+	get_viewport().set_input_as_handled()
+	Manager.pause(!get_tree().paused)
+	if get_tree().paused:
+		enable_ui(get_subwindow("PAUSE"), true)
+	else:
+		disable_ui(get_subwindow("PAUSE"), false)
 
 func is_ui_closed(exceptions: Array = [get_subwindow("PAUSE")]):
 	return get_children().all(func(x): return !x.visible || exceptions.has(x));

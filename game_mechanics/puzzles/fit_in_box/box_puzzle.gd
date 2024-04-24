@@ -1,5 +1,5 @@
 class_name FittingPuzzle
-extends Control
+extends GridContainer
 
 @export var item_slot_script: Script 
 @onready var container: BoxData = BoxData.new();
@@ -12,14 +12,14 @@ signal item_removed(id: String);
 @export var visual_element: Control = self
 var clear_on_open: bool = true;
 
-func on_enable(dict: Dictionary = {}):
+func on_enable(_dict: Dictionary = {}):
 	if clear_on_open:
 		#clear_on_open = false;
 		container.clear();
 		for child in visual_element.get_children():
 			child.queue_free();
 	
-	visual_element.columns = Manager.player.carryable.size;
+	visual_element.columns = Manager.player.carryable.size.y;
 	var curr_arr: Array = []
 	
 	for i in range(Manager.player.carryable.size.x * Manager.player.carryable.size.y):
@@ -41,9 +41,17 @@ func _ready():
 	if !visual_element:
 		visual_element = self;
 	_deferred_ready.call_deferred();
+	resized.connect(_control_size)
+	
+func _control_size():
+	for e: Control in get_children():
+		var container_size_x = clamp((size.x / columns) - get_theme_constant("h_separation"), 50, 100);
+		e.custom_minimum_size.x = container_size_x;
+		e.custom_minimum_size.y = container_size_x;
 	
 func _deferred_ready():
 	window.close_requested.connect(hide)
+	on_enable()
 	
 func can_add(btn: ItemSlotUI, item: Dictionary) -> Array:
 	item = item.duplicate();
