@@ -11,6 +11,9 @@ func get_item(id: String):
 	printerr(id + " not found in the item database.")
 	return null;
 	
+func get_items():
+	return _items;
+	
 func get_by_property(prop: String, value: Variant, dict: Dictionary = _items) -> Dictionary:
 	var a_items: Dictionary = {};
 	for entry in dict.keys():

@@ -21,9 +21,6 @@ func _unhandled_input(event):
 	if event.is_action_pressed("open_inventory") && !get_tree().paused:
 		enable_ui(get_subwindow("INVENTORY"))
 		
-	if event.is_action_pressed("open_puzzle") && !get_tree().paused:
-		enable_ui(get_subwindow("PUZZLE"))
-		
 	if event.is_action_pressed("cancel") && is_ui_closed():
 		toggle_pause();
 		
@@ -48,8 +45,8 @@ func get_subwindow(s: String) -> Node:
 		return null;
 
 func enable_ui(to_enable: Node, add_to_undo_stack: bool = true, options: Dictionary = {}):
-	if options.has("hide"):
-		options.hide.visible = false;
+	if options.has("hide") && options.hide is bool:
+		options.hide.visible = options.hide;
 
 	if to_enable:
 		if to_enable.has_method("on_enable"):

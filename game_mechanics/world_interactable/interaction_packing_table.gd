@@ -1,4 +1,4 @@
 extends Interaction
 
 func execute(_dict: Dictionary = {}):
-	print("HI!")
+	UIManager.enable_ui(UIManager.get_subwindow("PUZZLE"))
