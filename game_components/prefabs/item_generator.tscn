@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://d3yaswkd55sxm"]
+
+[ext_resource type="Script" path="res://game_mechanics/global_scripts/item_generator.gd" id="1_dylii"]
+[ext_resource type="PackedScene" uid="uid://cmhbojmr36k2q" path="res://imported_assets/prototyping/SM_Primitive_Cube_02.glb" id="2_6ii8l"]
+[ext_resource type="Material" uid="uid://bflflhkp2jdb3" path="res://materials/prototyping/interactable.tres" id="3_vlxcv"]
+[ext_resource type="Script" path="res://game_mechanics/global_scripts/input_item_buffered_display.gd" id="4_ce1m3"]
+
+[node name="generator" type="Node3D"]
+script = ExtResource("1_dylii")
+
+[node name="SM_Primitive_Cube_02" parent="." instance=ExtResource("2_6ii8l")]
+transform = Transform3D(0.9, -6.45333e-05, 0.000413282, 0.0006455, 0.09, -0.000363488, -0.000413021, 3.63784e-05, 0.9, 0, 0, 0)
+
+[node name="SM_Primitive_Cube_01_001" parent="SM_Primitive_Cube_02" index="0"]
+transform = Transform3D(0.01, -4.54747e-13, -2.19907e-13, -3.04645e-12, -3.61615e-09, -0.01, -2.27374e-12, 0.01, -3.5761e-09, 2.12008e-12, 0.5, -9.09495e-12)
+surface_material_override/0 = ExtResource("3_vlxcv")
+script = ExtResource("4_ce1m3")
+
+[editable path="SM_Primitive_Cube_02"]

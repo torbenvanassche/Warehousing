@@ -33,6 +33,9 @@ func add_slot(exceed_max: bool = false):
 		data.append(ItemSlot.new(true, identifier))
 	
 func add_item(item: Dictionary, amount: int = 1, create_slot_if_full: bool = false, empty_only: bool = false):
+	if item == {} || item == null:
+		return amount;
+	
 	var require_update: bool = false;
 	var remaining_amount: int = amount
 	var slots: Array[ItemSlot] = try_get_slots(item);

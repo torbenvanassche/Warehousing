@@ -6,6 +6,9 @@ static func load_json(file_path: String):
 		var parsed_result = JSON.parse_string(data_file.get_as_text())
 		
 		if parsed_result is Dictionary:
+			for item in parsed_result:
+				parsed_result[item].id = item;
+				pass
 			return parsed_result
 		else:
 			printerr("Error reading file.")

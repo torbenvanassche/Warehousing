@@ -31,8 +31,6 @@ func _ready():
 	
 	current_tile = find_location();
 	
-	inventory.add_item_by_id("wheat")
-	
 func set_speed(speed: float):
 	move_delay = speed;
 	animator.speed_scale = (1 / (move_delay + animation_delay));

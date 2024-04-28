@@ -16,6 +16,7 @@ func add_window(n: String, control: Control):
 		printerr(n + " already exists in the ui manager.")
 		return;
 	window_data[n] = control;
+	control.visible = false;
 
 func _unhandled_input(event):
 	if event.is_action_pressed("open_inventory") && !get_tree().paused:
