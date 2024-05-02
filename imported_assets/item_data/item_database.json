@@ -7,24 +7,13 @@
         "stack_size": 10,
         "random_weight": 5,
         "sprite_path": "wheat",
-        "scene_path": "SM_Prop_Plant_Wheat_03.glb",
+        "scene_path": "wheat",
         "grow_time": 5,
         "layout": {
             "data": "1111",
             "columns": 2
         },
         "yield": 1
-    },
-    "flour": {
-        "name": "Flour",
-        "description": "A bunch of flour, seems pretty basic.",
-        "available": true,
-        "stack_size": 10,
-        "random_weight": 1,
-        "sprite_path": "flour",
-        "scene_path": "SM_Prop_Plant_Wheat_03.glb",
-        "process": "GRIND",
-        "processing_time": 4
     },
     "iron_raw": {
         "name": "Raw Iron",
@@ -34,7 +23,11 @@
         "stack_size": 10,
         "random_weight": 5,
         "sprite_path": "iron_ore",
-        "scene_path": "ore"
+        "scene_path": "iron_ore",
+        "layout": {
+            "data": "11",
+            "columns": 2
+        }
     },
     "gold_raw": {
         "name": "Raw Gold",
@@ -44,7 +37,7 @@
         "stack_size": 10,
         "random_weight": 1,
         "sprite_path": "gold_ore",
-        "scene_path": "ore"
+        "scene_path": "gold_ore"
     },
     "copper_raw": {
         "name": "Raw Copper",
@@ -54,6 +47,6 @@
         "stack_size": 10,
         "random_weight": 2,
         "sprite_path": "copper_ore",
-        "scene_path": "ore"
+        "scene_path": "copper_ore"
     }
 }

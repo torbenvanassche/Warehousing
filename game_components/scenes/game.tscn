@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://r0h5w7xxcrjs"]
+[gd_scene load_steps=10 format=3 uid="uid://r0h5w7xxcrjs"]
 
 [ext_resource type="PackedScene" uid="uid://dihub6auclug1" path="res://game_components/scenes/post_office.tscn" id="1_2akv6"]
 [ext_resource type="PackedScene" uid="uid://cmhio6dr41661" path="res://game_mechanics/user_interface/windows/inventory.tscn" id="4_ap852"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dkn4nxkpwita" path="res://game_components/prefabs/packing_table.tscn" id="5_njmnk"]
 [ext_resource type="PackedScene" uid="uid://ccrqwbtxe7wa4" path="res://game_mechanics/user_interface/windows/box_fitting.tscn" id="6_vpj32"]
 [ext_resource type="PackedScene" uid="uid://cab8b0fs7luja" path="res://game_mechanics/user_interface/windows/paused.tscn" id="7_lkent"]
+[ext_resource type="PackedScene" uid="uid://d3yaswkd55sxm" path="res://game_components/prefabs/item_generator.tscn" id="8_7v7yb"]
 
 [sub_resource type="Environment" id="Environment_jjkjc"]
 tonemap_mode = 1
@@ -47,3 +48,6 @@ id = "PUZZLE"
 
 [node name="Pause" parent="UI" instance=ExtResource("7_lkent")]
 visible = false
+
+[node name="generator" parent="." instance=ExtResource("8_7v7yb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)

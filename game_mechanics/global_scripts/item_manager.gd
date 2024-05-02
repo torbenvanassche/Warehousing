@@ -23,15 +23,21 @@ func get_by_property(prop: String, value: Variant, dict: Dictionary = _items) ->
 	return a_items;
 
 func get_scene(item: Dictionary) -> PackedScene:
-	var path = "res://imported_assets/item_data/scenes/" + item.scene_path
+	var scene_name: String = item.scene_path;
+	if !scene_name.ends_with(".glb"):
+		scene_name += ".glb";
+	var path = "res://imported_assets/item_data/scenes/" + scene_name
 	if ResourceLoader.exists(path):
 		return load(path)
+	else:
+		printerr("Could not find mesh for " + item.name)
 	return null
 	
 func get_sprite(item: Dictionary) -> Texture:
 	if item.has("sprite"):
 		return item.sprite;
 	else:
+		var scene_name: String = item.scene_path;
 		var path = "res://imported_assets/item_data/sprites/" + item.sprite_path + ".png"
 		if ResourceLoader.exists(path):
 			item.sprite = load(path);
