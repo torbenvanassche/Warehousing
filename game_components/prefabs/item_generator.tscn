@@ -17,19 +17,21 @@ transform = Transform3D(0.01, -4.54747e-13, -2.19907e-13, -3.04645e-12, -3.61615
 surface_material_override/0 = ExtResource("3_vlxcv")
 script = ExtResource("4_ce1m3")
 
-[node name="Node3D" type="Node3D" parent="SM_Primitive_Cube_02/SM_Primitive_Cube_01_001" index="0"]
-transform = Transform3D(1, 1.02435e-09, 1.42609e-09, -1.74623e-10, -4.37103e-08, 1, 1.78011e-09, -1, -4.37722e-08, 25, 25, 3.8147e-06)
+[node name="spawner_parent" type="Node3D" parent="."]
+transform = Transform3D(1, 0.000459202, -2.00724e-11, 0, -4.37114e-08, -1, -0.000459202, 1, -4.37114e-08, 0.224864, 0.1, -0.225085)
 
-[node name="wheat" parent="SM_Primitive_Cube_02/SM_Primitive_Cube_01_001/Node3D" instance=ExtResource("5_l27yy")]
-transform = Transform3D(1, 1.29319e-11, -8.73115e-11, -1.75999e-09, 1, 0, 0, 3.63798e-12, 1, -1.90735e-06, 174.272, 1.90735e-06)
+[node name="Node3D2" type="Node3D" parent="spawner_parent"]
 
-[node name="Node3D2" type="Node3D" parent="SM_Primitive_Cube_02/SM_Primitive_Cube_01_001" index="1"]
-transform = Transform3D(1, -2.91038e-10, -2.20286e-11, -2.03727e-10, 1, -7.27596e-12, 2.71245e-09, -9.31323e-10, 1, 25, -25, 0)
+[node name="Node3D3" type="Node3D" parent="spawner_parent"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.45, 0.449999, -1.49012e-08)
 
-[node name="Node3D3" type="Node3D" parent="SM_Primitive_Cube_02/SM_Primitive_Cube_01_001" index="2"]
-transform = Transform3D(1, -1.45519e-10, -7.48024e-12, -1.45519e-10, 1, -7.27596e-12, 1.31467e-09, 0, 1, -25, 25, 0)
+[node name="Node3D4" type="Node3D" parent="spawner_parent"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.45, -6.25849e-07, 0)
 
-[node name="Node3D4" type="Node3D" parent="SM_Primitive_Cube_02/SM_Primitive_Cube_01_001" index="3"]
-transform = Transform3D(1, -3.20142e-10, -2.2025e-11, -2.03727e-10, 1, -1.09139e-11, 3.644e-09, -1.39698e-09, 1, -25, -25, 0)
+[node name="Node3D" type="Node3D" parent="spawner_parent"]
+transform = Transform3D(1, -0.000717222, 2.99769e-09, 2.88972e-07, 0.00040697, 1, -0.000717222, -1, 0.00040697, -7.06911e-05, 0.450085, -1.49012e-08)
+
+[node name="wheat" parent="spawner_parent/Node3D" instance=ExtResource("5_l27yy")]
+transform = Transform3D(1, 1.29319e-11, -8.73115e-11, -1.75999e-09, 1, 0, 0, 3.63798e-12, 1, 0, 0, 0)
 
 [editable path="SM_Primitive_Cube_02"]

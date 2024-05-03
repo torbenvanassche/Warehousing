@@ -18,7 +18,6 @@ func _on_signal(item: Dictionary):
 	if spawned_item_buffer.add_item(item, 1, false, true) == 0:
 		var rnd_location: Node3D = handle_random_location();
 		var instance: Node3D = ItemManager.get_scene(item).instantiate();
-		instance.scale *= 10;
 		rnd_location.add_child(instance)
 		pass
 		
