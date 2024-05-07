@@ -1,15 +1,14 @@
 extends Node
 
-@onready var spawner: ItemSpawner = $"./../../";
-var max_item_buffer: int = 1;
+@onready var spawner: ItemSpawner = $"./../";
 var spawned_item_buffer: Inventory
 var spawn_locations: Array[Node3D] = [];
 
 func _ready():
+	var max_item_buffer = get_child_count();
 	spawned_item_buffer = Inventory.new(max_item_buffer, max_item_buffer, "Input buffer");
 	spawner.item_generated.connect(_on_signal)
 	spawn_locations.append_array(get_children())
-	max_item_buffer = get_child_count();
 	
 	if spawn_locations.size() == 0:
 		printerr(self.name + " has no children, no elements can be spawned on this.")
