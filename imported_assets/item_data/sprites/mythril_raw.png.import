@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://djpsiiqt1icmb"
-path="res://.godot/imported/gold_ore.png-55c0880e8ac0c152278ee6c2e8e6ffbc.ctex"
+uid="uid://7reph371okjv"
+path="res://.godot/imported/mythril_raw.png-05f0706c71223e10dd06ea16bb516d3a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://imported_assets/item_data/sprites/gold_ore.png"
-dest_files=["res://.godot/imported/gold_ore.png-55c0880e8ac0c152278ee6c2e8e6ffbc.ctex"]
+source_file="res://imported_assets/item_data/sprites/mythril_raw.png"
+dest_files=["res://.godot/imported/mythril_raw.png-05f0706c71223e10dd06ea16bb516d3a.ctex"]
 
 [params]
 

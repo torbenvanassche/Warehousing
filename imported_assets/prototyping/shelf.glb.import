@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bnqt4i4pklxhi"
-path="res://.godot/imported/iron_ore.glb-6f16f4cdffaa229dc63c038d3bf31eec.scn"
+uid="uid://boabiwcbq7wbm"
+path="res://.godot/imported/shelf.glb-0bc9643327b8bb8abb3e7690d9c68487.scn"
 
 [deps]
 
-source_file="res://imported_assets/item_data/scenes/iron_ore.glb"
-dest_files=["res://.godot/imported/iron_ore.glb-6f16f4cdffaa229dc63c038d3bf31eec.scn"]
+source_file="res://imported_assets/prototyping/shelf.glb"
+dest_files=["res://.godot/imported/shelf.glb-0bc9643327b8bb8abb3e7690d9c68487.scn"]
 
 [params]
 
@@ -29,6 +29,13 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 import_script/path=""
-_subresources={}
+_subresources={
+"materials": {
+"placeholder": {
+"use_external/enabled": true,
+"use_external/path": "res://materials/prototyping/interactable.tres"
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1

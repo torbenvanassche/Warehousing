@@ -1,34 +1,29 @@
-[gd_scene load_steps=5 format=3 uid="uid://d3yaswkd55sxm"]
+[gd_scene load_steps=4 format=3 uid="uid://d3yaswkd55sxm"]
 
 [ext_resource type="Script" path="res://game_mechanics/global_scripts/item_generator.gd" id="1_dylii"]
-[ext_resource type="PackedScene" uid="uid://cmhbojmr36k2q" path="res://imported_assets/prototyping/SM_Primitive_Cube_02.glb" id="2_6ii8l"]
-[ext_resource type="Material" uid="uid://bflflhkp2jdb3" path="res://materials/prototyping/interactable.tres" id="3_vlxcv"]
+[ext_resource type="PackedScene" uid="uid://boabiwcbq7wbm" path="res://imported_assets/prototyping/shelf.glb" id="2_u4pw7"]
 [ext_resource type="Script" path="res://game_mechanics/global_scripts/input_item_buffered_display.gd" id="4_ce1m3"]
 
 [node name="generator" type="Node3D"]
 script = ExtResource("1_dylii")
 
-[node name="SM_Primitive_Cube_02" parent="." instance=ExtResource("2_6ii8l")]
-transform = Transform3D(0.9, -6.45333e-05, 0.000413282, 0.0006455, 0.09, -0.000363488, -0.000413021, 3.63784e-05, 0.9, 0, 0, 0)
-
-[node name="SM_Primitive_Cube_01_001" parent="SM_Primitive_Cube_02" index="0"]
-transform = Transform3D(0.01, -4.54747e-13, -2.19907e-13, -3.04645e-12, -3.61615e-09, -0.01, -2.27374e-12, 0.01, -3.5761e-09, 2.12008e-12, 0.5, -9.09495e-12)
-surface_material_override/0 = ExtResource("3_vlxcv")
-
-[node name="spawner_parent" type="Node3D" parent="."]
-transform = Transform3D(1, 0.000459202, -2.00724e-11, 0, -4.37114e-08, -1, -0.000459202, 1, -4.37114e-08, 0.224864, 0.1, -0.225085)
+[node name="shelf" parent="." instance=ExtResource("2_u4pw7")]
 script = ExtResource("4_ce1m3")
 
-[node name="Node3D2" type="Node3D" parent="spawner_parent"]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+[node name="position1" type="Node3D" parent="shelf"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.136027, 0.215, 0)
 
-[node name="Node3D3" type="Node3D" parent="spawner_parent"]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.45, 0.449999, -1.49012e-08)
+[node name="position2" type="Node3D" parent="shelf"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.113187, 0.215344, 0)
 
-[node name="Node3D4" type="Node3D" parent="spawner_parent"]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.45, -6.25849e-07, 0)
+[node name="position3" type="Node3D" parent="shelf"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.136027, 0.465032, 0)
 
-[node name="Node3D" type="Node3D" parent="spawner_parent"]
-transform = Transform3D(0.1, -7.17222e-05, -3.13508e-12, 0, -4.37114e-09, 0.1, -7.17222e-05, -0.1, -4.37114e-09, -7.06911e-05, 0.450085, -1.49012e-08)
+[node name="position4" type="Node3D" parent="shelf"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.113187, 0.465376, 0)
 
-[editable path="SM_Primitive_Cube_02"]
+[node name="position5" type="Node3D" parent="shelf"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.136027, 0.715437, 0)
+
+[node name="position6" type="Node3D" parent="shelf"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.113187, 0.715781, 0)

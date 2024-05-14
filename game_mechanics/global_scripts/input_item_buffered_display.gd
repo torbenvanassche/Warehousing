@@ -1,6 +1,6 @@
 extends Node
 
-@onready var spawner: ItemSpawner = $"./../";
+@onready var spawner: ItemGenerator = $"./../";
 var spawned_item_buffer: Inventory
 var spawn_locations: Array[Node3D] = [];
 

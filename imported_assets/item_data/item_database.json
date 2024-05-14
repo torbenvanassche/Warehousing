@@ -6,8 +6,6 @@
         "available": true,
         "stack_size": 10,
         "random_weight": 5,
-        "sprite_path": "wheat",
-        "scene_path": "wheat",
         "grow_time": 5,
         "layout": {
             "data": "1111",
@@ -15,38 +13,16 @@
         },
         "yield": 1
     },
-    "iron_raw": {
-        "name": "Raw Iron",
-        "description": "A bunch of raw iron. Can be processed or sold as-is.",
+    "mythril_raw": {
+        "name": "Raw Mythril",
+        "description": "A metal with an interesting color. It appears to be infused with some kind of magic.",
         "location": "mine",
         "available": true,
         "stack_size": 10,
         "random_weight": 5,
-        "sprite_path": "iron_ore",
-        "scene_path": "iron_ore",
         "layout": {
             "data": "11",
             "columns": 2
         }
-    },
-    "gold_raw": {
-        "name": "Raw Gold",
-        "description": "A bunch of raw gold, it sparkles and looks quite rare.",
-        "location": "mine",
-        "available": true,
-        "stack_size": 10,
-        "random_weight": 1,
-        "sprite_path": "gold_ore",
-        "scene_path": "gold_ore"
-    },
-    "copper_raw": {
-        "name": "Raw Copper",
-        "description": "A clump of raw copper. It feels dense and useful.",
-        "location": "mine",
-        "available": true,
-        "stack_size": 10,
-        "random_weight": 2,
-        "sprite_path": "copper_ore",
-        "scene_path": "copper_ore"
     }
 }

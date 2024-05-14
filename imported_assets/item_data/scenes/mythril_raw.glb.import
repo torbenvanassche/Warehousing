@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cmqx74rr7dpvf"
-path="res://.godot/imported/copper_ore.glb-e16c7efba78f7a0e706b4560f4b88421.scn"
+uid="uid://bnqt4i4pklxhi"
+path="res://.godot/imported/mythril_raw.glb-838a68a55fa918bd3bbe06c82a08b7d6.scn"
 
 [deps]
 
-source_file="res://imported_assets/item_data/scenes/copper_ore.glb"
-dest_files=["res://.godot/imported/copper_ore.glb-e16c7efba78f7a0e706b4560f4b88421.scn"]
+source_file="res://imported_assets/item_data/scenes/mythril_raw.glb"
+dest_files=["res://.godot/imported/mythril_raw.glb-838a68a55fa918bd3bbe06c82a08b7d6.scn"]
 
 [params]
 

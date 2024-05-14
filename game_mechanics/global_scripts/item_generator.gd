@@ -1,4 +1,4 @@
-class_name ItemSpawner
+class_name ItemGenerator
 extends Node
 
 var items: Dictionary;
