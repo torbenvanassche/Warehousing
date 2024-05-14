@@ -9,6 +9,7 @@ script = ExtResource("1_dylii")
 
 [node name="shelf" parent="." instance=ExtResource("2_u4pw7")]
 script = ExtResource("4_ce1m3")
+random_rotation = true
 
 [node name="position1" type="Node3D" parent="shelf"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.136027, 0.215, 0)
