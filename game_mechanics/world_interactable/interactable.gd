@@ -1,11 +1,15 @@
+class_name Interactable;
 extends Node3D
 
 @export var interaction: Interaction;
-@export var require_adjacent: bool = false;
 @export var static_body: StaticBody3D = null;
-@onready var fallback: StaticBody3D = get_node_or_null("StaticBody3D");
+@onready var fallback: StaticBody3D = get_child(0).get_child(0) as StaticBody3D;
 
 func _ready():
+	if !interaction:
+		printerr("No interaction is defined!")
+		return;
+	
 	if !static_body:
 		static_body = fallback;
 		if !static_body:
@@ -14,6 +18,6 @@ func _ready():
 	static_body.input_event.connect(execute)
 
 func execute(_camera = null, _event = null, _pos = Vector3.ZERO, _normal = Vector3.ZERO, _shape_idx = -1):
-	if !require_adjacent || Manager.player.is_near(self, 1.5):
+	if !interaction.require_adjacent || Manager.player.is_near(self, 1.5):
 		if _event.is_action_pressed("primary_click") && interaction:
 			interaction.execute({"target": self});

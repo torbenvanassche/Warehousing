@@ -35,6 +35,11 @@ _subresources={
 "use_external/enabled": true,
 "use_external/path": "res://materials/synty_fantasy_kingdom.tres"
 }
+},
+"nodes": {
+"PATH:SM_Prop_GrainBag_01": {
+"generate/physics": true
+}
 }
 }
 gltf/naming_version=1

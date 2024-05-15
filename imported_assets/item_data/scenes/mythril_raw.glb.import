@@ -39,6 +39,12 @@ _subresources={
 "use_external/enabled": true,
 "use_external/path": "res://materials/synty_dungeon_realms.tres"
 }
+},
+"nodes": {
+"PATH:SM_Prop_Crystal_Rock_B_02": {
+"generate/physics": true,
+"primitive/size": Vector3(100, 100, 100)
+}
 }
 }
 gltf/naming_version=1

@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://d3yaswkd55sxm"]
+[gd_scene load_steps=5 format=3 uid="uid://d3yaswkd55sxm"]
 
 [ext_resource type="Script" path="res://game_mechanics/global_scripts/item_generator.gd" id="1_dylii"]
 [ext_resource type="PackedScene" uid="uid://boabiwcbq7wbm" path="res://imported_assets/prototyping/shelf.glb" id="2_u4pw7"]
 [ext_resource type="Script" path="res://game_mechanics/global_scripts/input_item_buffered_display.gd" id="4_ce1m3"]
+[ext_resource type="Resource" uid="uid://dufgq3w5tl2w" path="res://game_components/interactions/interaction_pickup.tres" id="4_l88co"]
 
 [node name="generator" type="Node3D"]
 script = ExtResource("1_dylii")
@@ -10,6 +11,7 @@ script = ExtResource("1_dylii")
 [node name="shelf" parent="." instance=ExtResource("2_u4pw7")]
 script = ExtResource("4_ce1m3")
 random_rotation = true
+item_interaction_script = ExtResource("4_l88co")
 
 [node name="position1" type="Node3D" parent="shelf"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.136027, 0.215, 0)

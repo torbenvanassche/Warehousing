@@ -1,0 +1,7 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://dufgq3w5tl2w"]
+
+[ext_resource type="Script" path="res://game_mechanics/world_interactable/interaction_pickup.gd" id="1_mgvpi"]
+
+[resource]
+script = ExtResource("1_mgvpi")
+require_adjacent = false
