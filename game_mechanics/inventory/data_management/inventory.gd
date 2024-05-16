@@ -77,7 +77,7 @@ func remove_item(item: Dictionary, amount: int = 1):
 		remaining_amount -= 1;
 		require_update = true;
 		if slots[0].item.count <= 0:
-			data[slots[0].slot_index].item = {}
+			data[slots[0].get_meta("slot_index")].item = {}
 			slots.erase(slots[0])
 			
 	if require_update:
@@ -92,6 +92,7 @@ func try_get_slots(dict: Dictionary) -> Array[ItemSlot]:
 	var slots: Array[ItemSlot] = []
 	for i in range(data.size()):
 		if data[i].has_space(dict.id):
+			data[i].set_meta("slot_index", i);
 			slots.append(data[i]);
 	return slots
 

@@ -26,9 +26,14 @@ func _on_signal(item: Dictionary):
 		interactable.interaction = item_interaction_script;
 		interactable.set_meta("item", item);
 		rnd_location.add_child(instance);
+		instance.tree_exiting.connect(_on_item_deleted.bind(instance))
 		
 		if random_rotation:
 			instance.rotate_y(deg_to_rad(randi_range(-180, 180)))
+			
+func _on_item_deleted(node: Node):
+	spawned_item_buffer.remove_item(node.get_meta("item"))
+	node.get_parent().remove_meta("taken");
 		
 #this code prevents taking locations that are already in use
 func handle_random_location():

@@ -2,4 +2,5 @@ class_name InteractionPickup
 extends Interaction
 
 func execute(_dict: Dictionary = {}):
-	print(_dict.target.get_meta("item").name)
+	Manager.player.inventory.add_item(_dict.target.get_meta("item"))
+	_dict.target.queue_free();

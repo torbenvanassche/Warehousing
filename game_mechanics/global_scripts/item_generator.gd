@@ -1,7 +1,6 @@
 class_name ItemGenerator
 extends Node
 
-var items: Dictionary;
 var timer: Timer = Timer.new();
 
 @export var spawn_delay: float = 1;
