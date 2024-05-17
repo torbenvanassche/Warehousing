@@ -20,12 +20,10 @@ func is_empty():
 	
 func reset():
 	item = {};
-func has_space(id: String, amount: int = 1) -> bool:
-	if !is_available:
-		return false;	
+func has_space(id: String, amount: int = 1, include_empty = true) -> bool:
 	if item == {}:
-		return true;
-	elif item.id != id:
+		return include_empty;
+	elif !is_available || item.id != id:
 		return false;
 		
 	return item.stack_size - item.count - amount > 0;

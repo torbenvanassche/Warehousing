@@ -67,12 +67,12 @@ func refresh_ui():
 func remove_item(item: Dictionary, amount: int = 1):
 	var require_update: bool = false;		
 	var remaining_amount: int = amount
-	var slots: Array[ItemSlot] = try_get_slots(item);
+	var slots: Array[ItemSlot] = try_get_slots(item, false);
 	
 	while remaining_amount > 0:
 		if slots.size() == 0:
 			break;
-			
+		
 		slots[0].item.count -= 1;
 		remaining_amount -= 1;
 		require_update = true;
@@ -88,10 +88,10 @@ func remove_item(item: Dictionary, amount: int = 1):
 func add_item_by_id(item: String, amount: int = 1, create_slot_if_full: bool = false):
 	add_item(ItemManager.get_item(item), amount, create_slot_if_full)
 	
-func try_get_slots(dict: Dictionary) -> Array[ItemSlot]:
+func try_get_slots(dict: Dictionary, include_empty: bool = true) -> Array[ItemSlot]:
 	var slots: Array[ItemSlot] = []
 	for i in range(data.size()):
-		if data[i].has_space(dict.id):
+		if data[i].has_space(dict.id, 1, include_empty):
 			data[i].set_meta("slot_index", i);
 			slots.append(data[i]);
 	return slots
