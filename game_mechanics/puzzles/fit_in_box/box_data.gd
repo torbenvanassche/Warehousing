@@ -22,28 +22,38 @@ func get_tile(btn_index: int, erase: bool = false):
 	return clicked_shape;	
 
 func intersect(item, chosen_position: Vector2i) -> Array:
-	var result = [];
-	for row_idx in item.size():
-		var row = item[row_idx]
-		for col_idx in row.size():
-			if row_idx+chosen_position.y >= inventory_2d.size() || col_idx+chosen_position.x >= row.size():
-				return [];
-			
-			var item_state: bool = row[col_idx]
-			if row_idx+chosen_position.x >= inventory_2d.size() || col_idx+chosen_position.y >= inventory_2d[row_idx+chosen_position.x].size():
-				return [];
-			elif inventory_2d[row_idx+chosen_position.y][col_idx+chosen_position.x] and item_state:
-				return [];
-			elif item_state:
-				result.append(Vector2i(row_idx+chosen_position.x, col_idx+chosen_position.y))
-	return result;
+	var item_height = item.size()
+	var item_width = item[0].size()
+	var grid_height = inventory_2d.size()
+	var grid_width = inventory_2d[0].size()
+
+	# Unpack the chosen position
+	var x = chosen_position.x
+	var y = chosen_position.y
+	
+	var positions = []
+
+	# Check if the item fits within the grid dimensions starting from (x, y)
+	if x + item_height > grid_height or y + item_width > grid_width:
+		return []
+
+	# Check each cell of the item
+	for i in range(item_height):
+		for j in range(item_width):
+			if item[i][j]:  # Only check cells that are True in the item
+				if inventory_2d[x + i][y + j]:  # Check if the corresponding cell in the grid is already occupied
+					return []
+				positions.append(Vector2(x + i, y + j))
+
+	# If all checks pass, the item can be placed
+	return positions
 	
 func add_item(item_data: Array):
 	item_list.append(item_data[0].key)
 	_items.append(item_data);
 	
 func set_tile(x:int, y: int, value: bool):
-	inventory_2d[x][y] = value;
+	inventory_2d[y][x] = value;
 	
 func clear():
 	inventory_2d.clear();

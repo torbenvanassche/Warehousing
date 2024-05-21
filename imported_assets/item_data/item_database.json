@@ -1,28 +1,28 @@
 {
-    "wheat": {
-        "name": "Wheat",
-        "description": "Raw wheat farmed in a field.",
-        "location": "farm",
-        "available": true,
-        "stack_size": 10,
-        "random_weight": 5,
-        "grow_time": 5,
-        "layout": {
-            "data": "1111",
-            "columns": 2
-        },
-        "yield": 1
-    },
-    "mythril_raw": {
-        "name": "Raw Mythril",
-        "description": "A metal with an interesting color. It appears to be infused with some kind of magic.",
-        "location": "mine",
-        "available": true,
-        "stack_size": 10,
-        "random_weight": 5,
-        "layout": {
-            "data": "11",
-            "columns": 2
-        }
-    }
+	"wheat": {
+		"name": "Wheat",
+		"description": "Raw wheat farmed in a field.",
+		"location": "farm",
+		"available": true,
+		"stack_size": 10,
+		"random_weight": 5,
+		"grow_time": 5,
+		"layout": {
+			"data": "1111",
+			"columns": 2
+		},
+		"yield": 1
+	},
+	"mythril_raw": {
+		"name": "Raw Mythril",
+		"description": "A metal with an interesting color. It appears to be infused with some kind of magic.",
+		"location": "mine",
+		"available": true,
+		"stack_size": 10,
+		"random_weight": 5,
+		"layout": {
+			"data": "11",
+			"columns": 2
+		}
+	}
 }

@@ -15,7 +15,8 @@ func _get_drag_data(_at_position):
 		return DragData.new(slot_data.item, "puzzle", slots)
 	
 func _can_drop_data(_at_position, data):
-	return data is DragData && self is ItemSlotUI && slot_data.is_available && puzzle_controller.can_add(self, data.item).size() != 0;
+	var is_drag_data = data is DragData && self is ItemSlotUI;
+	return is_drag_data && slot_data.is_available && puzzle_controller.can_add(self, data.item).size() != 0;
 	
 func _drop_data(_at_position, data):
 	puzzle_controller.add_item(self, data.item);
