@@ -12,7 +12,7 @@ func _get_drag_data(_at_position):
 		slot.as_blank();
 		
 	if slots.size() != 0:
-		return DragData.new(slot_data.item, "puzzle", slots)
+		return DragData.new(slot_data.item, "puzzle", shape, slots)
 	
 func _can_drop_data(_at_position, data):
 	var is_drag_data = data is DragData && self is ItemSlotUI;
@@ -20,7 +20,12 @@ func _can_drop_data(_at_position, data):
 	
 func _drop_data(_at_position, data):
 	puzzle_controller.add_item(self, data.item);
-	data.item_slots[0].slot_data.remove(1);
+	for slot in data.item_slots:
+		slot.slot_data.remove(1);
+			
+	for s in data.shape:
+		puzzle_controller.remove_item(s.x, s.y)
+	
 	on_drag_end.emit(self);
 	
 func _notification(what):

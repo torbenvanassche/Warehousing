@@ -6,7 +6,7 @@ signal on_drag_end(b: ItemSlotUI);
 func _get_drag_data(_at_position):
 	if slot_data.item != {}:
 		as_blank();
-		return DragData.new(slot_data.item, "inventory", [self]);
+		return DragData.new(slot_data.item, "inventory", [], [self]);
 	return null;
 	
 func _can_drop_data(_at_position, data):
