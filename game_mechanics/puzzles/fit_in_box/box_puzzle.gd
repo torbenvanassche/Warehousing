@@ -12,17 +12,17 @@ signal item_removed(id: String);
 @export var visual_element: Control = self
 var clear_on_open: bool = true;
 
-func on_enable(_dict: Dictionary = {}):
+func on_enable(carryable: Carryable = Carryable.new(), _dict: Dictionary = {}):
 	if clear_on_open:
 		#clear_on_open = false;
 		container.clear();
 		for child in visual_element.get_children():
 			child.queue_free();
 	
-	visual_element.columns = Manager.player.carryable.size.y;
+	visual_element.columns = carryable.size.y;
 	var curr_arr: Array = []
 	
-	for i in range(Manager.player.carryable.size.x * Manager.player.carryable.size.y):
+	for i in range(carryable.size.x * carryable.size.y):
 		var btn = item_ui_packed.instantiate() as ItemSlotUI;
 		btn.set_script(item_slot_script);
 		btn.puzzle_controller = self;

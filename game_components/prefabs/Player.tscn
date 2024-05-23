@@ -1,11 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://bwrcc2gxqnosv"]
+[gd_scene load_steps=9 format=3 uid="uid://bwrcc2gxqnosv"]
 
 [ext_resource type="Script" path="res://game_mechanics/player_elements/player.gd" id="1_spbeu"]
 [ext_resource type="PackedScene" uid="uid://cvt0d66ofytw1" path="res://imported_assets/characters/slime.glb" id="2_3wwn3"]
 [ext_resource type="Script" path="res://game_mechanics/player_elements/navigation/click_navigator.gd" id="3_lo4tn"]
 [ext_resource type="Script" path="res://game_mechanics/player_elements/navigation/wasd_navigator.gd" id="4_l0om5"]
 [ext_resource type="Script" path="res://game_mechanics/inventory/data_management/inventory.gd" id="5_4bm4r"]
-[ext_resource type="Script" path="res://game_mechanics/inventory/data_management/carry_data.gd" id="6_od28r"]
 
 [sub_resource type="Animation" id="Animation_5bd2n"]
 length = 0.001
@@ -64,13 +63,10 @@ script = ExtResource("4_l0om5")
 
 [node name="Inventory" type="Node" parent="."]
 script = ExtResource("5_4bm4r")
-unlocked_slots = 4
-max_slots = 16
+unlocked_slots = 1
+max_slots = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_3rkfw")
 }
-
-[node name="carryable" type="Node" parent="."]
-script = ExtResource("6_od28r")

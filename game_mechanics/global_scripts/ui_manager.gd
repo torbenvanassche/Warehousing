@@ -18,10 +18,7 @@ func add_window(n: String, control: Control):
 	window_data[n] = control;
 	control.visible = false;
 
-func _unhandled_input(event):
-	if event.is_action_pressed("open_inventory") && !get_tree().paused:
-		enable_ui(get_subwindow("INVENTORY"))
-		
+func _unhandled_input(event):		
 	if event.is_action_pressed("cancel") && is_ui_closed():
 		toggle_pause();
 		

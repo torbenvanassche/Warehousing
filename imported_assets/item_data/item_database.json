@@ -4,7 +4,7 @@
 		"description": "Raw wheat farmed in a field.",
 		"location": "farm",
 		"available": true,
-		"stack_size": 10,
+		"stack_size": 1,
 		"random_weight": 5,
 		"grow_time": 5,
 		"layout": {
@@ -18,7 +18,7 @@
 		"description": "A metal with an interesting color. It appears to be infused with some kind of magic.",
 		"location": "mine",
 		"available": true,
-		"stack_size": 10,
+		"stack_size": 1,
 		"random_weight": 5,
 		"layout": {
 			"data": "11",

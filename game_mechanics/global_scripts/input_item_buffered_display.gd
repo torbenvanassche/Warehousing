@@ -11,12 +11,12 @@ var spawn_locations: Array[Node] = [];
 func _ready():
 	spawn_locations = get_children().filter(func(x: Node3D): return !(x is MeshInstance3D));
 	spawned_item_buffer = Inventory.new(spawn_locations.size(), spawn_locations.size(), "Input buffer");
-	spawner.item_generated.connect(_on_signal)
+	spawner.item_generated.connect(_on_spawn)
 	
 	if spawn_locations.size() == 0:
 		printerr(self.name + " has no children, no elements can be spawned on this.")
 	
-func _on_signal(item: Dictionary):
+func _on_spawn(item: Dictionary):
 	if spawned_item_buffer.add_item(item, 1, false, true) == 0:
 		var rnd_location: Node3D = handle_random_location();
 		var instance: Node3D = ItemManager.get_scene(item).instantiate();
