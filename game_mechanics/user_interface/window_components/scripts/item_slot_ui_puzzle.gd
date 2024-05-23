@@ -22,10 +22,7 @@ func _drop_data(_at_position, data):
 	puzzle_controller.add_item(self, data.item);
 	for slot in data.item_slots:
 		slot.slot_data.remove(1);
-			
-	for s in data.shape:
-		puzzle_controller.remove_item(s.x, s.y)
-	
+	puzzle_controller.reset_tiles(data.item_slots[0])
 	on_drag_end.emit(self);
 	
 func _notification(what):

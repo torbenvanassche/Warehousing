@@ -76,9 +76,6 @@ func add_item(btn: ItemSlotUI, item: Dictionary) -> void:
 		container.add_item(item_connections);
 		item_added.emit(item.id)
 		
-func remove_item(x: int, y: int):
-	container.set_tile(x, y, false);
-		
 func get_shape(btn: ItemSlotUI, erase: bool = true):
 	return container.get_tile(visual_element.get_children().find(btn), erase)
 	
