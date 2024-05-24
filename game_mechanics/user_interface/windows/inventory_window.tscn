@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://cmhio6dr41661"]
 
-[ext_resource type="PackedScene" uid="uid://dny1dqcanlco0" path="res://game_mechanics/user_interface/base_scenes/base_window.tscn" id="1_ywwq0"]
-[ext_resource type="Script" path="res://game_mechanics/inventory/user_interface/scripts/inventory_ui.gd" id="2_58dv1"]
-[ext_resource type="Script" path="res://game_mechanics/user_interface/window_components/scripts/item_slot_ui_inventory.gd" id="3_65ep8"]
+[ext_resource type="PackedScene" uid="uid://dny1dqcanlco0" path="res://game_mechanics/user_interface/base_scenes/base_window.tscn" id="1_bxa7k"]
+[ext_resource type="Script" path="res://game_mechanics/inventory/user_interface/scripts/inventory_ui.gd" id="2_sqaob"]
+[ext_resource type="Script" path="res://game_mechanics/user_interface/window_components/scripts/item_slot_ui_inventory.gd" id="3_esj18"]
 
-[node name="Window" node_paths=PackedStringArray("to_enable") instance=ExtResource("1_ywwq0")]
+[node name="Window" node_paths=PackedStringArray("to_enable") instance=ExtResource("1_bxa7k")]
 offset_right = -702.0
 offset_bottom = -248.0
 to_enable = NodePath("VBoxContainer/content/MarginContainer/Control/InventoryGrid")
@@ -34,8 +34,8 @@ layout_mode = 2
 [node name="InventoryGrid" type="GridContainer" parent="VBoxContainer/content/MarginContainer/Control" index="0"]
 layout_mode = 2
 columns = 4
-script = ExtResource("2_58dv1")
-item_slot_script = ExtResource("3_65ep8")
+script = ExtResource("2_sqaob")
+item_slot_script = ExtResource("3_esj18")
 show_locked = true
 
 [node name="VSeparator" type="VSeparator" parent="VBoxContainer/content/MarginContainer/Control" index="1"]

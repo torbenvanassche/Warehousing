@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://c7yilcr2wlb5d"]
+
+[ext_resource type="Script" path="res://game_mechanics/user_interface/scripts/billboard_to_camera.gd" id="1_3yp8s"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_sjpud"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fvult"]
+resource_local_to_scene = true
+transparency = 1
+shading_mode = 0
+albedo_texture = SubResource("ViewportTexture_sjpud")
+
+[sub_resource type="QuadMesh" id="QuadMesh_waqkx"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_cm5cd"]
+font_size = 40
+
+[node name="SpeechBubble" type="Node3D"]
+script = ExtResource("1_3yp8s")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_fvult")
+mesh = SubResource("QuadMesh_waqkx")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+transparent_bg = true
+size = Vector2i(256, 256)
+
+[node name="Label" type="Label" parent="SubViewport"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -23.5
+offset_top = -11.5
+offset_right = 23.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+text = "SLIME"
+label_settings = SubResource("LabelSettings_cm5cd")
+horizontal_alignment = 1
+vertical_alignment = 1

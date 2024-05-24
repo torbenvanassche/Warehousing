@@ -9,7 +9,7 @@ extends Node3D
 var pitch_input: float = 0
 var twist_input: float = 0
 
-var mouse_position:Vector2
+var mouse_position:Vector2;
 
 func _ready():
 	%Camera3D.position.z = distance

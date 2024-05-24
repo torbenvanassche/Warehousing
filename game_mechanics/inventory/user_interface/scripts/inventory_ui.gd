@@ -8,16 +8,13 @@ var elements: Array[ItemSlotUI] = []
 
 var selected_slot: ItemSlotUI;
 var controller: Inventory;
-var window: DraggableControl;
 var btn_grp: ButtonGroup = ButtonGroup.new()
 
 @export var show_locked: bool = false;
 
-@onready var infoTitle: Label = $"../MarginContainer/VBoxContainer/Title";
-@onready var infoDetails: Label = $"../MarginContainer/VBoxContainer/Description";
-
 func _ready():
 	resized.connect(_control_size)
+	on_enable();
 	
 func _control_size():
 	for e: Control in get_children():
@@ -30,7 +27,6 @@ func on_enable(_options: Dictionary = {}):
 		printerr("the item's UI is undefined")
 		return;
 	set_controller(Manager.player.inventory);
-	window.change_title.emit("Inventory");
 	btn_grp.allow_unpress = true;
 
 func set_controller(con: Inventory):
@@ -47,14 +43,13 @@ func create_ui(data: Array[ItemSlot]):
 	for d in data:
 		add(d)
 
-func add(dict: ItemSlot):
+func add(dict: ItemSlot) -> ItemSlotUI:
 	var item_ui = item_ui_packed.instantiate() as ItemSlotUI;
 	item_ui.set_script(item_slot_script)
 	add_child(item_ui);
 	elements.append(item_ui);
+	item_ui.show_amount = false;
 	
-	item_ui.mouse_entered.connect(set_info_content.bind(item_ui))
-	item_ui.mouse_exited.connect(set_info_content)
 	item_ui.button_up.connect(_set_selected.bind(item_ui))
 	item_ui.on_drag_end.connect(func(_drag_end_slot): selected_slot = null);
 	item_ui.button_group = btn_grp;
@@ -64,17 +59,7 @@ func add(dict: ItemSlot):
 	else:
 		item_ui.visible = dict.is_available;
 	item_ui.set_reference(dict);
-	
-func set_info_content(slot: ItemSlotUI = null):
-	if selected_slot:
-		slot = selected_slot;
-		
-	if slot && slot.slot_data && slot.slot_data.item != {}:
-		infoTitle.text = slot.slot_data.item.name;
-		infoDetails.text = slot.slot_data.item.description;
-	else:
-		infoTitle.text = "";
-		infoDetails.text = "";
+	return item_ui
 	
 func _set_selected(slot: ItemSlotUI):
 	if selected_slot != slot && selected_slot:

@@ -3,7 +3,7 @@ extends Node3D
 @export var scenes: Array[Node]
 @export var initial_scene: Node
 @export var player: Player
-var camera: CameraController;
+var camera: Camera3D;
 
 signal scene_entered(scene: Node)
 signal scene_exited(scene: Node)	

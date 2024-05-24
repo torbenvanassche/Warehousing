@@ -8,6 +8,11 @@ var slot_data: ItemSlot;
 @export var default_color = Color(Color.WHITE)
 @export var dragging_color = Color(Color.WHITE, 0.3);
 
+@export var show_amount: bool = true:
+	set(value):
+		counter.visible = value;
+		show_amount = value;
+
 var is_setup_done: bool = false;
 
 func _ready():
@@ -15,11 +20,6 @@ func _ready():
 		textureRect = $MarginContainer/ItemSprite;
 		counter = $Count;
 		is_setup_done = true;
-
-@export var show_amount: bool = true:
-	set(value):
-		counter.visible = value;
-		show_amount = value;
 	
 func as_blank():
 	textureRect.modulate = dragging_color;

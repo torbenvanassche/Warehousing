@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://g8cyqkretffu"]
+
+[ext_resource type="Script" path="res://game_mechanics/inventory/user_interface/scripts/inventory_ui.gd" id="1_jc34r"]
+[ext_resource type="Script" path="res://game_mechanics/user_interface/window_components/scripts/item_slot_ui_inventory.gd" id="2_yluj1"]
+
+[node name="InventoryHud" type="Control"]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+grow_horizontal = 0
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+columns = 2
+script = ExtResource("1_jc34r")
+item_slot_script = ExtResource("2_yluj1")
