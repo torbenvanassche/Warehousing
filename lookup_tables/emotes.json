@@ -1,0 +1,122 @@
+[
+	{
+		"frame": 0,
+		"id": "EMPTY"
+	},
+	{
+		"frame": 1,
+		"id": "DOTS1"
+	},
+	{
+		"frame": 2,
+		"id": "DOTS2"
+	},
+	{
+		"frame": 3,
+		"id": "DOTS3"
+	},
+	{
+		"frame": 4,
+		"id": "HEARTBROKEN"
+	},
+	{
+		"frame": 5,
+		"id": "HEART"
+	},
+	{
+		"frame": 6,
+		"id": "HEARTS"
+	},
+	{
+		"frame": 7,
+		"id": "EXCLAMATIONS"
+	},
+	{
+		"frame": 8,
+		"id": "EXCLAMATION"
+	},
+	{
+		"frame": 9,
+		"id": "QUESTION"
+	},
+	{
+		"frame": 10,
+		"id": "SLEEP"
+	},
+	{
+		"frame": 11,
+		"id": "SLEEPS"
+	},
+	{
+		"frame": 12,
+		"id": "BARS"
+	},
+	{
+		"frame": 13,
+		"id": "FACEHAPPY"
+	},
+	{
+		"frame": 14,
+		"id": "FACESAD"
+	},
+	{
+		"frame": 15,
+		"id": "FACEANGRY"
+	},
+	{
+		"frame": 16,
+		"id": "ALERT"
+	},
+	{
+		"frame": 17,
+		"id": "STAR"
+	},
+	{
+		"frame": 18,
+		"id": "STARS"
+	},
+	{
+		"frame": 19,
+		"id": "MUSIC"
+	},
+	{
+		"frame": 20,
+		"id": "DROP"
+	},
+	{
+		"frame": 21,
+		"id": "DROPS"
+	},
+	{
+		"frame": 22,
+		"id": "ANGER"
+	},
+	{
+		"frame": 23,
+		"id": "CASH"
+	},
+	{
+		"frame": 24,
+		"id": "SWIRL"
+	},
+	{
+		"frame": 25,
+		"id": "CROSS"
+	},
+	{
+		"frame": 26,
+		"id": "CIRCLE"
+	},
+	{
+		"frame": 27,
+		"id": "IDEA"
+	},
+	{
+		"frame": 28,
+		"id": "LAUGH"
+	},
+	{
+		"frame": 29,
+		"id": "CLOUD"
+	}
+]

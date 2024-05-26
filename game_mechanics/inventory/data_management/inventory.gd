@@ -7,6 +7,7 @@ var data: Array[ItemSlot] = []
 @export var identifier: String = "Inventory";
 
 signal inventory_changed(data: Array[ItemSlot]);
+signal on_item_add_failed();
 
 func _init(slot_open: int = 1, slot_max: int = 1, id: String = "Inventory"):
 	identifier = id;
@@ -59,6 +60,9 @@ func add_item(item: Dictionary, amount: int = 1, create_slot_if_full: bool = fal
 	if require_update:
 		inventory_changed.emit(data)
 		
+	if remaining_amount != 0:
+		on_item_add_failed.emit()
+	
 	return remaining_amount;
 	
 func refresh_ui():

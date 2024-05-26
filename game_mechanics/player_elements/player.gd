@@ -8,6 +8,7 @@ var current_tile: TileBase = null:
 
 @export var inventory: Inventory;
 @export var animator: AnimationPlayer;
+@export var speech_bubble: EmoteHandler;
 
 @export var click_navigator: ClickNavigator;
 @export var wasd_navigator: DefaultNavigator;
@@ -26,6 +27,8 @@ func _ready():
 	Manager.player = self
 	animator.speed_scale = (1 / (move_delay + animation_delay));
 	Settings.input_mode_changed.connect(read_input_mode)
+	
+	inventory.on_item_add_failed.connect(speech_bubble.set_emote.bind(speech_bubble.get_emote_by_id("CROSS").frame))
 	
 	current_tile = find_location();
 	

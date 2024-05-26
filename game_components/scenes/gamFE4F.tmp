@@ -1,8 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://r0h5w7xxcrjs"]
+[gd_scene load_steps=14 format=3 uid="uid://r0h5w7xxcrjs"]
 
 [ext_resource type="PackedScene" uid="uid://dihub6auclug1" path="res://game_components/scenes/post_office.tscn" id="1_2akv6"]
 [ext_resource type="PackedScene" uid="uid://bwrcc2gxqnosv" path="res://game_components/prefabs/Player.tscn" id="4_d5x6q"]
+[ext_resource type="Texture2D" uid="uid://ba8omyck4m2x0" path="res://imported_assets/ui_icons/pixel_style1.png" id="4_xnfnb"]
 [ext_resource type="PackedScene" uid="uid://cuqpjlp4i7pkb" path="res://game_components/prefabs/camera.tscn" id="5_gew37"]
+[ext_resource type="Script" path="res://game_mechanics/global_scripts/emote_handler.gd" id="5_kxijp"]
 [ext_resource type="PackedScene" uid="uid://dkn4nxkpwita" path="res://game_components/prefabs/packing_table.tscn" id="5_njmnk"]
 [ext_resource type="PackedScene" uid="uid://ccrqwbtxe7wa4" path="res://game_mechanics/user_interface/windows/box_fitting.tscn" id="6_vpj32"]
 [ext_resource type="PackedScene" uid="uid://cab8b0fs7luja" path="res://game_mechanics/user_interface/windows/paused.tscn" id="7_lkent"]
@@ -33,6 +35,17 @@ light_energy = 0.5
 [node name="CameraRoot" parent="PlayerRoot" node_paths=PackedStringArray("target") instance=ExtResource("5_gew37")]
 transform = Transform3D(-0.65, 0, -9.81473e-08, 0, 0.65, 0, 9.81473e-08, 0, -0.65, 0, 0.160077, 0)
 target = NodePath("../Player")
+
+[node name="SpeechBubble" type="Sprite3D" parent="PlayerRoot"]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0.48301, 0)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("4_xnfnb")
+hframes = 10
+vframes = 3
+frame = 3
+script = ExtResource("5_kxijp")
+dictionary_path = "res://imported_assets/item_data/item_database.json"
 
 [node name="Node3D" parent="." instance=ExtResource("5_njmnk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)

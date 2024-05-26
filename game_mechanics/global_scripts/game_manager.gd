@@ -6,7 +6,8 @@ extends Node3D
 var camera: Camera3D;
 
 signal scene_entered(scene: Node)
-signal scene_exited(scene: Node)	
+signal scene_exited(scene: Node)
+
 var active_scene: Node:
 	get: return active_scene;
 	set(new_scene):

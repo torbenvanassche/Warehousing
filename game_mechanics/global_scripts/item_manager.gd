@@ -1,7 +1,7 @@
 extends Node
 
 var data_file_path: String = "res://imported_assets/item_data/item_database.json"
-var _items: Dictionary = FileUtils.load_json(data_file_path);
+var _items: Dictionary = FileUtils.load_items(data_file_path);
 	
 func get_item(id: String):
 	if _items.keys().find(id) != -1:
