@@ -51,12 +51,25 @@ transform = Transform3D(-0.65, 0, -9.81473e-08, 0, 0.65, 0, 9.81473e-08, 0, -0.6
 script = ExtResource("1_spbeu")
 inventory = NodePath("Inventory")
 animator = NodePath("AnimationPlayer")
-speech_bubble = NodePath("SpeechBubble")
+speech_bubble = NodePath("mesh/SpeechBubble")
 click_navigator = NodePath("click_navigator")
 wasd_navigator = NodePath("wasd_navigator")
 
 [node name="mesh" parent="." instance=ExtResource("2_3wwn3")]
 transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 0, 0)
+
+[node name="SpeechBubble" type="Sprite3D" parent="mesh"]
+transform = Transform3D(-1.5, 0, 2.26494e-07, 0, 1.5, 0, -2.26494e-07, 0, -1.5, 0, 0.794893, 0)
+pixel_size = 0.03
+billboard = 1
+texture_filter = 0
+render_priority = 1
+texture = ExtResource("6_mgpas")
+hframes = 10
+vframes = 3
+frame = 15
+script = ExtResource("7_w36k6")
+dictionary_path = "res://lookup_tables/emotes.json"
 
 [node name="click_navigator" type="Node" parent="."]
 script = ExtResource("3_lo4tn")
@@ -73,15 +86,3 @@ max_slots = 1
 libraries = {
 "": SubResource("AnimationLibrary_3rkfw")
 }
-
-[node name="SpeechBubble" type="Sprite3D" parent="."]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0.48301, 0)
-billboard = 1
-texture_filter = 0
-render_priority = 1
-texture = ExtResource("6_mgpas")
-hframes = 10
-vframes = 3
-frame = 15
-script = ExtResource("7_w36k6")
-dictionary_path = "res://lookup_tables/emotes.json"

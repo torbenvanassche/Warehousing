@@ -11,6 +11,7 @@ func _ready():
 	timer.one_shot = true;
 	add_child(timer);
 	
+	scale = Vector3();
 	set_emote()
 	
 func get_emote_by_id(id: String):
@@ -23,8 +24,8 @@ func get_emote_by_id(id: String):
 
 func set_emote(f: int = -1):
 	if f == -1:
-		visible = false;
+		create_tween().tween_property(self, "scale", Vector3(), 0.1).set_ease(Tween.EASE_IN)
 		return;
 	self.frame = f;
-	visible = true;
+	create_tween().tween_property(self, "scale", Vector3(1, 1, 1), 0.1).set_ease(Tween.EASE_IN)
 	timer.start();
