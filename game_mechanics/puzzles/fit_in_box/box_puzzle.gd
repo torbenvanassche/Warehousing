@@ -12,25 +12,29 @@ signal item_removed(id: String);
 @export var visual_element: Control = self
 var clear_on_open: bool = true;
 
-func on_enable(carryable: Carryable = Carryable.new(), _dict: Dictionary = {}):
+func on_enable(_dict: Dictionary = {}):
 	if clear_on_open:
 		#clear_on_open = false;
 		container.clear();
 		for child in visual_element.get_children():
 			child.queue_free();
+			
+	if !_dict.has("carryable") || !(_dict["carryable"] is Carryable):
+		printerr("The dictionary for the puzzle does not contain a carryable object.");
+		return;
 	
-	visual_element.columns = carryable.size.y;
+	visual_element.columns = _dict.carryable.size.y;
 	var curr_arr: Array = []
 	
-	for i in range(carryable.size.x * carryable.size.y):
+	for i in range(_dict.carryable.size.x * _dict.carryable.size.y):
 		var btn = item_ui_packed.instantiate() as ItemSlotUI;
 		btn.set_script(item_slot_script);
 		btn.puzzle_controller = self;
-		btn.set_reference(ItemSlot.new(true, "Puzzle"));
-		#TODO: Make width dynamic to fit into the container
+		visual_element.add_child(btn)
+		
+		btn.set_reference.call_deferred(ItemSlot.new(true, "Puzzle"))
 		btn.custom_minimum_size = Vector2(25, 25);
 		btn.show_amount = false;
-		visual_element.add_child(btn)
 		
 		curr_arr.append(false)
 		if i % visual_element.columns == visual_element.columns - 1:
@@ -51,7 +55,6 @@ func _control_size():
 	
 func _deferred_ready():
 	window.close_requested.connect(hide)
-	on_enable()
 	
 func can_add(btn: ItemSlotUI, item: Dictionary) -> Array:
 	item = item.duplicate();
