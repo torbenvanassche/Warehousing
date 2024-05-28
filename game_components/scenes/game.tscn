@@ -58,5 +58,6 @@ surface_material_override/0 = ExtResource("10_e2sgc")
 [node name="HUD" type="Node" parent="."]
 
 [node name="InventoryHud" parent="HUD" instance=ExtResource("10_kr632")]
+mouse_filter = 2
 
 [editable path="SM_Primitive_Corner_01"]

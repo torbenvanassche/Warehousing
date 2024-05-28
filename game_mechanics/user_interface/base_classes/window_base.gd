@@ -23,7 +23,6 @@ var initial_position: Vector2;
 signal close_requested();
 signal change_title(name: String);
 
-var events_connected:= false;
 var dragging := false
 var stored_position:Vector2;
 
@@ -32,7 +31,6 @@ func _ready():
 	close_requested.connect(close_window)
 	top_bar.gui_input.connect(handle_input)
 	change_title.connect(_change_title)
-	events_connected = true;
 	
 	UIManager.add_window(id, self)
 	
@@ -47,9 +45,6 @@ func _ready():
 func on_enable(options: Dictionary = {}):
 	if visible:
 		return
-	
-	if !events_connected:
-		_ready();
 		
 	visible = true;
 	if to_enable && to_enable.has_method("on_enable"):
