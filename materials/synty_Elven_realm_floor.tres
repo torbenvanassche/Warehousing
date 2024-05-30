@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://bvd2a4tdyg5a2"]
+
+[ext_resource type="Texture2D" uid="uid://ctalh4cga5ydj" path="res://imported_assets/textures/ElvenRealm/Wood_FloorBoards_02_Diffuse.png" id="1_xwpap"]
+[ext_resource type="Texture2D" uid="uid://cnrp3t5gp3uuu" path="res://imported_assets/textures/ElvenRealm/Wood_FloorBoards_02_Normals.png" id="2_mysmt"]
+
+[resource]
+albedo_texture = ExtResource("1_xwpap")
+normal_enabled = true
+normal_texture = ExtResource("2_mysmt")

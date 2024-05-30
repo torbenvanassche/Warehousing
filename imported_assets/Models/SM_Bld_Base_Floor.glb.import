@@ -33,7 +33,7 @@ _subresources={
 "materials": {
 "A_Wall16.001": {
 "use_external/enabled": true,
-"use_external/path": "res://materials/synty_dark_fantasy.tres"
+"use_external/path": "res://materials/synty_Elven_realm_floor.tres"
 },
 "lambert26.001": {
 "use_external/enabled": true,
