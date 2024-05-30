@@ -1,3 +1,9 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://cjry74v7kd7un"]
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://cbge7w4drhc10"]
+
+[ext_resource type="Texture2D" uid="uid://dv32ls6tmsh3h" path="res://imported_assets/textures/ElvenRealm/PolygonElven_Texture_01_A.png" id="1_h2cjv"]
+[ext_resource type="Texture2D" uid="uid://4oqpty5twg0c" path="res://imported_assets/textures/ElvenRealm/PolygonElven_Emissive_01_A.png" id="2_8ogg6"]
 
 [resource]
+albedo_texture = ExtResource("1_h2cjv")
+emission_enabled = true
+emission_texture = ExtResource("2_8ogg6")

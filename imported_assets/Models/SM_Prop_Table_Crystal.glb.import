@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b8bxl0vq2qqn6"
-path="res://.godot/imported/SM_Prop_Table_Crystal.glb-744ced7f597e26c0a2d1085b0acf8856.scn"
+path="res://.godot/imported/SM_Prop_Table_Crystal.glb-f338c85820753c80e22efda2c0f54bb1.scn"
 
 [deps]
 
-source_file="res://imported_assets/Models/SM_Prop_Table_Crystal.glb"
-dest_files=["res://.godot/imported/SM_Prop_Table_Crystal.glb-744ced7f597e26c0a2d1085b0acf8856.scn"]
+source_file="res://imported_assets/models/SM_Prop_Table_Crystal.glb"
+dest_files=["res://.godot/imported/SM_Prop_Table_Crystal.glb-f338c85820753c80e22efda2c0f54bb1.scn"]
 
 [params]
 

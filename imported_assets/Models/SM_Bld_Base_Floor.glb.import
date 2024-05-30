@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://l8yklh4h8bok"
-path="res://.godot/imported/SM_Bld_Base_Floor.glb-8e9bacc0ceacf530d2d326766175847b.scn"
+path="res://.godot/imported/SM_Bld_Base_Floor.glb-7ee0d225dfb07c92e2f9efabec5038e7.scn"
 
 [deps]
 
-source_file="res://imported_assets/Models/SM_Bld_Base_Floor.glb"
-dest_files=["res://.godot/imported/SM_Bld_Base_Floor.glb-8e9bacc0ceacf530d2d326766175847b.scn"]
+source_file="res://imported_assets/models/SM_Bld_Base_Floor.glb"
+dest_files=["res://.godot/imported/SM_Bld_Base_Floor.glb-7ee0d225dfb07c92e2f9efabec5038e7.scn"]
 
 [params]
 
@@ -29,6 +29,17 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 import_script/path=""
-_subresources={}
+_subresources={
+"materials": {
+"A_Wall16.001": {
+"use_external/enabled": true,
+"use_external/path": "res://materials/synty_dark_fantasy.tres"
+},
+"lambert26.001": {
+"use_external/enabled": true,
+"use_external/path": "res://materials/synty_dungeon_realms.tres"
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1

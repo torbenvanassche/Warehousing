@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dc6q3tnnqqib6"
-path="res://.godot/imported/SM_Prop_Crate_Stack.glb-97bdeb06031b9937c99967761617c749.scn"
+path="res://.godot/imported/SM_Prop_Crate_Stack.glb-33696a9b1bf7e1f7f3d4e239d0be698c.scn"
 
 [deps]
 
-source_file="res://imported_assets/Models/SM_Prop_Crate_Stack.glb"
-dest_files=["res://.godot/imported/SM_Prop_Crate_Stack.glb-97bdeb06031b9937c99967761617c749.scn"]
+source_file="res://imported_assets/models/SM_Prop_Crate_Stack.glb"
+dest_files=["res://.godot/imported/SM_Prop_Crate_Stack.glb-33696a9b1bf7e1f7f3d4e239d0be698c.scn"]
 
 [params]
 
@@ -29,6 +29,13 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 import_script/path=""
-_subresources={}
+_subresources={
+"materials": {
+"CastleSHD335.001": {
+"use_external/enabled": true,
+"use_external/path": "res://materials/synty_fantasy_kingdom.tres"
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1

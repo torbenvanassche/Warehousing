@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://3h5gkry18y5c"
-path="res://.godot/imported/SM_Bld_Stairs_Railing_Half.glb-d61baf620af38a08e675fdae7dc948e4.scn"
+path="res://.godot/imported/SM_Bld_Stairs_Railing_Half.glb-5bd4e6915f70b348e2e1d258c83c6986.scn"
 
 [deps]
 
-source_file="res://imported_assets/Models/SM_Bld_Stairs_Railing_Half.glb"
-dest_files=["res://.godot/imported/SM_Bld_Stairs_Railing_Half.glb-d61baf620af38a08e675fdae7dc948e4.scn"]
+source_file="res://imported_assets/models/SM_Bld_Stairs_Railing_Half.glb"
+dest_files=["res://.godot/imported/SM_Bld_Stairs_Railing_Half.glb-5bd4e6915f70b348e2e1d258c83c6986.scn"]
 
 [params]
 

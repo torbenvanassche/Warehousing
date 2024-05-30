@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b702kc1sutkap"
-path="res://.godot/imported/SM_Prop_Dwarf_Cart.glb-6a9c08b4f707b7b9de0ea4350c6f9f21.scn"
+path="res://.godot/imported/SM_Prop_Dwarf_Cart.glb-d381be72604e23b0d388c79de2c2cc24.scn"
 
 [deps]
 
-source_file="res://imported_assets/Models/SM_Prop_Dwarf_Cart.glb"
-dest_files=["res://.godot/imported/SM_Prop_Dwarf_Cart.glb-6a9c08b4f707b7b9de0ea4350c6f9f21.scn"]
+source_file="res://imported_assets/models/SM_Prop_Dwarf_Cart.glb"
+dest_files=["res://.godot/imported/SM_Prop_Dwarf_Cart.glb-d381be72604e23b0d388c79de2c2cc24.scn"]
 
 [params]
 
