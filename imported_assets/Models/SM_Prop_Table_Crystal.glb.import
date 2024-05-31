@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b8bxl0vq2qqn6"
-path="res://.godot/imported/SM_Prop_Table_Crystal.glb-f338c85820753c80e22efda2c0f54bb1.scn"
+path="res://.godot/imported/SM_Prop_Table_Crystal.glb-744ced7f597e26c0a2d1085b0acf8856.scn"
 
 [deps]
 
-source_file="res://imported_assets/models/SM_Prop_Table_Crystal.glb"
-dest_files=["res://.godot/imported/SM_Prop_Table_Crystal.glb-f338c85820753c80e22efda2c0f54bb1.scn"]
+source_file="res://imported_assets/Models/SM_Prop_Table_Crystal.glb"
+dest_files=["res://.godot/imported/SM_Prop_Table_Crystal.glb-744ced7f597e26c0a2d1085b0acf8856.scn"]
 
 [params]
 
@@ -29,6 +29,17 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 import_script/path=""
-_subresources={}
+_subresources={
+"materials": {
+"PolygonCasino_MAT237.001": {
+"use_external/enabled": true,
+"use_external/path": "res://materials/synty_Casino.tres"
+},
+"lambert1589.001": {
+"use_external/enabled": true,
+"use_external/path": "res://materials/synty_fantasy_kingdom.tres"
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1

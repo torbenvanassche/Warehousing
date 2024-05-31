@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://u1dppsqwl68w"
-path="res://.godot/imported/SM_Wep_Pipe.glb-8ebf6f1fecfd8d7a2370ef36da0286a2.scn"
+uid="uid://cosble63jmxqd"
+path="res://.godot/imported/SM_Prop_Crystal.glb-7295d9389edd969363b9b864ca773622.scn"
 
 [deps]
 
-source_file="res://imported_assets/Models/SM_Wep_Pipe.glb"
-dest_files=["res://.godot/imported/SM_Wep_Pipe.glb-8ebf6f1fecfd8d7a2370ef36da0286a2.scn"]
+source_file="res://imported_assets/Models/SM_Prop_Crystal.glb"
+dest_files=["res://.godot/imported/SM_Prop_Crystal.glb-7295d9389edd969363b9b864ca773622.scn"]
 
 [params]
 
@@ -31,9 +31,9 @@ animation/remove_immutable_tracks=true
 import_script/path=""
 _subresources={
 "materials": {
-"Synty_material": {
+"lambert1589.002": {
 "use_external/enabled": true,
-"use_external/path": "res://materials/synty_Gang_Warfare.tres"
+"use_external/path": "res://materials/synty_fantasy_kingdom.tres"
 }
 }
 }

@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://vonw2wvba5ti"]
+
+[ext_resource type="Texture2D" uid="uid://tuiqbdh13a5g" path="res://imported_assets/textures/Casino/PolygonCasino_Texture_01_A.png" id="1_c3kej"]
+
+[resource]
+albedo_texture = ExtResource("1_c3kej")

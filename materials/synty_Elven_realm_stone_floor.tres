@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://bh7uh6wic85i4"]
+
+[ext_resource type="Texture2D" uid="uid://dy5dl0g1u2af3" path="res://imported_assets/textures/ElvenRealm/RockWall_Texture_01.png" id="1_e8d3f"]
+[ext_resource type="Texture2D" uid="uid://dix3mh314lk82" path="res://imported_assets/textures/ElvenRealm/RockWall_Normals_01.png" id="2_n3p42"]
+
+[resource]
+albedo_texture = ExtResource("1_e8d3f")
+normal_enabled = true
+normal_texture = ExtResource("2_n3p42")
