@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://caiw6l5h8xpfn" path="res://imported_assets/models/SM_Bld_Base_Wall_Door.glb" id="1_mo4kf"]
 [ext_resource type="PackedScene" uid="uid://cba5c51c4kkug" path="res://imported_assets/models/SM_Bld_Base_Wall_Window_Double.glb" id="2_kdndh"]
+[ext_resource type="PackedScene" uid="uid://deb48uwvn63l6" path="res://imported_assets/models/sm_bld_base_floor.tscn" id="2_ulpqr"]
 [ext_resource type="PackedScene" uid="uid://b5qqem6ceosh7" path="res://imported_assets/models/SM_Bld_Wall_Half.glb" id="3_u6d8k"]
-[ext_resource type="PackedScene" uid="uid://l8yklh4h8bok" path="res://imported_assets/models/SM_Bld_Base_Floor.glb" id="5_0w0xg"]
 [ext_resource type="PackedScene" uid="uid://bru0ud0iimrhx" path="res://imported_assets/models/sm_bld_wall_doorway.tscn" id="5_asqwc"]
 [ext_resource type="PackedScene" uid="uid://duhrxdci4pd0s" path="res://imported_assets/models/SM_Bld_Wall.glb" id="7_kv8ac"]
 [ext_resource type="PackedScene" uid="uid://b702kc1sutkap" path="res://imported_assets/models/SM_Prop_Dwarf_Cart.glb" id="8_4ygkg"]
@@ -41,522 +41,522 @@ func _ready():
 [node name="Floor" type="Node3D" parent="Ground Floor"]
 script = SubResource("GDScript_r4wdd")
 
-[node name="SM_Bld_Base_Floor2" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor2" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0)
 
-[node name="SM_Bld_Base_Floor3" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor3" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0.5)
 
-[node name="SM_Bld_Base_Floor4" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor4" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.5)
 
-[node name="SM_Bld_Base_Floor" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 
-[node name="SM_Bld_Base_Floor5" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor5" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
 
-[node name="SM_Bld_Base_Floor6" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor6" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0.5)
 
-[node name="SM_Bld_Base_Floor7" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor7" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
 
-[node name="SM_Bld_Base_Floor8" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor8" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 0)
 
-[node name="SM_Bld_Base_Floor9" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor9" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 0.5)
 
-[node name="SM_Bld_Base_Floor10" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor10" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0.5)
 
-[node name="SM_Bld_Base_Floor11" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor11" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
 
-[node name="SM_Bld_Base_Floor12" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor12" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0.5)
 
-[node name="SM_Bld_Base_Floor13" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor13" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 1)
 
-[node name="SM_Bld_Base_Floor14" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor14" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1.5)
 
-[node name="SM_Bld_Base_Floor15" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor15" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.5)
 
-[node name="SM_Bld_Base_Floor16" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor16" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
 
-[node name="SM_Bld_Base_Floor17" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor17" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
 
-[node name="SM_Bld_Base_Floor18" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor18" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 1.5)
 
-[node name="SM_Bld_Base_Floor19" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor19" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1)
 
-[node name="SM_Bld_Base_Floor20" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor20" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 1)
 
-[node name="SM_Bld_Base_Floor21" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor21" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 1.5)
 
-[node name="SM_Bld_Base_Floor22" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor22" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1.5)
 
-[node name="SM_Bld_Base_Floor23" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor23" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 1)
 
-[node name="SM_Bld_Base_Floor24" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor24" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 1.5)
 
-[node name="SM_Bld_Base_Floor25" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor25" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 2)
 
-[node name="SM_Bld_Base_Floor26" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor26" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 2.5)
 
-[node name="SM_Bld_Base_Floor27" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor27" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.5)
 
-[node name="SM_Bld_Base_Floor28" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor28" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
 
-[node name="SM_Bld_Base_Floor29" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor29" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 2)
 
-[node name="SM_Bld_Base_Floor30" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor30" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 2.5)
 
-[node name="SM_Bld_Base_Floor31" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor31" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 2)
 
-[node name="SM_Bld_Base_Floor32" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor32" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 2)
 
-[node name="SM_Bld_Base_Floor33" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor33" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 2.5)
 
-[node name="SM_Bld_Base_Floor37" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor37" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
 
-[node name="SM_Bld_Base_Floor38" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor38" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0.5)
 
-[node name="SM_Bld_Base_Floor39" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor39" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 1)
 
-[node name="SM_Bld_Base_Floor40" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor40" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 1.5)
 
-[node name="SM_Bld_Base_Floor41" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor41" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 2)
 
-[node name="SM_Bld_Base_Floor42" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor42" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 2.5)
 
-[node name="SM_Bld_Base_Floor43" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor43" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -3)
 
-[node name="SM_Bld_Base_Floor62" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor62" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, -3.5)
 
-[node name="SM_Bld_Base_Floor167" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor167" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, -4)
 
-[node name="SM_Bld_Base_Floor169" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor169" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -4)
 
-[node name="SM_Bld_Base_Floor171" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor171" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, -4)
 
-[node name="SM_Bld_Base_Floor173" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor173" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
 
-[node name="SM_Bld_Base_Floor175" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor175" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, -4)
 
-[node name="SM_Bld_Base_Floor177" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor177" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -4)
 
-[node name="SM_Bld_Base_Floor179" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor179" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0, -4)
 
-[node name="SM_Bld_Base_Floor181" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor181" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -4)
 
-[node name="SM_Bld_Base_Floor44" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor44" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -2.5)
 
-[node name="SM_Bld_Base_Floor45" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor45" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -2)
 
-[node name="SM_Bld_Base_Floor46" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor46" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -1.5)
 
-[node name="SM_Bld_Base_Floor47" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor47" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -1)
 
-[node name="SM_Bld_Base_Floor48" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor48" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -0.5)
 
-[node name="SM_Bld_Base_Floor50" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor50" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, 0)
 
-[node name="SM_Bld_Base_Floor51" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor51" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, 0.5)
 
-[node name="SM_Bld_Base_Floor52" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor52" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, 1)
 
-[node name="SM_Bld_Base_Floor53" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor53" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, 1.5)
 
-[node name="SM_Bld_Base_Floor54" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor54" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, 2)
 
-[node name="SM_Bld_Base_Floor55" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor55" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, 2.5)
 
-[node name="SM_Bld_Base_Floor56" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor56" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, -3)
 
-[node name="SM_Bld_Base_Floor57" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor57" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, -2.5)
 
-[node name="SM_Bld_Base_Floor58" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor58" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, -2)
 
-[node name="SM_Bld_Base_Floor59" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor59" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, -1.5)
 
-[node name="SM_Bld_Base_Floor60" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor60" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, -1)
 
-[node name="SM_Bld_Base_Floor61" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor61" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, -0.5)
 
-[node name="SM_Bld_Base_Floor63" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor49" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
 
-[node name="SM_Bld_Base_Floor64" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor64" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0.5)
 
-[node name="SM_Bld_Base_Floor65" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor65" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 1)
 
-[node name="SM_Bld_Base_Floor66" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor66" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 1.5)
 
-[node name="SM_Bld_Base_Floor67" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor67" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 2)
 
-[node name="SM_Bld_Base_Floor68" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor68" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 2.5)
 
-[node name="SM_Bld_Base_Floor69" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor69" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -3)
 
-[node name="SM_Bld_Base_Floor70" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor70" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -3.5)
 
-[node name="SM_Bld_Base_Floor71" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor71" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, -3.5)
 
-[node name="SM_Bld_Base_Floor72" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor72" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -2.5)
 
-[node name="SM_Bld_Base_Floor73" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor73" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -2)
 
-[node name="SM_Bld_Base_Floor74" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor74" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -1.5)
 
-[node name="SM_Bld_Base_Floor75" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor75" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -1)
 
-[node name="SM_Bld_Base_Floor76" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor76" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -0.5)
 
-[node name="SM_Bld_Base_Floor77" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor77" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, 0)
 
-[node name="SM_Bld_Base_Floor78" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor78" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, 0.5)
 
-[node name="SM_Bld_Base_Floor79" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor79" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, 1)
 
-[node name="SM_Bld_Base_Floor80" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor80" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, 1.5)
 
-[node name="SM_Bld_Base_Floor81" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor81" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, 2)
 
-[node name="SM_Bld_Base_Floor82" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor82" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, 2.5)
 
-[node name="SM_Bld_Base_Floor83" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor83" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, -3)
 
-[node name="SM_Bld_Base_Floor84" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor84" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, -2.5)
 
-[node name="SM_Bld_Base_Floor85" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor85" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, -2)
 
-[node name="SM_Bld_Base_Floor86" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor86" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, -1.5)
 
-[node name="SM_Bld_Base_Floor87" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor87" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, -1)
 
-[node name="SM_Bld_Base_Floor88" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor88" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, -0.5)
 
-[node name="SM_Bld_Base_Floor89" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor89" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
 
-[node name="SM_Bld_Base_Floor90" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor90" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0.5)
 
-[node name="SM_Bld_Base_Floor91" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor91" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 1)
 
-[node name="SM_Bld_Base_Floor92" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor92" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 1.5)
 
-[node name="SM_Bld_Base_Floor93" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor93" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 2)
 
-[node name="SM_Bld_Base_Floor94" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor94" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 2.5)
 
-[node name="SM_Bld_Base_Floor95" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor95" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -3)
 
-[node name="SM_Bld_Base_Floor96" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor96" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -3.5)
 
-[node name="SM_Bld_Base_Floor97" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor97" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, -3.5)
 
-[node name="SM_Bld_Base_Floor98" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor98" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -2.5)
 
-[node name="SM_Bld_Base_Floor99" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor99" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -2)
 
-[node name="SM_Bld_Base_Floor100" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor100" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -1.5)
 
-[node name="SM_Bld_Base_Floor101" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor101" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -1)
 
-[node name="SM_Bld_Base_Floor102" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor102" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -0.5)
 
-[node name="SM_Bld_Base_Floor103" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor103" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, 0)
 
-[node name="SM_Bld_Base_Floor104" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor104" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, 0.5)
 
-[node name="SM_Bld_Base_Floor105" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor105" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, 1)
 
-[node name="SM_Bld_Base_Floor106" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor106" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, 1.5)
 
-[node name="SM_Bld_Base_Floor107" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor107" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, 2)
 
-[node name="SM_Bld_Base_Floor108" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor108" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, 2.5)
 
-[node name="SM_Bld_Base_Floor109" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor109" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, -3)
 
-[node name="SM_Bld_Base_Floor110" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor110" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, -2.5)
 
-[node name="SM_Bld_Base_Floor111" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor111" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, -2)
 
-[node name="SM_Bld_Base_Floor112" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor112" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, -1.5)
 
-[node name="SM_Bld_Base_Floor113" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor113" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, -1)
 
-[node name="SM_Bld_Base_Floor114" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor114" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, -0.5)
 
-[node name="SM_Bld_Base_Floor115" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor115" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0)
 
-[node name="SM_Bld_Base_Floor116" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor116" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0.5)
 
-[node name="SM_Bld_Base_Floor117" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor117" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 1)
 
-[node name="SM_Bld_Base_Floor118" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor118" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 1.5)
 
-[node name="SM_Bld_Base_Floor119" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor119" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 2)
 
-[node name="SM_Bld_Base_Floor120" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor120" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 2.5)
 
-[node name="SM_Bld_Base_Floor121" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor121" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -3)
 
-[node name="SM_Bld_Base_Floor122" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor122" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -3.5)
 
-[node name="SM_Bld_Base_Floor123" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor123" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0, -3.5)
 
-[node name="SM_Bld_Base_Floor124" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor124" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -2.5)
 
-[node name="SM_Bld_Base_Floor125" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor125" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -2)
 
-[node name="SM_Bld_Base_Floor126" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor126" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -1.5)
 
-[node name="SM_Bld_Base_Floor127" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor127" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -1)
 
-[node name="SM_Bld_Base_Floor128" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor128" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -0.5)
 
-[node name="SM_Bld_Base_Floor129" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor129" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0, 0)
 
-[node name="SM_Bld_Base_Floor130" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor130" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0, 0.5)
 
-[node name="SM_Bld_Base_Floor131" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor131" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0, 1)
 
-[node name="SM_Bld_Base_Floor132" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor132" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0, 1.5)
 
-[node name="SM_Bld_Base_Floor133" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor133" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0, 2)
 
-[node name="SM_Bld_Base_Floor134" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor134" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0, 2.5)
 
-[node name="SM_Bld_Base_Floor135" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor135" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0, -3)
 
-[node name="SM_Bld_Base_Floor136" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor136" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0, -2.5)
 
-[node name="SM_Bld_Base_Floor137" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor137" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0, -2)
 
-[node name="SM_Bld_Base_Floor138" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor138" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0, -1.5)
 
-[node name="SM_Bld_Base_Floor139" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor139" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0, -1)
 
-[node name="SM_Bld_Base_Floor140" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor140" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0, -0.5)
 
-[node name="SM_Bld_Base_Floor141" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor141" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
 
-[node name="SM_Bld_Base_Floor142" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor142" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0.5)
 
-[node name="SM_Bld_Base_Floor143" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor143" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 1)
 
-[node name="SM_Bld_Base_Floor144" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor144" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 1.5)
 
-[node name="SM_Bld_Base_Floor145" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor145" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 2)
 
-[node name="SM_Bld_Base_Floor146" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor146" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 2.5)
 
-[node name="SM_Bld_Base_Floor147" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor147" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -3)
 
-[node name="SM_Bld_Base_Floor148" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor148" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -3.5)
 
-[node name="SM_Bld_Base_Floor149" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor149" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0, -3.5)
 
-[node name="SM_Bld_Base_Floor150" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor150" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -2.5)
 
-[node name="SM_Bld_Base_Floor151" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor151" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -2)
 
-[node name="SM_Bld_Base_Floor152" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor152" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -1.5)
 
-[node name="SM_Bld_Base_Floor153" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor153" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -1)
 
-[node name="SM_Bld_Base_Floor154" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor154" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -0.5)
 
-[node name="SM_Bld_Base_Floor155" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor155" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0, 0)
 
-[node name="SM_Bld_Base_Floor156" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor156" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0, 0.5)
 
-[node name="SM_Bld_Base_Floor157" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor157" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0, 1)
 
-[node name="SM_Bld_Base_Floor158" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor158" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0, 1.5)
 
-[node name="SM_Bld_Base_Floor159" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor159" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0, 2)
 
-[node name="SM_Bld_Base_Floor160" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor160" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0, 2.5)
 
-[node name="SM_Bld_Base_Floor161" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor161" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0, -3)
 
-[node name="SM_Bld_Base_Floor162" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor162" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0, -2.5)
 
-[node name="SM_Bld_Base_Floor163" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor163" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0, -2)
 
-[node name="SM_Bld_Base_Floor164" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor164" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0, -1.5)
 
-[node name="SM_Bld_Base_Floor165" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor165" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0, -1)
 
-[node name="SM_Bld_Base_Floor166" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor166" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0, -0.5)
 
-[node name="SM_Bld_Base_Floor34" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor34" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 2.5)
 
-[node name="SM_Bld_Base_Floor35" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor35" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 2)
 
-[node name="SM_Bld_Base_Floor36" parent="Ground Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor36" parent="Ground Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 2.5)
 
 [node name="Doors and windows" type="Node3D" parent="Ground Floor"]
@@ -770,247 +770,247 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -6.323
 
 [node name="Floor" type="Node3D" parent="1st Floor"]
 
-[node name="SM_Bld_Base_Floor49" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor49" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1.5, -3)
 
-[node name="SM_Bld_Base_Floor168" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor168" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 1.5, -3.5)
 
-[node name="SM_Bld_Base_Floor170" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor170" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 1.5, -4)
 
-[node name="SM_Bld_Base_Floor172" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor172" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1.5, -4)
 
-[node name="SM_Bld_Base_Floor174" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor174" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 1.5, -4)
 
-[node name="SM_Bld_Base_Floor176" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor176" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1.5, -4)
 
-[node name="SM_Bld_Base_Floor178" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor178" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 1.5, -4)
 
-[node name="SM_Bld_Base_Floor180" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor180" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1.5, -4)
 
-[node name="SM_Bld_Base_Floor182" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor182" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 1.5, -4)
 
-[node name="SM_Bld_Base_Floor183" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor183" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1.5, -4)
 
-[node name="SM_Bld_Base_Floor184" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor184" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1.5, -2.5)
 
-[node name="SM_Bld_Base_Floor185" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor185" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1.5, -2)
 
-[node name="SM_Bld_Base_Floor186" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor186" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1.5, -1.5)
 
-[node name="SM_Bld_Base_Floor187" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor187" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 1.5, -3)
 
-[node name="SM_Bld_Base_Floor188" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor188" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 1.5, -2.5)
 
-[node name="SM_Bld_Base_Floor189" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor189" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 1.5, -2)
 
-[node name="SM_Bld_Base_Floor190" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor190" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 1.5, -1.5)
 
-[node name="SM_Bld_Base_Floor191" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor191" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1.5, -3)
 
-[node name="SM_Bld_Base_Floor192" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor192" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1.5, -3.5)
 
-[node name="SM_Bld_Base_Floor193" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor193" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 1.5, -3.5)
 
-[node name="SM_Bld_Base_Floor194" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor194" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1.5, -2.5)
 
-[node name="SM_Bld_Base_Floor195" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor195" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1.5, -2)
 
-[node name="SM_Bld_Base_Floor196" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor196" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1.5, -1.5)
 
-[node name="SM_Bld_Base_Floor197" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor197" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 1.5, -3)
 
-[node name="SM_Bld_Base_Floor198" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor198" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 1.5, -2.5)
 
-[node name="SM_Bld_Base_Floor199" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor199" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 1.5, -2)
 
-[node name="SM_Bld_Base_Floor200" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor200" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 1.5, -1.5)
 
-[node name="SM_Bld_Base_Floor201" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor201" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1.5, -3)
 
-[node name="SM_Bld_Base_Floor202" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor202" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1.5, -3.5)
 
-[node name="SM_Bld_Base_Floor203" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor203" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 1.5, -3.5)
 
-[node name="SM_Bld_Base_Floor204" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor204" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1.5, -2.5)
 
-[node name="SM_Bld_Base_Floor205" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor205" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1.5, -2)
 
-[node name="SM_Bld_Base_Floor206" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor206" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1.5, -1.5)
 
-[node name="SM_Bld_Base_Floor207" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor207" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 1.5, -3)
 
-[node name="SM_Bld_Base_Floor208" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor208" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 1.5, -2.5)
 
-[node name="SM_Bld_Base_Floor209" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor209" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 1.5, -2)
 
-[node name="SM_Bld_Base_Floor210" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor210" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 1.5, -1.5)
 
-[node name="SM_Bld_Base_Floor211" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor211" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1.5, -3)
 
-[node name="SM_Bld_Base_Floor212" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor212" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1.5, -3.5)
 
-[node name="SM_Bld_Base_Floor213" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor213" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 1.5, -3.5)
 
-[node name="SM_Bld_Base_Floor214" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor214" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1.5, -2.5)
 
-[node name="SM_Bld_Base_Floor215" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor215" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1.5, -2)
 
-[node name="SM_Bld_Base_Floor216" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor216" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1.5, -1.5)
 
-[node name="SM_Bld_Base_Floor217" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor217" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 1.5, 0)
 
-[node name="SM_Bld_Base_Floor218" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor218" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 1.5, 0.5)
 
-[node name="SM_Bld_Base_Floor219" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor219" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 1.5, 1)
 
-[node name="SM_Bld_Base_Floor220" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor220" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 1.5, 1.5)
 
-[node name="SM_Bld_Base_Floor221" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor221" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 1.5, 2)
 
-[node name="SM_Bld_Base_Floor222" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor222" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 1.5, 2.5)
 
-[node name="SM_Bld_Base_Floor223" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor223" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 1.5, -3)
 
-[node name="SM_Bld_Base_Floor224" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor224" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 1.5, -2.5)
 
-[node name="SM_Bld_Base_Floor225" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor225" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 1.5, -2)
 
-[node name="SM_Bld_Base_Floor226" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor226" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 1.5, -1.5)
 
-[node name="SM_Bld_Base_Floor227" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor227" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 1.5, -1)
 
-[node name="SM_Bld_Base_Floor228" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor228" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 1.5, -0.5)
 
-[node name="SM_Bld_Base_Floor229" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor229" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1.5, 0)
 
-[node name="SM_Bld_Base_Floor230" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor230" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1.5, 0.5)
 
-[node name="SM_Bld_Base_Floor231" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor231" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1.5, 1)
 
-[node name="SM_Bld_Base_Floor232" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor232" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1.5, 1.5)
 
-[node name="SM_Bld_Base_Floor233" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor233" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1.5, 2)
 
-[node name="SM_Bld_Base_Floor234" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor234" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1.5, 2.5)
 
-[node name="SM_Bld_Base_Floor235" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor235" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1.5, -3)
 
-[node name="SM_Bld_Base_Floor236" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor236" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1.5, -3.5)
 
-[node name="SM_Bld_Base_Floor237" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor237" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 1.5, -3.5)
 
-[node name="SM_Bld_Base_Floor238" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor238" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1.5, -2.5)
 
-[node name="SM_Bld_Base_Floor239" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor239" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1.5, -2)
 
-[node name="SM_Bld_Base_Floor240" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor240" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1.5, -1.5)
 
-[node name="SM_Bld_Base_Floor241" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor241" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1.5, -1)
 
-[node name="SM_Bld_Base_Floor242" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor242" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1.5, -0.5)
 
-[node name="SM_Bld_Base_Floor243" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor243" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 1.5, 0)
 
-[node name="SM_Bld_Base_Floor244" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor244" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 1.5, 0.5)
 
-[node name="SM_Bld_Base_Floor245" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor245" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 1.5, 1)
 
-[node name="SM_Bld_Base_Floor246" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor246" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 1.5, 1.5)
 
-[node name="SM_Bld_Base_Floor247" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor247" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 1.5, 2)
 
-[node name="SM_Bld_Base_Floor248" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor248" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 1.5, 2.5)
 
-[node name="SM_Bld_Base_Floor249" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor249" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 1.5, -3)
 
-[node name="SM_Bld_Base_Floor250" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor250" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 1.5, -2.5)
 
-[node name="SM_Bld_Base_Floor251" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor251" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 1.5, -2)
 
-[node name="SM_Bld_Base_Floor252" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor252" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 1.5, -1.5)
 
-[node name="SM_Bld_Base_Floor253" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor253" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 1.5, -1)
 
-[node name="SM_Bld_Base_Floor254" parent="1st Floor/Floor" instance=ExtResource("5_0w0xg")]
+[node name="SM_Bld_Base_Floor254" parent="1st Floor/Floor" instance=ExtResource("2_ulpqr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 1.5, -0.5)
 
 [node name="Windows" type="Node3D" parent="1st Floor"]
