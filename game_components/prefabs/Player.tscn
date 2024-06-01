@@ -47,7 +47,7 @@ _data = {
 }
 
 [node name="Player" type="Node3D" node_paths=PackedStringArray("inventory", "animator", "speech_bubble", "click_navigator", "wasd_navigator")]
-transform = Transform3D(-0.65, 0, -9.81473e-08, 0, 0.65, 0, 9.81473e-08, 0, -0.65, 0, 0, 0)
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 0, 0)
 script = ExtResource("1_spbeu")
 inventory = NodePath("Inventory")
 animator = NodePath("AnimationPlayer")
