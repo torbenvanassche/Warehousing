@@ -1,0 +1,14 @@
+[gd_scene load_steps=5 format=3 uid="uid://c25s0jbhunfu1"]
+
+[ext_resource type="PackedScene" uid="uid://xybxog28ksjh" path="res://game_components/scenes/main_menu.tscn" id="1_rcmoo"]
+[ext_resource type="Script" path="res://game_mechanics/global_scripts/scene_manager.gd" id="1_v50w1"]
+[ext_resource type="Script" path="res://game_mechanics/global_scripts/data/scene_info.gd" id="3_75jyt"]
+
+[sub_resource type="Resource" id="Resource_jcoq7"]
+script = ExtResource("3_75jyt")
+id = "main_menu"
+packed_scene = ExtResource("1_rcmoo")
+
+[node name="absolute_root" type="Node"]
+script = ExtResource("1_v50w1")
+scenes = Array[ExtResource("3_75jyt")]([SubResource("Resource_jcoq7")])
