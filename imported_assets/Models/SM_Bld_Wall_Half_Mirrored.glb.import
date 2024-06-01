@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bhnwhicmtqkh6"
-path="res://.godot/imported/SM_Bld_Wall_Half_Mirrored.glb-73d09c9101dbf35a3ef57d26d75d1bbc.scn"
+path="res://.godot/imported/SM_Bld_Wall_Half_Mirrored.glb-fbeea0ee6700eed9b27d078a381e3209.scn"
 
 [deps]
 
-source_file="res://imported_assets/models/SM_Bld_Wall_Half_Mirrored.glb"
-dest_files=["res://.godot/imported/SM_Bld_Wall_Half_Mirrored.glb-73d09c9101dbf35a3ef57d26d75d1bbc.scn"]
+source_file="res://imported_assets/Models/SM_Bld_Wall_Half_Mirrored.glb"
+dest_files=["res://.godot/imported/SM_Bld_Wall_Half_Mirrored.glb-fbeea0ee6700eed9b27d078a381e3209.scn"]
 
 [params]
 
@@ -34,6 +34,10 @@ _subresources={
 "T_Elven_Brick57.005": {
 "use_external/enabled": true,
 "use_external/path": "res://materials/synty_Elven_realm_Wall_Half_Exterior.tres"
+},
+"T_Elven_Interior91.005": {
+"use_external/enabled": true,
+"use_external/path": "res://materials/synty_Elven_realm_Wall_Half_Interior.tres"
 }
 }
 }

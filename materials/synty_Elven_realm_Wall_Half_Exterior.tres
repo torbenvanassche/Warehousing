@@ -1,6 +1,6 @@
 [gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://nnm6emue2187"]
 
-[ext_resource type="Texture2D" uid="uid://b23ewe4imhrwe" path="res://imported_assets/textures/ElvenRealm/Brick_06.png" id="1_w2ole"]
+[ext_resource type="Texture2D" uid="uid://dehti23jaxrj" path="res://imported_assets/textures/ElvenRealm/Brick_06.png" id="1_w2ole"]
 [ext_resource type="Texture2D" uid="uid://cogrw0e6ragdp" path="res://imported_assets/textures/ElvenRealm/Brick_Normals_06.png" id="2_0wwl8"]
 
 [resource]

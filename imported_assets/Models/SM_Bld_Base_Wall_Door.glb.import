@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://caiw6l5h8xpfn"
-path="res://.godot/imported/SM_Bld_Base_Wall_Door.glb-f5f230e370c40ffa04df2028b0180a32.scn"
+path="res://.godot/imported/SM_Bld_Base_Wall_Door.glb-bec059596f9fda8f66b98905d6dda66c.scn"
 
 [deps]
 
-source_file="res://imported_assets/models/SM_Bld_Base_Wall_Door.glb"
-dest_files=["res://.godot/imported/SM_Bld_Base_Wall_Door.glb-f5f230e370c40ffa04df2028b0180a32.scn"]
+source_file="res://imported_assets/Models/SM_Bld_Base_Wall_Door.glb"
+dest_files=["res://.godot/imported/SM_Bld_Base_Wall_Door.glb-bec059596f9fda8f66b98905d6dda66c.scn"]
 
 [params]
 
@@ -29,6 +29,21 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 import_script/path=""
-_subresources={}
+_subresources={
+"materials": {
+"A_Wall1.001": {
+"use_external/enabled": true,
+"use_external/path": "res://materials/synty_Elven_realm_Wall_interior.tres"
+},
+"HorrorSHD.001": {
+"use_external/enabled": true,
+"use_external/path": "res://materials/synty_Elven_Realm.tres"
+},
+"lambert2.001": {
+"use_external/enabled": true,
+"use_external/path": "res://materials/synty_Elven_realm_Wall_Exterior.tres"
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1

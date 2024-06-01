@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://u1dppsqwl68w"
-path="res://.godot/imported/SM_Wep_Pipe.glb-8ebf6f1fecfd8d7a2370ef36da0286a2.scn"
+uid="uid://g6rfw2lubwtl"
+path="res://.godot/imported/SM_Bld_Wall_Half_interior.glb-055e9be50d8d62ff268c28917dd9d6c0.scn"
 
 [deps]
 
-source_file="res://imported_assets/Models/SM_Wep_Pipe.glb"
-dest_files=["res://.godot/imported/SM_Wep_Pipe.glb-8ebf6f1fecfd8d7a2370ef36da0286a2.scn"]
+source_file="res://imported_assets/Models/SM_Bld_Wall_Half_interior.glb"
+dest_files=["res://.godot/imported/SM_Bld_Wall_Half_interior.glb-055e9be50d8d62ff268c28917dd9d6c0.scn"]
 
 [params]
 
@@ -31,9 +31,13 @@ animation/remove_immutable_tracks=true
 import_script/path=""
 _subresources={
 "materials": {
-"Synty_material": {
+"T_Elven_Brick57.005": {
 "use_external/enabled": true,
-"use_external/path": "res://materials/synty_Gang_Warfare.tres"
+"use_external/path": "res://materials/synty_Elven_realm_Wall_interior.tres"
+},
+"T_Elven_Interior91.005": {
+"use_external/enabled": true,
+"use_external/path": "res://materials/synty_Elven_realm_Wall_interior.tres"
 }
 }
 }

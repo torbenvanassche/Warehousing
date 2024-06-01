@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dsjta7ridavxk"
-path="res://.godot/imported/SM_Prop_Mirror.glb-9dc82360fdba6f8308c205e21946efb1.scn"
+path="res://.godot/imported/SM_Prop_Mirror.glb-7647e73188a0edcdeb14808e334319d9.scn"
 
 [deps]
 
-source_file="res://imported_assets/models/SM_Prop_Mirror.glb"
-dest_files=["res://.godot/imported/SM_Prop_Mirror.glb-9dc82360fdba6f8308c205e21946efb1.scn"]
+source_file="res://imported_assets/Models/SM_Prop_Mirror.glb"
+dest_files=["res://.godot/imported/SM_Prop_Mirror.glb-7647e73188a0edcdeb14808e334319d9.scn"]
 
 [params]
 

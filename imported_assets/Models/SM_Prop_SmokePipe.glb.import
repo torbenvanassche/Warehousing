@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://3qhnshlhud3c"
-path="res://.godot/imported/SM_Prop_SmokePipe.glb-90982bc8087d74431d52d53aae8ecc1a.scn"
+path="res://.godot/imported/SM_Prop_SmokePipe.glb-eb3e76da4b3a4d53b7200eb94ad8b47a.scn"
 
 [deps]
 
-source_file="res://imported_assets/models/SM_Prop_SmokePipe.glb"
-dest_files=["res://.godot/imported/SM_Prop_SmokePipe.glb-90982bc8087d74431d52d53aae8ecc1a.scn"]
+source_file="res://imported_assets/Models/SM_Prop_SmokePipe.glb"
+dest_files=["res://.godot/imported/SM_Prop_SmokePipe.glb-eb3e76da4b3a4d53b7200eb94ad8b47a.scn"]
 
 [params]
 

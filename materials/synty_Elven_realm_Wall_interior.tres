@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://o6ivgf8qkjxl"]
+
+[ext_resource type="Texture2D" uid="uid://d3gu70gyqyl40" path="res://imported_assets/textures/ElvenRealm/Stucco_Brown_01.png" id="1_sbnk1"]
+[ext_resource type="Texture2D" uid="uid://cq3eq4nir34yu" path="res://imported_assets/textures/ElvenRealm/Stucco_Normals_01.png" id="2_0srop"]
+
+[resource]
+albedo_texture = ExtResource("1_sbnk1")
+normal_enabled = true
+normal_texture = ExtResource("2_0srop")

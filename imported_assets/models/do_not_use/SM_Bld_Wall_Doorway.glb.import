@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://u3k0kph0dkww"
-path="res://.godot/imported/SM_Bld_Wall_Doorway.glb-1a7eba0bdd44a32929205e39721e0314.scn"
+path="res://.godot/imported/SM_Bld_Wall_Doorway.glb-fdb164174fbbe30f332c4b5e56bb05e2.scn"
 
 [deps]
 
-source_file="res://imported_assets/models/do_not_use/SM_Bld_Wall_Doorway.glb"
-dest_files=["res://.godot/imported/SM_Bld_Wall_Doorway.glb-1a7eba0bdd44a32929205e39721e0314.scn"]
+source_file="res://imported_assets/Models/do_not_use/SM_Bld_Wall_Doorway.glb"
+dest_files=["res://.godot/imported/SM_Bld_Wall_Doorway.glb-fdb164174fbbe30f332c4b5e56bb05e2.scn"]
 
 [params]
 
@@ -41,7 +41,7 @@ _subresources={
 },
 "T_Elven_Interior71.007": {
 "use_external/enabled": true,
-"use_external/path": "res://materials/synty_Elven_realm_Wall_Half_Exterior.tres"
+"use_external/path": "res://materials/synty_Elven_realm_Wall_interior.tres"
 }
 },
 "meshes": {

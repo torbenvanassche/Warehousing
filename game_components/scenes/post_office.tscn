@@ -1,29 +1,30 @@
-[gd_scene load_steps=26 format=3 uid="uid://dihub6auclug1"]
+[gd_scene load_steps=27 format=3 uid="uid://dihub6auclug1"]
 
-[ext_resource type="PackedScene" uid="uid://caiw6l5h8xpfn" path="res://imported_assets/models/SM_Bld_Base_Wall_Door.glb" id="1_mo4kf"]
-[ext_resource type="PackedScene" uid="uid://cba5c51c4kkug" path="res://imported_assets/models/SM_Bld_Base_Wall_Window_Double.glb" id="2_kdndh"]
-[ext_resource type="PackedScene" uid="uid://deb48uwvn63l6" path="res://imported_assets/models/sm_bld_base_floor.tscn" id="2_ulpqr"]
-[ext_resource type="PackedScene" uid="uid://b5qqem6ceosh7" path="res://imported_assets/models/SM_Bld_Wall_Half.glb" id="3_u6d8k"]
-[ext_resource type="PackedScene" uid="uid://bru0ud0iimrhx" path="res://imported_assets/models/sm_bld_wall_doorway.tscn" id="5_asqwc"]
-[ext_resource type="PackedScene" uid="uid://duhrxdci4pd0s" path="res://imported_assets/models/SM_Bld_Wall.glb" id="7_kv8ac"]
-[ext_resource type="PackedScene" uid="uid://b702kc1sutkap" path="res://imported_assets/models/SM_Prop_Dwarf_Cart.glb" id="8_4ygkg"]
-[ext_resource type="PackedScene" uid="uid://be8i4t148qmu" path="res://imported_assets/models/SM_Prop_Shelf.glb" id="9_fsia1"]
-[ext_resource type="PackedScene" uid="uid://bs37h1au4no5i" path="res://imported_assets/models/SM_Prop_Desk.glb" id="10_ua6ud"]
-[ext_resource type="PackedScene" uid="uid://dc6q3tnnqqib6" path="res://imported_assets/models/SM_Prop_Crate_Stack.glb" id="11_0pfjo"]
-[ext_resource type="PackedScene" uid="uid://4ap0x4gi5saa" path="res://imported_assets/models/SM_Prop_Chair.glb" id="12_qnka5"]
-[ext_resource type="PackedScene" uid="uid://dsjta7ridavxk" path="res://imported_assets/models/SM_Prop_Mirror.glb" id="13_vy463"]
-[ext_resource type="PackedScene" uid="uid://u1dppsqwl68w" path="res://imported_assets/models/SM_Wep_Pipe.glb" id="15_qlyai"]
-[ext_resource type="PackedScene" uid="uid://2by7c8ydd0o4" path="res://imported_assets/models/SM_Prop_Tech_Shelf_Empty.glb" id="16_m33yl"]
-[ext_resource type="PackedScene" uid="uid://ip53quphfwtl" path="res://imported_assets/models/SM_Prop_Quest_Board.glb" id="18_rktir"]
-[ext_resource type="PackedScene" uid="uid://jfdyhbcc2j8l" path="res://imported_assets/models/SM_Bld_Base_Wall_Window.glb" id="19_g4ehx"]
-[ext_resource type="PackedScene" uid="uid://gr74qf57fvli" path="res://imported_assets/models/SM_Bld_Stairs_Railing.glb" id="20_jh5x7"]
-[ext_resource type="PackedScene" uid="uid://3h5gkry18y5c" path="res://imported_assets/models/SM_Bld_Stairs_Railing_Half.glb" id="21_djykp"]
-[ext_resource type="PackedScene" uid="uid://3qhnshlhud3c" path="res://imported_assets/models/SM_Prop_SmokePipe.glb" id="22_dhdj8"]
-[ext_resource type="PackedScene" uid="uid://cosble63jmxqd" path="res://imported_assets/models/SM_Prop_Crystal.glb" id="22_f6f7d"]
-[ext_resource type="PackedScene" uid="uid://8rodyjdopp0v" path="res://imported_assets/models/SM_Prop_Shelves.glb" id="23_4am3c"]
-[ext_resource type="PackedScene" uid="uid://cuts031m2uiqu" path="res://imported_assets/models/SM_Prop_Table.glb" id="23_n0a1w"]
-[ext_resource type="PackedScene" uid="uid://bhnwhicmtqkh6" path="res://imported_assets/models/SM_Bld_Wall_Half_Mirrored.glb" id="24_vh6im"]
-[ext_resource type="PackedScene" uid="uid://ctx1dg3qbi2o3" path="res://imported_assets/models/SM_Bld_Wall_Beam.glb" id="25_0ktgi"]
+[ext_resource type="PackedScene" uid="uid://caiw6l5h8xpfn" path="res://imported_assets/Models/SM_Bld_Base_Wall_Door.glb" id="1_mo4kf"]
+[ext_resource type="PackedScene" uid="uid://cba5c51c4kkug" path="res://imported_assets/Models/SM_Bld_Base_Wall_Window_Double.glb" id="2_kdndh"]
+[ext_resource type="PackedScene" uid="uid://deb48uwvn63l6" path="res://imported_assets/Models/sm_bld_base_floor.tscn" id="2_ulpqr"]
+[ext_resource type="PackedScene" uid="uid://b5qqem6ceosh7" path="res://imported_assets/Models/SM_Bld_Wall_Half.glb" id="3_u6d8k"]
+[ext_resource type="PackedScene" uid="uid://bru0ud0iimrhx" path="res://imported_assets/Models/sm_bld_wall_doorway.tscn" id="5_asqwc"]
+[ext_resource type="PackedScene" uid="uid://duhrxdci4pd0s" path="res://imported_assets/Models/SM_Bld_Wall.glb" id="7_kv8ac"]
+[ext_resource type="PackedScene" uid="uid://b702kc1sutkap" path="res://imported_assets/Models/SM_Prop_Dwarf_Cart.glb" id="8_4ygkg"]
+[ext_resource type="PackedScene" uid="uid://be8i4t148qmu" path="res://imported_assets/Models/SM_Prop_Shelf.glb" id="9_fsia1"]
+[ext_resource type="PackedScene" uid="uid://bs37h1au4no5i" path="res://imported_assets/Models/SM_Prop_Desk.glb" id="10_ua6ud"]
+[ext_resource type="PackedScene" uid="uid://dc6q3tnnqqib6" path="res://imported_assets/Models/SM_Prop_Crate_Stack.glb" id="11_0pfjo"]
+[ext_resource type="PackedScene" uid="uid://4ap0x4gi5saa" path="res://imported_assets/Models/SM_Prop_Chair.glb" id="12_qnka5"]
+[ext_resource type="PackedScene" uid="uid://dsjta7ridavxk" path="res://imported_assets/Models/SM_Prop_Mirror.glb" id="13_vy463"]
+[ext_resource type="PackedScene" uid="uid://u1dppsqwl68w" path="res://imported_assets/Models/SM_Wep_Pipe.glb" id="15_qlyai"]
+[ext_resource type="PackedScene" uid="uid://2by7c8ydd0o4" path="res://imported_assets/Models/SM_Prop_Tech_Shelf_Empty.glb" id="16_m33yl"]
+[ext_resource type="PackedScene" uid="uid://ip53quphfwtl" path="res://imported_assets/Models/SM_Prop_Quest_Board.glb" id="18_rktir"]
+[ext_resource type="PackedScene" uid="uid://jfdyhbcc2j8l" path="res://imported_assets/Models/SM_Bld_Base_Wall_Window.glb" id="19_g4ehx"]
+[ext_resource type="PackedScene" uid="uid://gr74qf57fvli" path="res://imported_assets/Models/SM_Bld_Stairs_Railing.glb" id="20_jh5x7"]
+[ext_resource type="PackedScene" uid="uid://3h5gkry18y5c" path="res://imported_assets/Models/SM_Bld_Stairs_Railing_Half.glb" id="21_djykp"]
+[ext_resource type="PackedScene" uid="uid://3qhnshlhud3c" path="res://imported_assets/Models/SM_Prop_SmokePipe.glb" id="22_dhdj8"]
+[ext_resource type="PackedScene" uid="uid://cosble63jmxqd" path="res://imported_assets/Models/SM_Prop_Crystal.glb" id="22_f6f7d"]
+[ext_resource type="PackedScene" uid="uid://8rodyjdopp0v" path="res://imported_assets/Models/SM_Prop_Shelves.glb" id="23_4am3c"]
+[ext_resource type="PackedScene" uid="uid://cuts031m2uiqu" path="res://imported_assets/Models/SM_Prop_Table.glb" id="23_n0a1w"]
+[ext_resource type="PackedScene" uid="uid://bhnwhicmtqkh6" path="res://imported_assets/Models/SM_Bld_Wall_Half_Mirrored.glb" id="24_vh6im"]
+[ext_resource type="PackedScene" uid="uid://ctx1dg3qbi2o3" path="res://imported_assets/Models/SM_Bld_Wall_Beam.glb" id="25_0ktgi"]
+[ext_resource type="PackedScene" uid="uid://g6rfw2lubwtl" path="res://imported_assets/Models/SM_Bld_Wall_Half_interior.glb" id="25_ukqyg"]
 
 [sub_resource type="GDScript" id="GDScript_r4wdd"]
 script/source = "extends Node3D
@@ -568,7 +569,7 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.5, 0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0, 1.5)
 
 [node name="SM_Bld_Base_Wall_Window_Double" parent="Ground Floor/Doors and windows" instance=ExtResource("2_kdndh")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.5, 0, 1.5)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.5, 7.45058e-09, 1.50001)
 
 [node name="SM_Bld_Base_Wall_Window_Double2" parent="Ground Floor/Doors and windows" instance=ExtResource("2_kdndh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0, -0.5)
@@ -598,12 +599,6 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -6, 0,
 
 [node name="SM_Bld_Wall_Half8" parent="Ground Floor/Walls" instance=ExtResource("3_u6d8k")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.5, 0, -3)
-
-[node name="SM_Bld_Wall_Half9" parent="Ground Floor/Walls" instance=ExtResource("3_u6d8k")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.5, 0, 0)
-
-[node name="SM_Bld_Wall_Half10" parent="Ground Floor/Walls" instance=ExtResource("3_u6d8k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 0.5)
 
 [node name="SM_Bld_Wall" parent="Ground Floor/Walls" instance=ExtResource("7_kv8ac")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 3)
@@ -674,23 +669,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.52543, 0, 3.01892)
 [node name="SM_Bld_Wall_Beam5" parent="Ground Floor/Walls" instance=ExtResource("25_0ktgi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.52543, 0, -3.51358)
 
-[node name="SM_Bld_Wall_Beam7" parent="Ground Floor/Walls" instance=ExtResource("25_0ktgi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.00558, 0, -3.51358)
-
 [node name="SM_Bld_Wall_Beam9" parent="Ground Floor/Walls" instance=ExtResource("25_0ktgi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.00558, 0, -4.01358)
 
 [node name="SM_Bld_Wall_Beam11" parent="Ground Floor/Walls" instance=ExtResource("25_0ktgi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.98127, 0, -4.01358)
 
-[node name="SM_Bld_Wall_Beam13" parent="Ground Floor/Walls" instance=ExtResource("25_0ktgi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.98127, 0, -3.01358)
-
 [node name="SM_Bld_Wall_Beam15" parent="Ground Floor/Walls" instance=ExtResource("25_0ktgi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.48127, 0, -3.01358)
-
-[node name="SM_Bld_Wall_Beam17" parent="Ground Floor/Walls" instance=ExtResource("25_0ktgi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.48127, 0, -0.0135775)
 
 [node name="SM_Bld_Wall_Half_Mirrored2" parent="Ground Floor/Walls" instance=ExtResource("24_vh6im")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -6.5, 0, 3)
@@ -1133,14 +1119,8 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -3.842
 [node name="SM_Prop_Shelves22" parent="1st Floor/Props" instance=ExtResource("23_4am3c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.192, 1.5, -3.408)
 
-[node name="SM_Prop_Shelves9" parent="1st Floor/Props" instance=ExtResource("22_dhdj8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.192, 1.5, -3.408)
-
 [node name="SM_Prop_Shelves23" parent="1st Floor/Props" instance=ExtResource("23_4am3c")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -4.942, 1.5, -3.408)
-
-[node name="SM_Prop_Shelves11" parent="1st Floor/Props" instance=ExtResource("22_dhdj8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.192, 1.5, -2.408)
 
 [node name="SM_Bld_Wall_Half_Mirrored" parent="." instance=ExtResource("24_vh6im")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 3)
@@ -1158,7 +1138,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.52543, 1.5, 3.01892)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.52543, 1.5, -3.51358)
 
 [node name="SM_Bld_Wall_Beam8" parent="." instance=ExtResource("25_0ktgi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.00558, 1.5, -3.51358)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.97369, 1.5, -3.47549)
+
+[node name="SM_Bld_Wall_Beam9" parent="." instance=ExtResource("25_0ktgi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.02369, 1.5, -2.97549)
+
+[node name="SM_Bld_Wall_Beam11" parent="." instance=ExtResource("25_0ktgi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.97369, 0, -3.47549)
+
+[node name="SM_Bld_Wall_Beam13" parent="." instance=ExtResource("25_0ktgi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.02369, 0, -2.97549)
 
 [node name="SM_Bld_Wall_Beam10" parent="." instance=ExtResource("25_0ktgi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.00558, 1.5, -4.01358)
@@ -1166,11 +1155,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.00558, 1.5, -4.01358)
 [node name="SM_Bld_Wall_Beam12" parent="." instance=ExtResource("25_0ktgi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.98127, 1.5, -4.01358)
 
-[node name="SM_Bld_Wall_Beam14" parent="." instance=ExtResource("25_0ktgi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.98127, 1.5, -3.01358)
-
 [node name="SM_Bld_Wall_Beam16" parent="." instance=ExtResource("25_0ktgi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.48127, 1.5, -3.01358)
 
-[node name="SM_Bld_Wall_Beam18" parent="." instance=ExtResource("25_0ktgi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.48127, 1.5, -0.0135775)
+[node name="SM_Bld_Wall_Half_interior" parent="." instance=ExtResource("25_ukqyg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0.005, 0.5)
+
+[node name="SM_Bld_Wall_Half_interior2" parent="." instance=ExtResource("25_ukqyg")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.98572, 0.005, 0)

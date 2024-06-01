@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://ip53quphfwtl"
-path="res://.godot/imported/SM_Prop_Quest_Board.glb-bfac405159d4c74f7b139df2ff9d2804.scn"
+path="res://.godot/imported/SM_Prop_Quest_Board.glb-f55faf2dcf664b47109d9e1fc9bba412.scn"
 
 [deps]
 
-source_file="res://imported_assets/models/SM_Prop_Quest_Board.glb"
-dest_files=["res://.godot/imported/SM_Prop_Quest_Board.glb-bfac405159d4c74f7b139df2ff9d2804.scn"]
+source_file="res://imported_assets/Models/SM_Prop_Quest_Board.glb"
+dest_files=["res://.godot/imported/SM_Prop_Quest_Board.glb-f55faf2dcf664b47109d9e1fc9bba412.scn"]
 
 [params]
 

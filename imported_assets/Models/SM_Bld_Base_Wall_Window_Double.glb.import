@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cba5c51c4kkug"
-path="res://.godot/imported/SM_Bld_Base_Wall_Window_Double.glb-694a68a0d85437fddc36b111b2fbd6bc.scn"
+path="res://.godot/imported/SM_Bld_Base_Wall_Window_Double.glb-e2704be1258cac3ddb0203dd524c08be.scn"
 
 [deps]
 
-source_file="res://imported_assets/models/SM_Bld_Base_Wall_Window_Double.glb"
-dest_files=["res://.godot/imported/SM_Bld_Base_Wall_Window_Double.glb-694a68a0d85437fddc36b111b2fbd6bc.scn"]
+source_file="res://imported_assets/Models/SM_Bld_Base_Wall_Window_Double.glb"
+dest_files=["res://.godot/imported/SM_Bld_Base_Wall_Window_Double.glb-e2704be1258cac3ddb0203dd524c08be.scn"]
 
 [params]
 
@@ -32,8 +32,16 @@ import_script/path=""
 _subresources={
 "materials": {
 "A_Wall12.006": {
-"use_external/enabled": false,
-"use_external/path": "res://materials/synty_Elven_realm_Wall_Exterior.tres"
+"use_external/enabled": true,
+"use_external/path": "res://materials/synty_Elven_realm_Wall_interior.tres"
+},
+"GlassSHD.001": {
+"use_external/enabled": true,
+"use_external/path": "res://materials/synty_Elven_Realm.tres"
+},
+"lambert1691.006": {
+"use_external/enabled": true,
+"use_external/path": "res://materials/synty_Elven_Realm.tres"
 },
 "lambert1692.006": {
 "use_external/enabled": true,

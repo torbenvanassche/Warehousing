@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://ctx1dg3qbi2o3"
-path="res://.godot/imported/SM_Bld_Wall_Beam.glb-f4caef2b3282b8081a48c23bdf80ceb5.scn"
+path="res://.godot/imported/SM_Bld_Wall_Beam.glb-ba3afa94d59432f6e14fab5bff016562.scn"
 
 [deps]
 
-source_file="res://imported_assets/models/SM_Bld_Wall_Beam.glb"
-dest_files=["res://.godot/imported/SM_Bld_Wall_Beam.glb-f4caef2b3282b8081a48c23bdf80ceb5.scn"]
+source_file="res://imported_assets/Models/SM_Bld_Wall_Beam.glb"
+dest_files=["res://.godot/imported/SM_Bld_Wall_Beam.glb-ba3afa94d59432f6e14fab5bff016562.scn"]
 
 [params]
 

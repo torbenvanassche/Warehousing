@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cuts031m2uiqu"
-path="res://.godot/imported/SM_Prop_Table.glb-83423092ad3a67584fadc199d8a5c353.scn"
+path="res://.godot/imported/SM_Prop_Table.glb-ba5401688ea7d063dac1818d038bc085.scn"
 
 [deps]
 
-source_file="res://imported_assets/models/SM_Prop_Table.glb"
-dest_files=["res://.godot/imported/SM_Prop_Table.glb-83423092ad3a67584fadc199d8a5c353.scn"]
+source_file="res://imported_assets/Models/SM_Prop_Table.glb"
+dest_files=["res://.godot/imported/SM_Prop_Table.glb-ba5401688ea7d063dac1818d038bc085.scn"]
 
 [params]
 

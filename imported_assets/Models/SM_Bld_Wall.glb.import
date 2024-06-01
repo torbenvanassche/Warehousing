@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://duhrxdci4pd0s"
-path="res://.godot/imported/SM_Bld_Wall.glb-c76a2dd3b884e483d50ea44b15dfa748.scn"
+path="res://.godot/imported/SM_Bld_Wall.glb-9b727e0f73d2e159cf425bceb2c51cbf.scn"
 
 [deps]
 
-source_file="res://imported_assets/models/SM_Bld_Wall.glb"
-dest_files=["res://.godot/imported/SM_Bld_Wall.glb-c76a2dd3b884e483d50ea44b15dfa748.scn"]
+source_file="res://imported_assets/Models/SM_Bld_Wall.glb"
+dest_files=["res://.godot/imported/SM_Bld_Wall.glb-9b727e0f73d2e159cf425bceb2c51cbf.scn"]
 
 [params]
 
@@ -33,11 +33,11 @@ _subresources={
 "materials": {
 "T_Elven_Brick27.011": {
 "use_external/enabled": true,
-"use_external/path": "res://materials/synty_Elven_realm_stone_floor.tres"
+"use_external/path": "res://materials/synty_Elven_realm_Wall_Exterior.tres"
 },
 "T_Elven_Interior65.011": {
 "use_external/enabled": true,
-"use_external/path": "res://materials/synty_Elven_realm_Wall_Exterior.tres"
+"use_external/path": "res://materials/synty_Elven_realm_Wall_interior.tres"
 }
 }
 }
