@@ -26,6 +26,7 @@ light_energy = 0.5
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
 
 [node name="Player" parent="PlayerRoot" instance=ExtResource("4_d5x6q")]
+transform = Transform3D(-0.65, 0, -9.81473e-08, 0, 0.65, 0, 9.81473e-08, 0, -0.65, 0, 0.0195935, 0)
 
 [node name="CameraRoot" parent="PlayerRoot" node_paths=PackedStringArray("target") instance=ExtResource("5_gew37")]
 transform = Transform3D(-0.65, 0, -9.81473e-08, 0, 0.65, 0, 9.81473e-08, 0, -0.65, 0, 0.160077, 0)

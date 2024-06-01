@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://dihub6auclug1"]
+[gd_scene load_steps=26 format=3 uid="uid://dihub6auclug1"]
 
 [ext_resource type="PackedScene" uid="uid://caiw6l5h8xpfn" path="res://imported_assets/models/SM_Bld_Base_Wall_Door.glb" id="1_mo4kf"]
 [ext_resource type="PackedScene" uid="uid://cba5c51c4kkug" path="res://imported_assets/models/SM_Bld_Base_Wall_Window_Double.glb" id="2_kdndh"]
