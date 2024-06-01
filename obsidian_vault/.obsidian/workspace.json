@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Creatures.md",
+                "file": "Gameplay.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Creatures.md",
+                "file": "Gameplay.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Creatures.md",
+                "file": "Gameplay.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Creatures.md"
+                "file": "Gameplay.md"
               }
             }
           }
@@ -148,10 +148,10 @@
   },
   "active": "251202e52d89daa3",
   "lastOpenFiles": [
-    "Concepts.md",
+    "GDD.md",
     "Gameplay.md",
     "Creatures.md",
-    "GDD.md",
+    "Concepts.md",
     "().md",
     "Untitled.canvas",
     "Welcome.md"
