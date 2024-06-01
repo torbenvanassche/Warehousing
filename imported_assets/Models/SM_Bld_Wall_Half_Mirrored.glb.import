@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bhnwhicmtqkh6"
-path="res://.godot/imported/SM_Bld_Wall_Half_Mirrored.glb-fbeea0ee6700eed9b27d078a381e3209.scn"
+path="res://.godot/imported/SM_Bld_Wall_Half_Mirrored.glb-73d09c9101dbf35a3ef57d26d75d1bbc.scn"
 
 [deps]
 
-source_file="res://imported_assets/Models/SM_Bld_Wall_Half_Mirrored.glb"
-dest_files=["res://.godot/imported/SM_Bld_Wall_Half_Mirrored.glb-fbeea0ee6700eed9b27d078a381e3209.scn"]
+source_file="res://imported_assets/models/SM_Bld_Wall_Half_Mirrored.glb"
+dest_files=["res://.godot/imported/SM_Bld_Wall_Half_Mirrored.glb-73d09c9101dbf35a3ef57d26d75d1bbc.scn"]
 
 [params]
 

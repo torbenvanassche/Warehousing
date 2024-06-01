@@ -1,9 +1,9 @@
 [gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://qwfigtfltcqs"]
 
-[ext_resource type="Texture2D" uid="uid://5oimpriax6dj" path="res://imported_assets/textures/ElvenRealm/Brick_05.png" id="1_n6my5"]
+[ext_resource type="Texture2D" uid="uid://cd5r7sgc47w2j" path="res://imported_assets/textures/ElvenRealm/Brick_05.png" id="1_i1bmq"]
 [ext_resource type="Texture2D" uid="uid://sy0anepha7pl" path="res://imported_assets/textures/ElvenRealm/Brick_Normals_05.png" id="2_1xi3k"]
 
 [resource]
-albedo_texture = ExtResource("1_n6my5")
+albedo_texture = ExtResource("1_i1bmq")
 normal_enabled = true
 normal_texture = ExtResource("2_1xi3k")

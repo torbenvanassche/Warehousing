@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://u1dppsqwl68w"
-path="res://.godot/imported/SM_Wep_Pipe.glb-8ebf6f1fecfd8d7a2370ef36da0286a2.scn"
+path="res://.godot/imported/SM_Wep_Pipe.glb-8d60e91b28b11138c764707d2fa6911c.scn"
 
 [deps]
 
-source_file="res://imported_assets/Models/SM_Wep_Pipe.glb"
-dest_files=["res://.godot/imported/SM_Wep_Pipe.glb-8ebf6f1fecfd8d7a2370ef36da0286a2.scn"]
+source_file="res://imported_assets/models/SM_Wep_Pipe.glb"
+dest_files=["res://.godot/imported/SM_Wep_Pipe.glb-8d60e91b28b11138c764707d2fa6911c.scn"]
 
 [params]
 

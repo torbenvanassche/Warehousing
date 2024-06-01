@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bru0ud0iimrhx"]
+
+[ext_resource type="PackedScene" uid="uid://u3k0kph0dkww" path="res://imported_assets/models/do_not_use/SM_Bld_Wall_Doorway.glb" id="1_ujepo"]
+
+[node name="SM_Bld_Wall_Doorway" instance=ExtResource("1_ujepo")]
+
+[node name="SM_Bld_Wall_Doorway_01_Collision_009" parent="SM_Bld_Wall_Doorway_01_013" index="0"]
+mesh = null
