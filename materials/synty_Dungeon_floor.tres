@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://p8l8gbx8rjdr"]
+
+[ext_resource type="Texture2D" uid="uid://cilgjbybwhedk" path="res://imported_assets/textures/ElvenRealm/Dungeons_Texture_FloorTile_09_02.png" id="1_y7osf"]
+[ext_resource type="Texture2D" uid="uid://chpytkca1k8hu" path="res://imported_assets/textures/ElvenRealm/Dungeons_Texture_FloorTile_09_normals.png" id="2_qkmpy"]
+
+[resource]
+albedo_texture = ExtResource("1_y7osf")
+normal_enabled = true
+normal_texture = ExtResource("2_qkmpy")

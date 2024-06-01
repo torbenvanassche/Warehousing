@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://ddocm0bggwvft"]
+
+[ext_resource type="Texture2D" uid="uid://cpfhf3541jhwx" path="res://imported_assets/textures/ElvenRealm/Wood_Fancy_01.png" id="1_00duq"]
+
+[resource]
+albedo_texture = ExtResource("1_00duq")
