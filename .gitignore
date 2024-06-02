@@ -11,6 +11,3 @@ export_presets.cfg
 
 #build folder
 builds/
-
-#ignore import files
-*.import
