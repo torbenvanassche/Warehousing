@@ -1,9 +1,17 @@
+class_name SceneManager
 extends Node
 
 @export var scenes: Array[SceneInfo];
+static var instance: SceneManager;
 
 signal scene_entered(scene: Node)
 signal scene_exited(scene: Node)
+
+func _ready():
+	SceneManager.instance = self;
+	
+	#Init the game view
+	set_active_scene("main_menu")
 
 var active_scene: Node:
 	get: return active_scene;
@@ -14,7 +22,7 @@ var active_scene: Node:
 			active_scene.visible = false;
 			scene_exited.emit(active_scene);
 			if active_scene.has_method("on_disable"):
-				active_scene.on_enable();
+				active_scene.on_disable();
 		active_scene = new_scene;
 		active_scene.visible = true;
 		
@@ -22,11 +30,13 @@ var active_scene: Node:
 		if active_scene.has_method("on_enable"):
 			active_scene.on_enable();
 			
-func get_or_create_scene(scene_name: String):
-	var scene_filtered := scenes.filter(func(scene): return scene.id == scene_name);
-	if scene_filtered.size() == 1:
-		var scene_info: SceneInfo = scene_filtered[0];
-		print(scene_info.node_path)
+func get_or_create_scene(scene_name: String):	
+	var filtered: Array = scenes.filter(func(scene: SceneInfo): return scene.id == scene_name);
+	if filtered.size() == 0:
+		printerr(scene_name + " was not found, unable to instantiate!")
+	
+	if filtered.size() == 1:
+		var scene_info: SceneInfo = filtered[0];
 		if !scene_info.node_path.is_empty():
 			return get_node(scene_info.node_path);
 		else:
@@ -34,20 +44,36 @@ func get_or_create_scene(scene_name: String):
 			add_child(node)
 			scene_info.node_path = node.get_path();
 			return node;
+	else:
+		printerr(scene_name + " was found multiple times, unable to instantiate!")
 		
-func set_active_scene(scene_name: String, remove_active_from_tree: bool = true, last_position: Node3D = null):
+func node_to_info(node: Node) -> SceneInfo:
+	var filtered = scenes.filter(func(x: SceneInfo): return x.id == node.name);
+	if filtered.size() == 1:
+		return filtered[0];
+	return null
+		
+func set_active_scene(scene_name: String, remove_active_from_tree: bool = false):
+	var previous_scene: Node = null;
 	if active_scene:
-		if last_position:
-			active_scene.set_meta("last_tile", last_position)
 		if remove_active_from_tree:
 			active_scene.queue_free()
+		else:
+			previous_scene = active_scene;
 	active_scene = get_or_create_scene(scene_name)
 	
-	if Manager.player:
-		if active_scene.has_meta("last_tile"):
-			Manager.player.current_tile = active_scene.get_meta("last_tile")
-		else:
-			Manager.player.current_tile = active_scene.entrance;                   
-
-func _ready():
-	set_active_scene("main_menu")
+	if previous_scene:
+		active_scene.set_meta("previous_scene_node", previous_scene)
+		
+func to_previous_scene():
+	var scene_info = node_to_info(active_scene.get_meta("previous_scene_node", null));
+	if scene_info:
+		active_scene.remove_meta("previous_scene_node")
+		set_active_scene(scene_info.id, false);
+	
+func get_scene_by_name(scene_name: String):
+	var filtered = scenes.filter(func(x: Node): return x.name == scene_name)
+	if filtered.size() > 0:
+		return filtered[0]
+	else:
+		return null

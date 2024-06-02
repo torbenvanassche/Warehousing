@@ -1,14 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://c25s0jbhunfu1"]
+[gd_scene load_steps=7 format=3 uid="uid://c25s0jbhunfu1"]
 
 [ext_resource type="PackedScene" uid="uid://xybxog28ksjh" path="res://game_components/scenes/main_menu.tscn" id="1_rcmoo"]
 [ext_resource type="Script" path="res://game_mechanics/global_scripts/scene_manager.gd" id="1_v50w1"]
 [ext_resource type="Script" path="res://game_mechanics/global_scripts/data/scene_info.gd" id="3_75jyt"]
+[ext_resource type="PackedScene" uid="uid://cwy41r2h51umk" path="res://game_mechanics/user_interface/windows/new_game_file_creator.tscn" id="4_7om38"]
 
 [sub_resource type="Resource" id="Resource_jcoq7"]
 script = ExtResource("3_75jyt")
 id = "main_menu"
 packed_scene = ExtResource("1_rcmoo")
 
+[sub_resource type="Resource" id="Resource_3le8e"]
+script = ExtResource("3_75jyt")
+id = "new_game_file_creator"
+packed_scene = ExtResource("4_7om38")
+
 [node name="absolute_root" type="Node"]
 script = ExtResource("1_v50w1")
-scenes = Array[ExtResource("3_75jyt")]([SubResource("Resource_jcoq7")])
+scenes = Array[ExtResource("3_75jyt")]([SubResource("Resource_jcoq7"), SubResource("Resource_3le8e")])

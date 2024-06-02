@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://bsmejqqhv6061"]
+
+[ext_resource type="Texture2D" uid="uid://begspnt402cia" path="res://icon.svg" id="1_hdang"]
+
+[node name="HBoxContainer" type="HBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_hdang")
+expand_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "SAVE FILE NAME"
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "TIME PLAYED"

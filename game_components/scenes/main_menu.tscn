@@ -1,15 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://xybxog28ksjh"]
+[gd_scene load_steps=4 format=3 uid="uid://xybxog28ksjh"]
 
 [ext_resource type="Texture2D" uid="uid://rif7kce1nbso" path="res://imported_assets/ui_icons/ic--baseline-discord.svg" id="1_oe4ev"]
+[ext_resource type="Script" path="res://game_mechanics/user_interface/scripts/main_menu.gd" id="1_rmu8i"]
 [ext_resource type="Texture2D" uid="uid://b2fhjns7lpdap" path="res://imported_assets/ui_icons/ph--globe.svg" id="2_xas7j"]
 
-[node name="full_rect_menu" type="Control"]
+[node name="main_menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_rmu8i")
 
 [node name="Background" type="ColorRect" parent="."]
 layout_mode = 1
