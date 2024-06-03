@@ -108,3 +108,6 @@ func _indices_to_tiles(arr: PackedInt64Array) -> Array[TileBase]:
 	
 func set_path(arr: Array[TileBase]):
 	current_nav = arr;
+	
+func is_adjacent(tile1: TileBase, tile2: TileBase) -> bool:
+	return tile1.neighbours.has(tile2) || tile2.neighbours.has(tile1)

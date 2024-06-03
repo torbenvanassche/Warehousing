@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bwrcc2gxqnosv"]
+[gd_scene load_steps=12 format=3 uid="uid://bwrcc2gxqnosv"]
 
 [ext_resource type="Script" path="res://game_mechanics/player_elements/player.gd" id="1_spbeu"]
 [ext_resource type="PackedScene" uid="uid://cvt0d66ofytw1" path="res://imported_assets/characters/slime.glb" id="2_3wwn3"]
@@ -46,20 +46,18 @@ _data = {
 "hop": SubResource("Animation_p2pcr")
 }
 
-[node name="Player" type="Node3D" node_paths=PackedStringArray("inventory", "animator", "speech_bubble", "click_navigator", "wasd_navigator")]
-transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 0, 0)
+[sub_resource type="BoxShape3D" id="BoxShape3D_k2ivl"]
+
+[node name="Player" type="CharacterBody3D"]
+transform = Transform3D(-3, 0, -4.52987e-07, 0, 3, 0, 4.52987e-07, 0, -3, 0, 0, 0)
 script = ExtResource("1_spbeu")
-inventory = NodePath("Inventory")
-animator = NodePath("AnimationPlayer")
-speech_bubble = NodePath("mesh/SpeechBubble")
-click_navigator = NodePath("click_navigator")
-wasd_navigator = NodePath("wasd_navigator")
 
 [node name="mesh" parent="." instance=ExtResource("2_3wwn3")]
 transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 0, 0)
 
 [node name="SpeechBubble" type="Sprite3D" parent="mesh"]
 transform = Transform3D(-1.5, 0, 2.26494e-07, 0, 1.5, 0, -2.26494e-07, 0, -1.5, 0, 0.794893, 0)
+visible = false
 pixel_size = 0.03
 billboard = 1
 texture_filter = 0
@@ -86,3 +84,9 @@ max_slots = 1
 libraries = {
 "": SubResource("AnimationLibrary_3rkfw")
 }
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0.1, 0)
+shape = SubResource("BoxShape3D_k2ivl")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
