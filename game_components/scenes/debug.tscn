@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b1p3jq7dcjf1c"]
+[gd_scene load_steps=9 format=3 uid="uid://b1p3jq7dcjf1c"]
 
 [ext_resource type="PackedScene" uid="uid://bwrcc2gxqnosv" path="res://game_components/prefabs/Player.tscn" id="1_8fulo"]
 [ext_resource type="Material" uid="uid://bflflhkp2jdb3" path="res://materials/prototyping/interactable.tres" id="1_olsch"]
@@ -17,6 +17,8 @@ agent_radius = 0.6
 [sub_resource type="BoxShape3D" id="BoxShape3D_66e2b"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gir4f"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_txgf5"]
 
 [node name="Debug" type="Node3D"]
 
@@ -44,13 +46,17 @@ skeleton = NodePath("../..")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/MeshInstance3D2/StaticBody3D"]
 shape = SubResource("BoxShape3D_gir4f")
 
-[node name="PlayerRoot" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.28287, 0.0602186, 0.732245)
-
-[node name="Player" parent="PlayerRoot" instance=ExtResource("1_8fulo")]
-
-[node name="CameraRoot" parent="PlayerRoot" instance=ExtResource("2_w1hqd")]
-transform = Transform3D(-0.65, 0, -9.81473e-08, 0, 0.65, 0, 9.81473e-08, 0, -0.65, 0, 0.160077, 0)
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.615221, 0.425426, -0.663713, 0, 0.841897, 0.539638, 0.788354, -0.331997, 0.517953, -4.19668, 3.41676, 0)
+
+[node name="Player" parent="." instance=ExtResource("1_8fulo")]
+transform = Transform3D(-3, 0, -4.52987e-07, 0, 3, 0, 4.52987e-07, 0, -3, -2.28287, 0.0602186, 0.732245)
+
+[node name="Camera" parent="." node_paths=PackedStringArray("target") instance=ExtResource("2_w1hqd")]
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -2.28287, 0.220296, 0.732245)
+target = NodePath("../Player")
+distance = 4.0
+distance_interval = Vector2i(3, 8)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("WorldBoundaryShape3D_txgf5")

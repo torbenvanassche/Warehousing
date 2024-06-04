@@ -5,6 +5,7 @@ extends Node3D
 
 @export var distance: float = 7
 @export var distance_interval: Vector2i = Vector2i(5, 10);
+@export var follow_speed = 1;
 
 var pitch_input: float = 0
 var twist_input: float = 0
@@ -15,10 +16,12 @@ func _ready():
 	%Camera3D.position.z = distance
 	Manager.camera = %Camera3D;
 	
-func _process(_delta):
+func _process(delta):
 	$TwistPivot.rotate_y(twist_input)
 	$TwistPivot/PitchPivot.rotate_x((pitch_input))
 	$TwistPivot/PitchPivot.rotation.x = clamp($TwistPivot/PitchPivot.rotation.x, -0.7, -0.15)
+	
+	position = position.lerp(target.position, delta * follow_speed);
 	
 	twist_input = 0.0
 	pitch_input = 0.0
@@ -46,4 +49,3 @@ func _unhandled_input(event):
 	if Input.is_action_just_pressed("cancel"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		get_viewport().warp_mouse(mouse_position)
-	pass

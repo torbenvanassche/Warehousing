@@ -1,0 +1,92 @@
+[gd_scene load_steps=12 format=3 uid="uid://bwrcc2gxqnosv"]
+
+[ext_resource type="Script" path="res://game_mechanics/player_elements/player.gd" id="1_spbeu"]
+[ext_resource type="PackedScene" uid="uid://cvt0d66ofytw1" path="res://imported_assets/characters/slime.glb" id="2_3wwn3"]
+[ext_resource type="Script" path="res://game_mechanics/player_elements/navigation/click_navigator.gd" id="3_lo4tn"]
+[ext_resource type="Script" path="res://game_mechanics/player_elements/navigation/wasd_navigator.gd" id="4_l0om5"]
+[ext_resource type="Script" path="res://game_mechanics/inventory/data_management/inventory.gd" id="5_4bm4r"]
+[ext_resource type="Texture2D" uid="uid://ba8omyck4m2x0" path="res://imported_assets/ui_icons/pixel_style1.png" id="6_mgpas"]
+[ext_resource type="Script" path="res://game_mechanics/global_scripts/emote_handler.gd" id="7_w36k6"]
+
+[sub_resource type="Animation" id="Animation_5bd2n"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_p2pcr"]
+resource_name = "hop"
+loop_mode = 1
+step = 0.025
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("mesh:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.8),
+"transitions": PackedFloat32Array(0.5, 0.292817, 0.0625002),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0.5, 0), Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("mesh:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.025, 0.075, 0.125, 0.4, 0.45, 0.6, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, -2),
+"update": 0,
+"values": [Vector3(1, 1, 1), Vector3(1.2, 0.7, 1.2), Vector3(1, 1, 1), Vector3(0.75, 1.25, 0.75), Vector3(1, 1, 1), Vector3(1, 1, 1), Vector3(1.4, 0.5, 1.4), Vector3(1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3rkfw"]
+_data = {
+"RESET": SubResource("Animation_5bd2n"),
+"hop": SubResource("Animation_p2pcr")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_k2ivl"]
+
+[node name="Player" type="CharacterBody3D"]
+transform = Transform3D(-3, 0, -4.52987e-07, 0, 3, 0, 4.52987e-07, 0, -3, 0, 0, 0)
+script = ExtResource("1_spbeu")
+
+[node name="mesh" parent="." instance=ExtResource("2_3wwn3")]
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 0, 0)
+
+[node name="SpeechBubble" type="Sprite3D" parent="mesh"]
+transform = Transform3D(-1.5, 0, 2.26494e-07, 0, 1.5, 0, -2.26494e-07, 0, -1.5, 0, 0.794893, 0)
+visible = false
+pixel_size = 0.03
+billboard = 1
+texture_filter = 0
+render_priority = 1
+texture = ExtResource("6_mgpas")
+hframes = 10
+vframes = 3
+frame = 15
+script = ExtResource("7_w36k6")
+dictionary_path = "res://lookup_tables/emotes.json"
+
+[node name="click_navigator" type="Node" parent="."]
+script = ExtResource("3_lo4tn")
+
+[node name="wasd_navigator" type="Node" parent="."]
+script = ExtResource("4_l0om5")
+
+[node name="Inventory" type="Node" parent="."]
+script = ExtResource("5_4bm4r")
+unlocked_slots = 1
+max_slots = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_3rkfw")
+}
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0.1, 0)
+shape = SubResource("BoxShape3D_k2ivl")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
