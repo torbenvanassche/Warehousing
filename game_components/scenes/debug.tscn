@@ -1,24 +1,22 @@
-[gd_scene load_steps=9 format=3 uid="uid://b1p3jq7dcjf1c"]
+[gd_scene load_steps=8 format=3 uid="uid://b1p3jq7dcjf1c"]
 
 [ext_resource type="PackedScene" uid="uid://bwrcc2gxqnosv" path="res://game_components/prefabs/Player.tscn" id="1_8fulo"]
 [ext_resource type="Material" uid="uid://bflflhkp2jdb3" path="res://materials/prototyping/interactable.tres" id="1_olsch"]
 [ext_resource type="PackedScene" uid="uid://cuqpjlp4i7pkb" path="res://game_components/prefabs/camera.tscn" id="2_w1hqd"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_txtks"]
-vertices = PackedVector3Array(0.95, 0.07, 4.4, 1, 0.07, 3.05, 0.7, 0.07, 3.05, 0.7, 0.07, -3.05, 1, 0.07, -3.05, 0.95, 0.07, -4.4, 0.95, 0.07, 4.4, 0.7, 0.07, 3.05, 0.4, 0.07, 2.9, 0.4, 0.07, -2.9, 0.7, 0.07, -3.05, 0.95, 0.07, -4.4, 0.95, 0.07, 4.4, 0.4, 0.07, 2.9, 0.15, 0.07, 2.5, -4.4, 0.07, 4.4, 0.15, 0.07, -2.5, 0.4, 0.07, -2.9, 0.95, 0.07, -4.4, -4.4, 0.07, -4.4, 0.15, 0.07, 2.5, 0.15, 0.07, -2.5, -4.4, 0.07, -4.4, -4.4, 0.07, 4.4, 0.95, 0.07, -4.4, 1, 0.07, -3.05, 1.85, 0.07, -3.05, 0.95, 0.07, -4.4, 1.85, 0.07, -3.05, 2.15, 0.07, -2.9, 4.4, 0.07, -2.1, 4.4, 0.07, -4.4, 2.4, 0.07, -2.5, 2.4, 0.07, -2.1, 4.4, 0.07, -2.1, 2.15, 0.07, -2.9, 2.4, 0.07, -2.5, 4.4, 0.07, -2.1, 2.4, 0.07, 2.1, 4.4, 0.07, 2.1, 4.4, 0.07, -2.1, 2.4, 0.07, -2.1, 1.85, 0.07, 3.05, 1, 0.07, 3.05, 0.95, 0.07, 4.4, 2.15, 0.07, 2.9, 1.85, 0.07, 3.05, 0.95, 0.07, 4.4, 4.4, 0.07, 4.4, 4.4, 0.07, 2.1, 4.4, 0.07, 2.1, 2.4, 0.07, 2.1, 2.4, 0.07, 2.5, 4.4, 0.07, 2.1, 2.4, 0.07, 2.5, 2.15, 0.07, 2.9)
-polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(5, 4, 3), PackedInt32Array(8, 7, 6), PackedInt32Array(11, 10, 9), PackedInt32Array(13, 12, 14), PackedInt32Array(14, 12, 15), PackedInt32Array(17, 16, 18), PackedInt32Array(18, 16, 19), PackedInt32Array(20, 23, 21), PackedInt32Array(21, 23, 22), PackedInt32Array(24, 26, 25), PackedInt32Array(28, 27, 29), PackedInt32Array(29, 27, 31), PackedInt32Array(29, 31, 30), PackedInt32Array(32, 34, 33), PackedInt32Array(37, 36, 35), PackedInt32Array(41, 40, 38), PackedInt32Array(38, 40, 39), PackedInt32Array(44, 43, 42), PackedInt32Array(46, 45, 47), PackedInt32Array(47, 45, 48), PackedInt32Array(48, 45, 49), PackedInt32Array(52, 51, 50), PackedInt32Array(55, 54, 53)]
+vertices = PackedVector3Array(0.95, 0.07, 4.35, 1, 0.07, 3.1, 0.7, 0.07, 3.1, 0.7, 0.07, -3.1, 1, 0.07, -3.1, 0.95, 0.07, -4.35, 0.95, 0.07, 4.35, 0.7, 0.07, 3.1, 0.4, 0.07, 2.95, 0.4, 0.07, -2.95, 0.7, 0.07, -3.1, 0.95, 0.07, -4.35, 0.95, 0.07, 4.35, 0.4, 0.07, 2.95, 0.0999999, 0.07, 2.5, -4.35, 0.07, 4.35, 0.0999999, 0.07, -2.5, 0.4, 0.07, -2.95, 0.95, 0.07, -4.35, -4.35, 0.07, -4.35, 0.0999999, 0.07, 2.5, 0.0999999, 0.07, -2.5, -4.35, 0.07, -4.35, -4.35, 0.07, 4.35, 0.95, 0.07, -4.35, 1, 0.07, -3.1, 1.85, 0.07, -3.1, 0.95, 0.07, -4.35, 1.85, 0.07, -3.1, 2.15, 0.07, -2.95, 4.35, 0.07, -2.1, 4.35, 0.07, -4.35, 2.45, 0.07, -2.5, 2.45, 0.07, -2.1, 4.35, 0.07, -2.1, 2.15, 0.07, -2.95, 2.45, 0.07, -2.5, 4.35, 0.07, -2.1, 2.45, 0.07, 2.1, 4.35, 0.07, 2.1, 4.35, 0.07, -2.1, 2.45, 0.07, -2.1, 1.85, 0.07, 3.1, 1, 0.07, 3.1, 0.95, 0.07, 4.35, 2.15, 0.07, 2.95, 1.85, 0.07, 3.1, 0.95, 0.07, 4.35, 4.35, 0.07, 4.35, 4.35, 0.07, 2.1, 4.35, 0.07, 2.1, 2.45, 0.07, 2.1, 2.45, 0.07, 2.5, 4.35, 0.07, 2.1, 2.45, 0.07, 2.5, 2.15, 0.07, 2.95)
+polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(5, 4, 3), PackedInt32Array(6, 8, 7), PackedInt32Array(9, 11, 10), PackedInt32Array(13, 12, 14), PackedInt32Array(14, 12, 15), PackedInt32Array(17, 16, 18), PackedInt32Array(18, 16, 19), PackedInt32Array(21, 20, 22), PackedInt32Array(22, 20, 23), PackedInt32Array(26, 25, 24), PackedInt32Array(28, 27, 29), PackedInt32Array(29, 27, 31), PackedInt32Array(29, 31, 30), PackedInt32Array(34, 33, 32), PackedInt32Array(37, 36, 35), PackedInt32Array(41, 40, 38), PackedInt32Array(38, 40, 39), PackedInt32Array(42, 44, 43), PackedInt32Array(46, 45, 47), PackedInt32Array(47, 45, 48), PackedInt32Array(48, 45, 49), PackedInt32Array(52, 51, 50), PackedInt32Array(55, 54, 53)]
 cell_size = 0.05
 cell_height = 0.01
 agent_height = 0.5
-agent_radius = 0.6
+agent_radius = 0.65
 
 [sub_resource type="BoxMesh" id="BoxMesh_5n078"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_66e2b"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gir4f"]
-
-[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_txgf5"]
 
 [node name="Debug" type="Node3D"]
 
@@ -57,6 +55,3 @@ transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -2.282
 target = NodePath("../Player")
 distance = 4.0
 distance_interval = Vector2i(3, 8)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("WorldBoundaryShape3D_txgf5")
