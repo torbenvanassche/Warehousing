@@ -48,7 +48,7 @@ shape = SubResource("BoxShape3D_gir4f")
 transform = Transform3D(0.615221, 0.425426, -0.663713, 0, 0.841897, 0.539638, 0.788354, -0.331997, 0.517953, -4.19668, 3.41676, 0)
 
 [node name="Player" parent="." instance=ExtResource("1_8fulo")]
-transform = Transform3D(-3, 0, -4.52987e-07, 0, 3, 0, 4.52987e-07, 0, -3, -2.28287, 0.0602186, 0.732245)
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -2.28287, 0.0602186, 0.732245)
 
 [node name="Camera" parent="." node_paths=PackedStringArray("target") instance=ExtResource("2_w1hqd")]
 transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -2.28287, 0.220296, 0.732245)

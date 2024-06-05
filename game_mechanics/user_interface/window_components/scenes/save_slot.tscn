@@ -1,11 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://bsmejqqhv6061"]
+[gd_scene load_steps=3 format=3 uid="uid://bsmejqqhv6061"]
 
+[ext_resource type="Script" path="res://game_mechanics/user_interface/scripts/update_save_data.gd" id="1_e3wnp"]
 [ext_resource type="Texture2D" uid="uid://begspnt402cia" path="res://icon.svg" id="1_hdang"]
 
 [node name="HBoxContainer" type="HBoxContainer"]
 custom_minimum_size = Vector2(0, 50)
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("1_e3wnp")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 2
@@ -16,10 +18,10 @@ expand_mode = 2
 layout_mode = 2
 alignment = 1
 
-[node name="Label" type="Label" parent="VBoxContainer"]
+[node name="save_name" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 text = "SAVE FILE NAME"
 
-[node name="Label2" type="Label" parent="VBoxContainer"]
+[node name="time_played" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 text = "TIME PLAYED"
