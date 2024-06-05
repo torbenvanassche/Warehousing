@@ -8,6 +8,7 @@ extends Control
 	
 func _ready():
 	new_game_button.pressed.connect(SceneManager.instance.set_active_scene.bind("new_game_file_creator", false))
+	quit_button.pressed.connect(get_tree().quit)
 	
 func on_enable():
 	pass
