@@ -3,6 +3,7 @@ extends Node
 
 @export var scenes: Array[SceneInfo];
 static var instance: SceneManager;
+var game_loaded_timestamp: Dictionary;
 
 signal scene_entered(scene: Node)
 signal scene_exited(scene: Node)

@@ -16,13 +16,13 @@ offset_right = 4.0
 offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_nn7po")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("1_nn7po")
 
 [node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
 layout_mode = 2
@@ -48,12 +48,9 @@ theme_override_constants/separation = 5
 
 [node name="save_name" type="Label" parent="HBoxContainer/MarginContainer2/VBoxContainer"]
 layout_mode = 2
-text = "SAVE FILE NAME"
 
 [node name="time_played" type="Label" parent="HBoxContainer/MarginContainer2/VBoxContainer"]
 layout_mode = 2
-text = "TIME PLAYED"
 
 [node name="last_played" type="Label" parent="HBoxContainer/MarginContainer2/VBoxContainer"]
 layout_mode = 2
-text = "LAST PLAYED"
