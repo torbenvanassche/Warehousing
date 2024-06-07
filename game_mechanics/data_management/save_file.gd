@@ -51,7 +51,7 @@ func calculate_session_time(start_time: Dictionary, end_time: Dictionary) -> int
 	return end_timestamp - start_timestamp
 	
 func get_readable_save_time():
-	return String("{day}-{month}-{year} {hour}:").format(SceneManager.instance.game_loaded_timestamp) + str("%02d" % SceneManager.instance.game_loaded_timestamp["minute"])
+	return String("{day}-{month}-{year} {hour}:").format(last_time_played) + str("%02d" % last_time_played["minute"])
 	
 func get_total_time_played() -> Array:
 	var hours = time_played / 3600
