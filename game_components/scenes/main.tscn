@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://c25s0jbhunfu1"]
+[gd_scene load_steps=11 format=3 uid="uid://c25s0jbhunfu1"]
 
 [ext_resource type="PackedScene" uid="uid://xybxog28ksjh" path="res://game_components/scenes/main_menu.tscn" id="1_rcmoo"]
 [ext_resource type="Script" path="res://game_mechanics/global_scripts/scene_manager.gd" id="1_v50w1"]
 [ext_resource type="Script" path="res://game_mechanics/global_scripts/data/scene_info.gd" id="3_75jyt"]
 [ext_resource type="PackedScene" uid="uid://cwy41r2h51umk" path="res://game_mechanics/user_interface/windows/new_game_file_creator.tscn" id="4_7om38"]
+[ext_resource type="PackedScene" uid="uid://b1p3jq7dcjf1c" path="res://game_components/scenes/debug.tscn" id="5_0jrsm"]
+[ext_resource type="PackedScene" uid="uid://cab8b0fs7luja" path="res://game_mechanics/user_interface/windows/paused.tscn" id="6_hs7vx"]
 
 [sub_resource type="Resource" id="Resource_jcoq7"]
 script = ExtResource("3_75jyt")
@@ -15,6 +17,16 @@ script = ExtResource("3_75jyt")
 id = "new_game_file_creator"
 packed_scene = ExtResource("4_7om38")
 
-[node name="absolute_root" type="Node"]
+[sub_resource type="Resource" id="Resource_j38ss"]
+script = ExtResource("3_75jyt")
+id = "game"
+packed_scene = ExtResource("5_0jrsm")
+
+[sub_resource type="Resource" id="Resource_pd3f1"]
+script = ExtResource("3_75jyt")
+id = "paused"
+packed_scene = ExtResource("6_hs7vx")
+
+[node name="game_root" type="Node"]
 script = ExtResource("1_v50w1")
-scenes = Array[ExtResource("3_75jyt")]([SubResource("Resource_jcoq7"), SubResource("Resource_3le8e")])
+scenes = Array[ExtResource("3_75jyt")]([SubResource("Resource_jcoq7"), SubResource("Resource_3le8e"), SubResource("Resource_j38ss"), SubResource("Resource_pd3f1")])

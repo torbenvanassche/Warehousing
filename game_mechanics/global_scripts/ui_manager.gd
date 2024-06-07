@@ -3,6 +3,10 @@ extends Node
 
 var window_data: Dictionary = {};
 var scene_history: Array[Node] = []
+static var instance: UserInterface;
+
+func _enter_tree():
+	UserInterface.instance = self;
 
 func _ready():
 	process_mode = Node.PROCESS_MODE_ALWAYS;

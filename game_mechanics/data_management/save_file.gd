@@ -7,15 +7,16 @@ var save_id: String;
 var slot_number: int;
 
 var user_defined_string: String;
+var file_on_disk: bool = false;
 	
 func _init(id: String):	
 	save_id = id;
 	
-	var save_path = "user://saves/" + id + ".sav";	
+	var save_path = "user://saves/" + id + ".sav";
 	if not FileAccess.file_exists(save_path):
-		print("Save file with name " + id + " not found, creating.")
 		return;
 		
+	file_on_disk = true;
 	var file = FileAccess.open(save_path, FileAccess.READ);
 	var save_data = generate_save_dictionary();
 	for key in save_data.keys():
@@ -54,10 +55,9 @@ func get_readable_save_time():
 	return String("{day}-{month}-{year} {hour}:").format(last_time_played) + str("%02d" % last_time_played["minute"])
 	
 func get_total_time_played() -> Array:
-	var hours = time_played / 3600
-	var minutes = (time_played % 3600) / 60
+	var hours: int = int(time_played / 3600.0)
+	var minutes: int = int((time_played % 3600) / 60.0)
 	return [hours, minutes]
 
 func get_total_time_played_as_string() -> String:
-	var total_time = get_total_time_played();
 	return "%02d:%02d" % get_total_time_played();

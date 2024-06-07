@@ -16,7 +16,7 @@ func _defer_ready():
 	player.navigation_agent.target_reached.connect(func(): arrived = true);
 	player.navigation_agent.path_changed.connect(func(): arrived = false);
 	
-func _physics_process(delta):	
+func _physics_process(_delta):
 	if !player.use_navmesh:
 		return
 	var current_location = player.global_position;

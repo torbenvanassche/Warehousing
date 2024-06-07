@@ -19,9 +19,7 @@ config/icon="res://icon.svg"
 
 Settings="*res://game_mechanics/global_scripts/settings.gd"
 Manager="*res://game_mechanics/global_scripts/game_manager.gd"
-UIManager="*res://game_mechanics/global_scripts/ui_manager.gd"
 ItemManager="*res://game_mechanics/global_scripts/item_manager.gd"
-PathFinder="*res://game_mechanics/player_elements/navigation/pathfinder.gd"
 
 [display]
 

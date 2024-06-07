@@ -5,6 +5,6 @@ extends Node
 @onready var quit_button: Button = $quit;
 
 func _ready():
-	resume_button.pressed.connect(UIManager.toggle_pause)
+	resume_button.pressed.connect(UserInterface.instance.toggle_pause)
 	settings_button.pressed.connect(func(): print("Not implemented yet."))
-	quit_button.pressed.connect(get_tree().quit)
+	quit_button.pressed.connect(SceneManager.instance.set_active_scene.bind("main_menu", true))

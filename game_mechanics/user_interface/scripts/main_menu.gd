@@ -7,7 +7,7 @@ extends Control
 @onready var quit_button: Button = $Buttons/VBoxContainer/quit;
 	
 func _ready():
-	new_game_button.pressed.connect(SceneManager.instance.set_active_scene.bind("new_game_file_creator", false))
+	new_game_button.pressed.connect(SceneManager.instance.set_active_scene.bind("new_game_file_creator", true))
 	quit_button.pressed.connect(get_tree().quit)
 	
 func on_enable():

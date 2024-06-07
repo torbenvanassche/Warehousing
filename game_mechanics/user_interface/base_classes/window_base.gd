@@ -32,7 +32,7 @@ func _ready():
 	top_bar.gui_input.connect(handle_input)
 	change_title.connect(_change_title)
 	
-	UIManager.add_window(id, self)
+	UserInterface.instance.add_window(id, self)
 	
 	if to_enable && "window" in to_enable:
 		to_enable.window = self;
@@ -91,7 +91,7 @@ func handle_input(event: InputEvent) -> void:
 func close_window():
 	if store_position:
 		stored_position = position;
-	UIManager.disable_ui(self, return_on_close)
+	UserInterface.instance.disable_ui(self, return_on_close)
 	
 func _unhandled_input(event):	
 	if event.is_action_pressed("cancel") && visible:

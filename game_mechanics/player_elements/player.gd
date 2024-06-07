@@ -27,9 +27,9 @@ func set_speed(speed: float):
 func is_near(node: Node3D, max_distance: float = 1) -> bool:
 	return global_position.distance_to(node.global_position) <= max_distance;
 	
-func get_closest_point_navmesh(position: Vector3) -> Vector3:
-	return NavigationServer3D.map_get_closest_point(NavigationServer3D.agent_get_map(navigation_agent.get_rid()), position)
+func get_closest_point_navmesh(pos: Vector3) -> Vector3:
+	return NavigationServer3D.map_get_closest_point(NavigationServer3D.agent_get_map(navigation_agent.get_rid()), pos)
 	
-func look_forward(position: Vector3 = velocity):
-	if global_position.distance_to(transform.origin + position) > 0.25:
+func look_forward(pos: Vector3 = velocity):
+	if global_position.distance_to(transform.origin + pos) > 0.25:
 		look_at(transform.origin + velocity, Vector3.UP)

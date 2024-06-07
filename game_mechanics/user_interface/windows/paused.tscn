@@ -35,4 +35,4 @@ text = "SETTINGS"
 
 [node name="quit" type="Button" parent="VBoxContainer/content/VBoxContainer" index="2"]
 layout_mode = 2
-text = "QUIT"
+text = "QUIT TO MENU"

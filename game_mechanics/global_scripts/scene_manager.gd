@@ -59,14 +59,15 @@ func set_active_scene(scene_name: String, remove_active_from_tree: bool = false)
 	if active_scene:
 		if remove_active_from_tree:
 			active_scene.queue_free()
+			#TODO: node also needs to be removed from the sceneinfo
 		else:
 			previous_scene = active_scene;
 	active_scene = get_or_create_scene(scene_name)
 	
-	if previous_scene:
+	if previous_scene && !remove_active_from_tree:
 		active_scene.set_meta("previous_scene_node", previous_scene)
 		
-func to_previous_scene():
+func to_previous_scene(remove_current: bool = false):
 	var scene_info = node_to_info(active_scene.get_meta("previous_scene_node", null));
 	if scene_info:
 		active_scene.remove_meta("previous_scene_node")
