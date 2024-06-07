@@ -13,3 +13,7 @@ func on_enable():
 		DirAccess.make_dir_absolute(save_root_path)
 		
 	var files = DirAccess.get_files_at(save_root_path).slice(0, save_container.get_child_count());
+	for f: String in files: 
+		print(int(f), int(f.get_basename()))
+		save_container.get_child(int(f)).open(f.get_basename())
+		

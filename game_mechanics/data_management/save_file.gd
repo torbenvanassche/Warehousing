@@ -3,33 +3,25 @@ extends Resource
 
 var last_time_played: Dictionary;
 var time_played: int;
-var uuid: String;
+var save_id: String;
 var slot_number: int;
 
 var user_defined_string: String;
 	
-func _init(uuid: String = str(ResourceUID.create_id())):
-	var save_path = "user://saves/" + uuid + ".save";
+func _init(id: String):	
+	save_id = id;
+	
+	var save_path = "user://saves/" + id + ".sav";	
 	if not FileAccess.file_exists(save_path):
-		print("Save file with name " + uuid + " not found, creating.")
+		print("Save file with name " + id + " not found, creating.")
 		return;
 		
-	self.uuid = uuid;
+	var file = FileAccess.open(save_path, FileAccess.READ);
+	var save_data = generate_save_dictionary();
+	for key in save_data.keys():
+		set(key, file.get_var())
+	file.close();
 	
-	var save_file = FileAccess.open(save_path, FileAccess.READ)
-	while save_file.get_position() < save_file.get_length():
-		var json_string = save_file.get_line();
-		var json = JSON.new();
-		var parse_result = json.parse(json_string);
-		if not parse_result == OK:
-			printerr("JSON Parse error: ", json.get_error_message())
-			continue;
-			
-		var json_data = json.get_data();
-		
-		for key in json_data.keys():
-			set(key, json_data[key]);
-			
 func save():
 	last_time_played = Time.get_datetime_dict_from_system(false)
 	var session_time = calculate_session_time(SceneManager.instance.game_loaded_timestamp, last_time_played)
@@ -39,19 +31,18 @@ func save():
 	time_played += session_time;
 	
 	#actually save the resource
-	var save_data: Dictionary = generate_save_dictionary();
-	var save_as_json: String = JSON.stringify(save_data)
-	var save_path = "user://saves/" + uuid + ".save";
-	var save_file = FileAccess.open(save_path, FileAccess.WRITE);
-	save_file.store_line(save_as_json)
+	var save_path = "user://saves/" + save_id + ".sav";
+	var file = FileAccess.open(save_path, FileAccess.WRITE);
+	var save_data = generate_save_dictionary();
+	for key in save_data.keys():
+		file.store_var(save_data[key])
+	file.close();
 	
 func generate_save_dictionary() -> Dictionary:
 	return {
 		"last_time_played": last_time_played,
 		"time_played": time_played,
 		"user_defined_string": user_defined_string,
-		"slot_number": slot_number,
-		"uuid": uuid
 	}
 
 func calculate_session_time(start_time: Dictionary, end_time: Dictionary) -> int:
