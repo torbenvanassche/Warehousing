@@ -20,7 +20,7 @@ agent_radius = 0.65
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gir4f"]
 
-[node name="Debug" type="Node3D"]
+[node name="game" type="Node3D"]
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_txtks")

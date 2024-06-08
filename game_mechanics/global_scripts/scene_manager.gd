@@ -38,44 +38,38 @@ func get_or_create_scene(scene_name: String):
 	
 	if filtered.size() == 1:
 		var scene_info: SceneInfo = filtered[0];
-		if !scene_info.node_path.is_empty():
-			return get_node(scene_info.node_path);
+		if scene_info.node != null:
+			return scene_info.node;
 		else:
 			var node = scene_info.packed_scene.instantiate();
 			add_child(node)
-			scene_info.node_path = node.get_path();
+			scene_info.node = node
 			return node;
 	else:
 		printerr(scene_name + " was found multiple times, unable to instantiate!")
 		
 func node_to_info(node: Node) -> SceneInfo:
-	var filtered = scenes.filter(func(x: SceneInfo): return x.id == node.name);
+	var filtered = scenes.filter(func(x: SceneInfo): return x.node == node);
 	if filtered.size() == 1:
 		return filtered[0];
+	printerr("Could not find " + node.name + " in scenes.")
 	return null
 		
 func set_active_scene(scene_name: String, remove_active_from_tree: bool = false):
-	var previous_scene: Node = null;
+	var previous_scene_info: SceneInfo = null;
 	if active_scene:
+		previous_scene_info = node_to_info(active_scene);
 		if remove_active_from_tree:
-			active_scene.queue_free()
-			#TODO: node also needs to be removed from the sceneinfo
-		else:
-			previous_scene = active_scene;
+			previous_scene_info.node.queue_free() 
 	active_scene = get_or_create_scene(scene_name)
+	active_scene.set_meta("previous_scene_info", previous_scene_info)
 	
-	if previous_scene && !remove_active_from_tree:
-		active_scene.set_meta("previous_scene_node", previous_scene)
+	if active_scene.has_method("on_enable"):
+		active_scene.on_enable()
 		
 func to_previous_scene(remove_current: bool = false):
-	var scene_info = node_to_info(active_scene.get_meta("previous_scene_node", null));
-	if scene_info:
-		active_scene.remove_meta("previous_scene_node")
-		set_active_scene(scene_info.id, false);
+	var scene_info = active_scene.get_meta("previous_scene_info")
+	active_scene.remove_meta("previous_scene_info")
 	
-func get_scene_by_name(scene_name: String):
-	var filtered = scenes.filter(func(x: Node): return x.name == scene_name)
-	if filtered.size() > 0:
-		return filtered[0]
-	else:
-		return null
+	if scene_info:
+		set_active_scene(scene_info.id, remove_current);
