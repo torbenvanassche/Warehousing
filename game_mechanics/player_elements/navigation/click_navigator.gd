@@ -28,10 +28,7 @@ func _physics_process(_delta):
 		player.look_forward(next_location)
 	
 func _input(event):
-	if event is InputEventMouseButton and event.is_released() and event.button_index == 1:
-		if UserInterface.instance.is_ui_closed():
-			return
-		
+	if event is InputEventMouseButton and event.is_released() and event.button_index == 1 && UserInterface.instance.is_ui_closed():
 		player.use_navmesh = true;
 		var space_state = player.get_world_3d().direct_space_state;
 		
