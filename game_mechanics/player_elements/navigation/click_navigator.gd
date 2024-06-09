@@ -35,5 +35,6 @@ func _input(event):
 		var origin = Manager.camera.project_ray_origin(event.position)
 		var end = origin + Manager.camera.project_ray_normal(event.position) * 1000;
 		var result = space_state.intersect_ray(PhysicsRayQueryParameters3D.create(origin, end))
-		destination = player.get_closest_point_navmesh(result.position);
+		if result != {}:
+			destination = player.get_closest_point_navmesh(result.position);
 		

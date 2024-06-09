@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://dkn4nxkpwita"]
+
+[ext_resource type="Script" path="res://game_mechanics/world_interactable/interactable.gd" id="1_nxfkr"]
+[ext_resource type="Resource" uid="uid://brgiirep48rjv" path="res://game_components/interactions/interaction_packing_table.tres" id="2_8wgia"]
+[ext_resource type="Material" uid="uid://csl6nknoxj5bw" path="res://materials/prototyping/interactable.tres" id="4_cdseh"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_0h4xs"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rbnnv"]
+
+[node name="Node3D" type="Node3D" node_paths=PackedStringArray("static_body")]
+script = ExtResource("1_nxfkr")
+interaction = ExtResource("2_8wgia")
+static_body = NodePath("StaticBody3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+material_override = ExtResource("4_cdseh")
+mesh = SubResource("BoxMesh_0h4xs")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_rbnnv")

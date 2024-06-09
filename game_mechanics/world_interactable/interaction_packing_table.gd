@@ -1,4 +1,4 @@
 extends Interaction
 
 func execute(_dict: Dictionary = {}):
-	UIManager.enable_ui(UIManager.get_subwindow("PUZZLE"), true, { carryable = Carryable.new(Vector2i(3, 3)) })
+	UserInterface.instance.enable_ui(UserInterface.instance.get_subwindow("BOX_FITTING"), true, { carryable = Carryable.new(Vector2i(3, 3)) })

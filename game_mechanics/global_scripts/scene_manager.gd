@@ -38,7 +38,7 @@ func get_or_create_scene(scene_name: String):
 	
 	if filtered.size() == 1:
 		var scene_info: SceneInfo = filtered[0];
-		if scene_info.node != null:
+		if is_instance_valid(scene_info.node):
 			return scene_info.node;
 		else:
 			var node = scene_info.packed_scene.instantiate();
