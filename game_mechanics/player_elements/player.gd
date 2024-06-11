@@ -3,7 +3,7 @@ extends CharacterBody3D
 
 @onready var inventory: Inventory = $Inventory;
 @onready var animator: AnimationPlayer = $AnimationPlayer;
-@onready var speech_bubble: EmoteHandler = $mesh/SpeechBubble;
+@onready var emote: EmoteHandler = $mesh/SpeechBubble;
 @onready var navigation_agent: NavigationAgent3D = $NavigationAgent3D;
 
 @export var move_delay: float = 0.5;
@@ -18,7 +18,7 @@ signal on_move_complete();
 func _ready():
 	Manager.player = self;
 	animator.speed_scale = (1 / (move_delay + animation_delay));
-	inventory.on_item_add_failed.connect(speech_bubble.set_emote.bind(speech_bubble.get_emote_by_id("CROSS").frame))
+	inventory.on_item_add_failed.connect(emote.set_emote.bind(emote.get_emote_by_id("CROSS").frame))
 	
 func set_speed(speed: float):
 	move_delay = speed;

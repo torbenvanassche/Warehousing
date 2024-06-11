@@ -5,18 +5,14 @@ extends Node3D
 @export var static_body: StaticBody3D = null;
 @export var interaction_distance: float = 1.5;
 
-@onready var fallback: StaticBody3D = get_child(0).get_child(0) as StaticBody3D;
-
 func _ready():
 	if !interaction:
 		printerr("No interaction is defined!")
 		return;
 	
 	if !static_body:
-		static_body = fallback;
-		if !static_body:
-			printerr("No static body assigned on " + self.name)
-			return;
+		printerr("No static body assigned on " + self.name)
+		return;
 	static_body.input_event.connect(execute)
 
 func execute(_camera = null, _event = null, _pos = Vector3.ZERO, _normal = Vector3.ZERO, _shape_idx = -1):
