@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://b1p3jq7dcjf1c"]
+[gd_scene load_steps=13 format=3 uid="uid://b1p3jq7dcjf1c"]
 
 [ext_resource type="PackedScene" uid="uid://bwrcc2gxqnosv" path="res://game_components/prefabs/Player.tscn" id="1_8fulo"]
 [ext_resource type="Material" uid="uid://bflflhkp2jdb3" path="res://materials/prototyping/look_through.tres" id="1_y1sy8"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cab8b0fs7luja" path="res://game_mechanics/user_interface/windows/paused.tscn" id="5_5y3xw"]
 [ext_resource type="PackedScene" uid="uid://ccrqwbtxe7wa4" path="res://game_mechanics/user_interface/windows/box_fitting.tscn" id="6_3dcw5"]
 [ext_resource type="PackedScene" uid="uid://dkn4nxkpwita" path="res://game_components/prefabs/interactable.tscn" id="7_sao04"]
+[ext_resource type="PackedScene" uid="uid://d3yaswkd55sxm" path="res://game_components/prefabs/item_generator.tscn" id="8_ayvwo"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_txtks"]
 vertices = PackedVector3Array(0.95, 0.07, 4.35, 1, 0.07, 3.1, 0.7, 0.07, 3.1, 0.7, 0.07, -3.1, 1, 0.07, -3.1, 0.95, 0.07, -4.35, 0.95, 0.07, 4.35, 0.7, 0.07, 3.1, 0.4, 0.07, 2.95, 0.4, 0.07, -2.95, 0.7, 0.07, -3.1, 0.95, 0.07, -4.35, 0.95, 0.07, 4.35, 0.4, 0.07, 2.95, 0.0999999, 0.07, 2.5, -4.35, 0.07, 4.35, 0.0999999, 0.07, -2.5, 0.4, 0.07, -2.95, 0.95, 0.07, -4.35, -3.1, 0.07, -4.35, -3.05, 0.07, -3.7, 0.0999999, 0.07, -2.5, -3.4, 0.07, -3.2, -3.7, 0.07, -3.05, 0.0999999, 0.07, -2.5, -3.7, 0.07, -3.05, -4.35, 0.07, -3.1, -4.35, 0.07, 4.35, 0.0999999, 0.07, 2.5, 0.0999999, 0.07, -2.5, -3.05, 0.07, -3.7, -3.4, 0.07, -3.2, 0.95, 0.07, -4.35, 1, 0.07, -3.1, 1.85, 0.07, -3.1, 0.95, 0.07, -4.35, 1.85, 0.07, -3.1, 2.15, 0.07, -2.95, 4.35, 0.07, -2.1, 4.35, 0.07, -4.35, 2.45, 0.07, -2.5, 2.45, 0.07, -2.1, 4.35, 0.07, -2.1, 2.15, 0.07, -2.95, 2.45, 0.07, -2.5, 4.35, 0.07, -2.1, 2.45, 0.07, 2.1, 4.35, 0.07, 2.1, 4.35, 0.07, -2.1, 2.45, 0.07, -2.1, 1.85, 0.07, 3.1, 1, 0.07, 3.1, 0.95, 0.07, 4.35, 2.15, 0.07, 2.95, 1.85, 0.07, 3.1, 0.95, 0.07, 4.35, 4.35, 0.07, 4.35, 4.35, 0.07, 2.1, 4.35, 0.07, 2.1, 2.45, 0.07, 2.1, 2.45, 0.07, 2.5, 4.35, 0.07, 2.1, 2.45, 0.07, 2.5, 2.15, 0.07, 2.95)
@@ -56,15 +57,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.46418, 0)
 billboard = 2
 text = "Open puzzle"
 
-[node name="Node3D2" parent="NavigationRegion3D" node_paths=PackedStringArray("static_body") instance=ExtResource("7_sao04")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.25, 0, -4)
-static_body = NodePath("../Node3D/StaticBody3D")
-
-[node name="Label3D" type="Label3D" parent="NavigationRegion3D/Node3D2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.46418, 0)
-billboard = 2
-text = "Get random item"
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.615221, 0.425426, -0.663713, 0, 0.841897, 0.539638, 0.788354, -0.331997, 0.517953, -4.19668, 3.41676, 0)
 
@@ -83,3 +75,11 @@ script = ExtResource("4_p5ugg")
 [node name="pause" parent="UI" instance=ExtResource("5_5y3xw")]
 
 [node name="puzzle" parent="UI" instance=ExtResource("6_3dcw5")]
+
+[node name="generator" parent="." instance=ExtResource("8_ayvwo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.23302, 0.05, -3.87327)
+
+[node name="Label3D" type="Label3D" parent="generator"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1667, 0)
+billboard = 2
+text = "Item generator"

@@ -9,9 +9,13 @@ func _ready():
 	if !interaction:
 		printerr("No interaction is defined!")
 		return;
-	
-	if !static_body:
-		printerr("No static body assigned on " + self.name)
+		
+	var all_children = Utils.flatten_hierarchy(self, true).filter(func(x): return x is StaticBody3D);
+	if all_children.size() != 0:
+		static_body = all_children[0];
+		
+	if not static_body:
+		printerr("No physics on " + self.name + ", verify it has a static_body component.")
 		return;
 	static_body.input_event.connect(execute)
 
