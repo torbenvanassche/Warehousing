@@ -1,40 +1,90 @@
-[gd_scene load_steps=4 format=3 uid="uid://ccrqwbtxe7wa4"]
+[gd_scene load_steps=6 format=3 uid="uid://ccrqwbtxe7wa4"]
 
 [ext_resource type="PackedScene" uid="uid://dny1dqcanlco0" path="res://game_mechanics/user_interface/base_scenes/base_window.tscn" id="1_v7sw0"]
 [ext_resource type="Script" path="res://game_mechanics/puzzles/fit_in_box/box_puzzle.gd" id="2_edvg4"]
 [ext_resource type="Script" path="res://game_mechanics/user_interface/window_components/scripts/item_slot_ui_puzzle.gd" id="3_1vkwa"]
+[ext_resource type="Texture2D" uid="uid://begspnt402cia" path="res://icon.svg" id="4_nc0yv"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_qa3ud"]
+color = Color(0.498039, 0.498039, 0.498039, 1)
+grow_begin = 0.0
+grow_end = 0.0
+thickness = 2
+vertical = true
 
 [node name="Window" node_paths=PackedStringArray("to_enable") instance=ExtResource("1_v7sw0")]
 offset_right = -702.0
 offset_bottom = -248.0
 id = "BOX_FITTING"
-to_enable = NodePath("VBoxContainer/content/MarginContainer/Control/GridController")
+to_enable = [NodePath("VBoxContainer/content/HBoxContainer/MarginContainer/Control/PuzzleGrid"), NodePath("VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer/ItemShape")]
 
 [node name="Title" parent="VBoxContainer/topbar/HBoxContainer/MarginContainer" index="0"]
 text = "Puzzle"
 
 [node name="content" parent="VBoxContainer" index="1"]
-custom_minimum_size = Vector2(450, 200)
+custom_minimum_size = Vector2(200, 200)
 size_flags_vertical = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/content" index="0"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/content" index="0"]
+layout_mode = 0
+offset_right = 450.0
+offset_bottom = 200.0
+theme_override_constants/separation = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/content/HBoxContainer" index="0"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="Control" type="HFlowContainer" parent="VBoxContainer/content/MarginContainer" index="0"]
+[node name="Control" type="HFlowContainer" parent="VBoxContainer/content/HBoxContainer/MarginContainer" index="0"]
 layout_mode = 2
 
-[node name="GridController" type="GridContainer" parent="VBoxContainer/content/MarginContainer/Control" index="0" node_paths=PackedStringArray("visual_element")]
+[node name="PuzzleGrid" type="GridContainer" parent="VBoxContainer/content/HBoxContainer/MarginContainer/Control" index="0" node_paths=PackedStringArray("visual_element")]
 layout_mode = 2
+theme_override_constants/h_separation = 1
+theme_override_constants/v_separation = 1
 columns = 4
 script = ExtResource("2_edvg4")
 item_slot_script = ExtResource("3_1vkwa")
 visual_element = NodePath(".")
+
+[node name="VSeparator" type="VSeparator" parent="VBoxContainer/content/HBoxContainer" index="1"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_qa3ud")
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/content/HBoxContainer" index="2"]
+custom_minimum_size = Vector2(245, 200)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme_override_constants/margin_top = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/content/HBoxContainer/MarginContainer2" index="0"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer" index="0"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer" index="0"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+texture = ExtResource("4_nc0yv")
+expand_mode = 1
+
+[node name="item_name" type="Label" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer" index="1"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "ITEM_NAME"
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer" index="1"]
+layout_mode = 2
+
+[node name="ItemShape" type="GridContainer" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer" index="2"]
+layout_mode = 2
+theme_override_constants/h_separation = 1
+theme_override_constants/v_separation = 1
+columns = 3

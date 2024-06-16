@@ -17,7 +17,7 @@ var initial_position: Vector2;
 @export var store_position: bool = false;
 @export var override_position: Vector2;
 @export var override_size: Vector2;
-@export var to_enable: Node;
+@export var to_enable: Array[Node];
 @export var return_on_close: bool = true;
 
 signal close_requested();
@@ -34,8 +34,9 @@ func _ready():
 	
 	UserInterface.instance.add_window(id, self)
 	
-	if to_enable && "window" in to_enable:
-		to_enable.window = self;
+	for n in to_enable:
+		if n && "window" in n:
+			n.window = self;
 	
 	if override_size != Vector2.ZERO:
 		self.set_deferred("size", override_size)
@@ -47,8 +48,10 @@ func on_enable(options: Dictionary = {}):
 		return
 		
 	visible = true;
-	if to_enable && to_enable.has_method("on_enable"):
-		to_enable.on_enable(options)
+	
+	for n in to_enable:
+		if n && n.has_method("on_enable"):
+			n.on_enable(options)
 		
 	match display_mode:
 		"display":
