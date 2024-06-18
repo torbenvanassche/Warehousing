@@ -27,6 +27,9 @@ func _process(delta):
 	pitch_input = 0.0
 	
 func _unhandled_input(event):
+	if !UserInterface.instance.is_ui_closed():
+		return;
+	
 	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 		twist_input = - event.relative.x * Settings.camera_rotation_sensitivity;
 		pitch_input = - event.relative.y * Settings.camera_rotation_sensitivity;

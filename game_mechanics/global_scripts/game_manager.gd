@@ -6,6 +6,7 @@ extends Node3D
 var camera: Camera3D;
 
 var current_save_file: SaveFile;
+var scroll_in_use: bool = false;
 	
 func pause(pause_game = true):
 	get_tree().paused = pause_game

@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://game_mechanics/player_elements/navigation/click_navigator.gd" id="3_lo4tn"]
 [ext_resource type="Script" path="res://game_mechanics/player_elements/navigation/wasd_navigator.gd" id="4_l0om5"]
 [ext_resource type="Script" path="res://game_mechanics/inventory/data_management/inventory.gd" id="5_4bm4r"]
-[ext_resource type="Texture2D" uid="uid://ba8omyck4m2x0" path="res://imported_assets/ui_icons/pixel_style1.png" id="6_mgpas"]
+[ext_resource type="Texture2D" uid="uid://ba8omyck4m2x0" path="res://imported_assets/ui_icons/emotes_pixel_style.png" id="6_mgpas"]
 [ext_resource type="Script" path="res://game_mechanics/global_scripts/emote_handler.gd" id="7_w36k6"]
 
 [sub_resource type="Animation" id="Animation_5bd2n"]

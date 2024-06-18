@@ -52,6 +52,8 @@ func on_enable(options: Dictionary = {}):
 	for n in to_enable:
 		if n && n.has_method("on_enable"):
 			n.on_enable(options)
+		else:
+			printerr(n.name + " is not valid to call on_enable.")
 		
 	match display_mode:
 		"display":
@@ -73,7 +75,7 @@ func on_enable(options: Dictionary = {}):
 		"center":
 			initial_position = get_viewport_rect().size / 2
 		"override":
-			initial_position = override_position;	
+			initial_position = override_position;
 	position = initial_position - size / 2;
 	
 	if store_position:

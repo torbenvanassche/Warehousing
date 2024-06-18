@@ -3,15 +3,21 @@ extends Node
 var data_file_path: String = "res://imported_assets/item_data/item_database.json"
 var _items: Dictionary = FileUtils.load_items(data_file_path);
 	
-func get_item(id: String):
+func get_item(id: String, as_copy: bool = false) -> Dictionary:
 	if _items.keys().find(id) != -1:
-		var rv = _items[id];
+		var rv: Dictionary = _items[id];
+		assign_layout(rv)
 		rv.id = id;
-		return rv;
+		
+		if as_copy:
+			return rv.duplicate();
+		else:
+			return rv;
+		
 	printerr(id + " not found in the item database.")
-	return null;
+	return {};
 	
-func get_items():
+func get_items() -> Dictionary:
 	return _items;
 	
 func get_by_property(prop: String, value: Variant, dict: Dictionary = _items) -> Dictionary:
@@ -42,7 +48,7 @@ func get_sprite(item: Dictionary) -> Texture:
 			printerr("Could not find sprite for " + item.name)
 		return null
 	
-func assign_layout(source: Dictionary, destination: Dictionary) -> void:
+func assign_layout(source: Dictionary, destination: Dictionary = source) -> void:
 	var result: Array[bool] = []
 	if source.has("layout") && source.layout is Dictionary:
 		for c in source.layout.data:
@@ -67,7 +73,7 @@ func get_components(item: Dictionary) -> Array[Dictionary]:
 		result.append(get_item(component))
 	return result
 	
-func get_craftables(components: Array[String], process: Utils.CRAFT_METHOD):
-	var options = get_by_property("process", Utils.convert_craft_method(process), get_by_property("available", true));
+func get_craftables(components: Array[String], process: Utils.CRAFT_METHOD) -> Dictionary:
+	var options: Dictionary = get_by_property("process", Utils.convert_craft_method(process), get_by_property("available", true));
 	options = get_by_property("components", components, options)
 	return options;

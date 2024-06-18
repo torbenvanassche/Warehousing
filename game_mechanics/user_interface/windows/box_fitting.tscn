@@ -1,49 +1,46 @@
-[gd_scene load_steps=6 format=3 uid="uid://ccrqwbtxe7wa4"]
+[gd_scene load_steps=8 format=3 uid="uid://ccrqwbtxe7wa4"]
 
 [ext_resource type="PackedScene" uid="uid://dny1dqcanlco0" path="res://game_mechanics/user_interface/base_scenes/base_window.tscn" id="1_v7sw0"]
 [ext_resource type="Script" path="res://game_mechanics/puzzles/fit_in_box/box_puzzle.gd" id="2_edvg4"]
 [ext_resource type="Script" path="res://game_mechanics/user_interface/window_components/scripts/item_slot_ui_puzzle.gd" id="3_1vkwa"]
+[ext_resource type="StyleBox" uid="uid://dj18phdy5nqwx" path="res://StyleBoxes/separator_vertical.tres" id="4_0gnam"]
 [ext_resource type="Texture2D" uid="uid://begspnt402cia" path="res://icon.svg" id="4_nc0yv"]
-
-[sub_resource type="StyleBoxLine" id="StyleBoxLine_qa3ud"]
-color = Color(0.498039, 0.498039, 0.498039, 1)
-grow_begin = 0.0
-grow_end = 0.0
-thickness = 2
-vertical = true
+[ext_resource type="Script" path="res://game_mechanics/user_interface/scripts/item_display.gd" id="5_eki3i"]
+[ext_resource type="StyleBox" uid="uid://uejiaync4rlf" path="res://StyleBoxes/separator_horizontal.tres" id="7_rqvpg"]
 
 [node name="Window" node_paths=PackedStringArray("to_enable") instance=ExtResource("1_v7sw0")]
-offset_right = -702.0
+offset_right = -552.0
 offset_bottom = -248.0
 id = "BOX_FITTING"
-to_enable = [NodePath("VBoxContainer/content/HBoxContainer/MarginContainer/Control/PuzzleGrid"), NodePath("VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer/ItemShape")]
+to_enable = [NodePath("VBoxContainer/content/HBoxContainer/MarginContainer/PuzzleGrid"), NodePath("VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer")]
 
 [node name="Title" parent="VBoxContainer/topbar/HBoxContainer/MarginContainer" index="0"]
 text = "Puzzle"
 
 [node name="content" parent="VBoxContainer" index="1"]
 custom_minimum_size = Vector2(200, 200)
-size_flags_vertical = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/content" index="0"]
-layout_mode = 0
-offset_right = 450.0
-offset_bottom = 200.0
+custom_minimum_size = Vector2(600, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_constants/separation = 0
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/content/HBoxContainer" index="0"]
-custom_minimum_size = Vector2(200, 200)
+custom_minimum_size = Vector2(280, 200)
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="Control" type="HFlowContainer" parent="VBoxContainer/content/HBoxContainer/MarginContainer" index="0"]
+[node name="PuzzleGrid" type="GridContainer" parent="VBoxContainer/content/HBoxContainer/MarginContainer" index="0" node_paths=PackedStringArray("visual_element")]
 layout_mode = 2
-
-[node name="PuzzleGrid" type="GridContainer" parent="VBoxContainer/content/HBoxContainer/MarginContainer/Control" index="0" node_paths=PackedStringArray("visual_element")]
-layout_mode = 2
+size_flags_vertical = 4
 theme_override_constants/h_separation = 1
 theme_override_constants/v_separation = 1
 columns = 4
@@ -53,38 +50,104 @@ visual_element = NodePath(".")
 
 [node name="VSeparator" type="VSeparator" parent="VBoxContainer/content/HBoxContainer" index="1"]
 layout_mode = 2
-theme_override_styles/separator = SubResource("StyleBoxLine_qa3ud")
+theme_override_styles/separator = ExtResource("4_0gnam")
 
 [node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/content/HBoxContainer" index="2"]
 custom_minimum_size = Vector2(245, 200)
 layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 0
+size_flags_horizontal = 3
 theme_override_constants/margin_top = 10
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/content/HBoxContainer/MarginContainer2" index="0"]
 layout_mode = 2
+script = ExtResource("5_eki3i")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer" index="0"]
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer" index="0"]
+[node name="item_name" type="Label" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer" index="0"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "ITEM_NAME"
+
+[node name="item_image" type="TextureRect" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer" index="1"]
 custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
 texture = ExtResource("4_nc0yv")
 expand_mode = 1
 
-[node name="item_name" type="Label" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer" index="1"]
-layout_mode = 2
-size_flags_horizontal = 0
-text = "ITEM_NAME"
-
 [node name="HSeparator" type="HSeparator" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer" index="1"]
 layout_mode = 2
+theme_override_styles/separator = ExtResource("7_rqvpg")
 
-[node name="ItemShape" type="GridContainer" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer" index="2"]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer" index="2"]
 layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer" index="0"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/HBoxContainer2" index="0"]
+layout_mode = 2
+
+[node name="ItemShape" type="GridContainer" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/HBoxContainer2/VBoxContainer" index="0"]
+layout_mode = 2
+size_flags_vertical = 2
 theme_override_constants/h_separation = 1
 theme_override_constants/v_separation = 1
-columns = 3
+columns = 2
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/HBoxContainer2/VBoxContainer/ItemShape" index="0"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="ColorRect2" type="ColorRect" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/HBoxContainer2/VBoxContainer/ItemShape" index="1"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="ColorRect3" type="ColorRect" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/HBoxContainer2/VBoxContainer/ItemShape" index="2"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="ColorRect4" type="ColorRect" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/HBoxContainer2/VBoxContainer/ItemShape" index="3"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/HBoxContainer2/VBoxContainer" index="1"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/HBoxContainer2/VBoxContainer/MarginContainer" index="0"]
+layout_mode = 2
+theme_override_constants/separation = 1
+
+[node name="rotate" type="Button" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/HBoxContainer2/VBoxContainer/MarginContainer/HBoxContainer" index="0"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="close_box" type="Button" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/HBoxContainer2/VBoxContainer/MarginContainer/HBoxContainer" index="1"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/HBoxContainer2" index="1"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 20
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/HBoxContainer2/MarginContainer" index="0"]
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="Label" type="Label" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/HBoxContainer2/MarginContainer/ScrollContainer" index="0"]
+custom_minimum_size = Vector2(170, 0)
+layout_mode = 2
+size_flags_vertical = 0
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+autowrap_mode = 3
