@@ -1,8 +1,57 @@
-[gd_scene load_steps=2 format=3 uid="uid://36ro2mel3pe4"]
+[gd_scene load_steps=4 format=3 uid="uid://36ro2mel3pe4"]
 
 [ext_resource type="PackedScene" uid="uid://dny1dqcanlco0" path="res://game_mechanics/user_interface/base_scenes/base_window.tscn" id="1_xji8c"]
+[ext_resource type="Script" path="res://game_mechanics/global_scripts/settings.gd" id="2_1s6m3"]
+[ext_resource type="ButtonGroup" uid="uid://2ad56ea4ojh6" path="res://game_mechanics/user_interface/button_groups/settings_group.tres" id="2_my4qs"]
 
 [node name="Window" instance=ExtResource("1_xji8c")]
+id = "SETTINGS"
 
 [node name="Title" parent="VBoxContainer/topbar/HBoxContainer/MarginContainer" index="0"]
-text = "Split stack"
+text = "Settings"
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/content" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/content/MarginContainer" index="0"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/content/MarginContainer/VBoxContainer" index="0"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+script = ExtResource("2_1s6m3")
+
+[node name="General" type="Button" parent="VBoxContainer/content/MarginContainer/VBoxContainer/HBoxContainer" index="0"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 1
+toggle_mode = true
+button_group = ExtResource("2_my4qs")
+text = "GENERAL"
+flat = true
+
+[node name="Graphics" type="Button" parent="VBoxContainer/content/MarginContainer/VBoxContainer/HBoxContainer" index="1"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 1
+toggle_mode = true
+button_group = ExtResource("2_my4qs")
+text = "GRAPHICS"
+flat = true
+
+[node name="Sound" type="Button" parent="VBoxContainer/content/MarginContainer/VBoxContainer/HBoxContainer" index="2"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 1
+toggle_mode = true
+button_group = ExtResource("2_my4qs")
+text = "SOUND"
+flat = true

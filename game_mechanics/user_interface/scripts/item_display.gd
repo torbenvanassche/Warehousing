@@ -2,12 +2,14 @@ extends Node
 
 @onready var item_image: TextureRect = $HBoxContainer/item_image;
 @onready var item_name: Label = $HBoxContainer/item_name;
-@onready var item_shape: GridContainer = $MarginContainer/HBoxContainer2/VBoxContainer/ItemShape;
-@onready var item_description_container: ScrollContainer = $MarginContainer/HBoxContainer2/MarginContainer/ScrollContainer;
+@onready var item_shape: GridContainer = $MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer2/ItemShape;
+@onready var item_description_container: ScrollContainer = $MarginContainer/VBoxContainer/MarginContainer/ScrollContainer;
 
 func on_enable(dict: Dictionary = {}) -> void:
-	var item = ItemManager.get_item("wheat")
-	
+	if Manager.player.inventory.data[0].item == {}:
+		return;
+		
+	var item = Manager.player.inventory.data[0].item;
 	item_image.texture = ItemManager.get_sprite(item)
 	item_name.text = item.name;
 	item_shape.columns = item.layout_cols;

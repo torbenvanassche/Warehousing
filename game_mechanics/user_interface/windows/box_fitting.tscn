@@ -62,7 +62,7 @@ theme_override_constants/margin_top = 10
 layout_mode = 2
 script = ExtResource("5_eki3i")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer" index="0"]
+[node name="HBoxContainer" type="VBoxContainer" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer" index="0"]
 layout_mode = 2
 size_flags_horizontal = 4
 
@@ -74,8 +74,10 @@ text = "ITEM_NAME"
 [node name="item_image" type="TextureRect" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer" index="1"]
 custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
+size_flags_horizontal = 4
 texture = ExtResource("4_nc0yv")
 expand_mode = 1
+stretch_mode = 4
 
 [node name="HSeparator" type="HSeparator" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer" index="1"]
 layout_mode = 2
@@ -87,67 +89,68 @@ size_flags_vertical = 3
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer" index="0"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer" index="0"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/VBoxContainer" index="0"]
 layout_mode = 2
 size_flags_vertical = 3
-
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/HBoxContainer2" index="0"]
-layout_mode = 2
-
-[node name="ItemShape" type="GridContainer" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/HBoxContainer2/VBoxContainer" index="0"]
-layout_mode = 2
-size_flags_vertical = 2
-theme_override_constants/h_separation = 1
-theme_override_constants/v_separation = 1
-columns = 2
-
-[node name="ColorRect" type="ColorRect" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/HBoxContainer2/VBoxContainer/ItemShape" index="0"]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
-
-[node name="ColorRect2" type="ColorRect" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/HBoxContainer2/VBoxContainer/ItemShape" index="1"]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
-
-[node name="ColorRect3" type="ColorRect" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/HBoxContainer2/VBoxContainer/ItemShape" index="2"]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
-
-[node name="ColorRect4" type="ColorRect" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/HBoxContainer2/VBoxContainer/ItemShape" index="3"]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/HBoxContainer2/VBoxContainer" index="1"]
-layout_mode = 2
-size_flags_vertical = 8
-theme_override_constants/margin_bottom = 20
-
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/HBoxContainer2/VBoxContainer/MarginContainer" index="0"]
-layout_mode = 2
-theme_override_constants/separation = 1
-
-[node name="rotate" type="Button" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/HBoxContainer2/VBoxContainer/MarginContainer/HBoxContainer" index="0"]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
-
-[node name="close_box" type="Button" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/HBoxContainer2/VBoxContainer/MarginContainer/HBoxContainer" index="1"]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/HBoxContainer2" index="1"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 20
+theme_override_constants/margin_bottom = 0
 
-[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/HBoxContainer2/MarginContainer" index="0"]
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer" index="0"]
 layout_mode = 2
 horizontal_scroll_mode = 0
 
-[node name="Label" type="Label" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/HBoxContainer2/MarginContainer/ScrollContainer" index="0"]
-custom_minimum_size = Vector2(170, 0)
+[node name="Label" type="Label" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer" index="0"]
+custom_minimum_size = Vector2(290, 0)
 layout_mode = 2
 size_flags_vertical = 0
 text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 autowrap_mode = 3
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/VBoxContainer" index="1"]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer2" index="0"]
+layout_mode = 2
+
+[node name="ItemShape" type="GridContainer" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer2" index="0"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/h_separation = 1
+theme_override_constants/v_separation = 1
+columns = 2
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer2/ItemShape" index="0"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="ColorRect2" type="ColorRect" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer2/ItemShape" index="1"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="ColorRect3" type="ColorRect" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer2/ItemShape" index="2"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="ColorRect4" type="ColorRect" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer2/ItemShape" index="3"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer2" index="1"]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+theme_override_constants/separation = 1
+
+[node name="rotate" type="Button" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer2/HBoxContainer" index="0"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="close_box" type="Button" parent="VBoxContainer/content/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer2/HBoxContainer" index="1"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
