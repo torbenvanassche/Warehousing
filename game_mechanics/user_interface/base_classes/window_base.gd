@@ -10,7 +10,7 @@ extends Control
 @onready var content_panel: ColorRect = $VBoxContainer/content;
 @onready var background_color: Color = $VBoxContainer/content.color;
 
-@export_enum("display", "no_header", "none") var display_mode: String = "display"
+@export_enum("fullscreen", "display", "no_header", "none") var display_mode: String = "display"
 @export_enum("mouse", "center", "override") var position_options: String = "center";
 var initial_position: Vector2;
 
@@ -56,6 +56,10 @@ func on_enable(options: Dictionary = {}):
 			printerr(n.name + " is not valid to call on_enable.")
 		
 	match display_mode:
+		"fullscreen":
+			top_bar.visible = false;
+			content_panel.color = background_color;
+			size =get_viewport_rect().size;
 		"display":
 			top_bar.visible = true;
 			content_panel.color = background_color;

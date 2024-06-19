@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://36ro2mel3pe4"]
+
+[ext_resource type="PackedScene" uid="uid://dny1dqcanlco0" path="res://game_mechanics/user_interface/base_scenes/base_window.tscn" id="1_xji8c"]
+
+[node name="Window" instance=ExtResource("1_xji8c")]
+
+[node name="Title" parent="VBoxContainer/topbar/HBoxContainer/MarginContainer" index="0"]
+text = "Split stack"
