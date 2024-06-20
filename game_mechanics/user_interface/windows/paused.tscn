@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cab8b0fs7luja"]
 
-[ext_resource type="PackedScene" uid="uid://dny1dqcanlco0" path="res://game_mechanics/user_interface/base_scenes/base_window.tscn" id="1_v7d3o"]
+[ext_resource type="PackedScene" uid="uid://dny1dqcanlco0" path="res://game_mechanics/user_interface/base_window.tscn" id="1_v7d3o"]
 [ext_resource type="Script" path="res://game_mechanics/user_interface/scripts/pause_menu.gd" id="2_emtrc"]
 
 [node name="Window" node_paths=PackedStringArray("to_enable") instance=ExtResource("1_v7d3o")]

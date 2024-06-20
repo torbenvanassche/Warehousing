@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://ccrqwbtxe7wa4"]
 
-[ext_resource type="PackedScene" uid="uid://dny1dqcanlco0" path="res://game_mechanics/user_interface/base_scenes/base_window.tscn" id="1_v7sw0"]
+[ext_resource type="PackedScene" uid="uid://dny1dqcanlco0" path="res://game_mechanics/user_interface/base_window.tscn" id="1_v7sw0"]
 [ext_resource type="Script" path="res://game_mechanics/puzzles/fit_in_box/box_puzzle.gd" id="2_edvg4"]
 [ext_resource type="Script" path="res://game_mechanics/user_interface/window_components/scripts/item_slot_ui_puzzle.gd" id="3_1vkwa"]
 [ext_resource type="StyleBox" uid="uid://dj18phdy5nqwx" path="res://StyleBoxes/separator_vertical.tres" id="4_0gnam"]
