@@ -35,7 +35,7 @@ func _gui_input(_event):
 	if _event is InputEventMouseButton and _event.is_pressed() and _event.button_index == MOUSE_BUTTON_RIGHT && !slot_data.is_empty() && slot_data.item.count > 1:
 		var mouse_position = get_global_mouse_position();
 		var context := ContextMenu.new([
-			ContextMenuItem.new("Split stack", UIManager.enable_ui.bind(UIManager.get_subwindow("SPLITSTACK"), true, {"slot": self}), Manager.player.inventory.has_open_slot())
+			ContextMenuItem.new("Split stack", UserInterface.instance.enable_ui.bind(UserInterface.instance.get_subwindow("SPLITSTACK"), true, {"slot": self}), Manager.player.inventory.has_open_slot())
 			])
 		context.open(Rect2(mouse_position.x, mouse_position.y, context.size.x, context.size.y))
 	pass
